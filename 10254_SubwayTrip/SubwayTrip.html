@@ -1,0 +1,13 @@
+<html><head><title>10254. SubwayTrip</title></head><body><h1>10254. SubwayTrip</h1><h2>Problem</h2><p><td class="statText">You are walking down the escalator to catch a subway train. 
+The escalator itself moves at a speed of <b>Ve</b> meters per minute. 
+You can walk down the escalator at a relative speed of <b>Vy</b> meters per minute.
+The length of the escalator is <b>L</b> meters.
+Trains arrive <b>T</b> minutes apart.
+<br />
+Let t be the time between your arrival to the station if you stand still on the escalator 
+and the arrival of the last train before your arrival.
+Assume that t is a random variable uniformly distributed between 0 and T.
+<br />
+Return the probability of catching an earlier train if you choose to walk down the escalator 
+instead of standing still on it.
+</td></p><h2>Definition</h2><h3>Filename</h3><p>SubwayTrip.py</p><h3>Signature</h3><p>double earlierTrain(int Ve, int Vy, int L, int T)</p><h2>Constraints</h2><ul><li><td class="statText"><b>Ve</b> will be between 10 and 60, inclusive.</td></li><li><td class="statText"><b>Vy</b> will be between 1 and 10, inclusive.</td></li><li><td class="statText"><b>L</b> will be between 10 and 100, inclusive.</td></li><li><td class="statText"><b>T</b> will be between 2 and 20, inclusive.</td></li></ul><h2>Examples</h2><ul><li>earlierTrain(10, 10, 20, 2) = 0<td class="statText"><table><tr><td colspan="2" class="statText">If you stand still, it'll take you 20/10 = 2 minutes to reach the bottom of the escalator. If you choose to walk, it'll make you 20/(10+10) = 1 minute. In the second case you save 1 minute and in 50% of the cases it'll allow you to catch an earlier train.</td></tr></table></td></li><li>earlierTrain(50, 5, 55, 20) = 0</li><li>earlierTrain(34, 3, 85, 7) = 0</li><li>earlierTrain(10, 10, 100, 4) = 1<td class="statText"><table><tr><td colspan="2" class="statText">Here, if you choose to walk instead of stand still, you will save 5 minutes and you will certainly be guaranteed to catch an earlier train.</td></tr></table></td></li></ul>

@@ -1,0 +1,75 @@
+{
+    "definition": {
+        "method": "earlierTrain", 
+        "names": {
+            "input": [
+                "Ve", 
+                "Vy", 
+                "L", 
+                "T"
+            ]
+        }, 
+        "types": {
+            "output": "double", 
+            "input": [
+                "int", 
+                "int", 
+                "int", 
+                "int"
+            ]
+        }, 
+        "class": "SubwayTrip"
+    }, 
+    "tests": [], 
+    "name": "SubwayTrip", 
+    "statement": "<td class=\"statText\">You are walking down the escalator to catch a subway train. \nThe escalator itself moves at a speed of <b>Ve</b> meters per minute. \nYou can walk down the escalator at a relative speed of <b>Vy</b> meters per minute.\nThe length of the escalator is <b>L</b> meters.\nTrains arrive <b>T</b> minutes apart.\n<br />\nLet t be the time between your arrival to the station if you stand still on the escalator \nand the arrival of the last train before your arrival.\nAssume that t is a random variable uniformly distributed between 0 and T.\n<br />\nReturn the probability of catching an earlier train if you choose to walk down the escalator \ninstead of standing still on it.\n</td>", 
+    "constraints": [
+        "<td class=\"statText\"><b>Ve</b> will be between 10 and 60, inclusive.</td>", 
+        "<td class=\"statText\"><b>Vy</b> will be between 1 and 10, inclusive.</td>", 
+        "<td class=\"statText\"><b>L</b> will be between 10 and 100, inclusive.</td>", 
+        "<td class=\"statText\"><b>T</b> will be between 2 and 20, inclusive.</td>"
+    ], 
+    "number": 10254, 
+    "examples": [
+        {
+            "comment": "<td class=\"statText\"><table><tr><td colspan=\"2\" class=\"statText\">If you stand still, it'll take you 20/10 = 2 minutes to reach the bottom of the escalator. If you choose to walk, it'll make you 20/(10+10) = 1 minute. In the second case you save 1 minute and in 50% of the cases it'll allow you to catch an earlier train.</td></tr></table></td>", 
+            "input": [
+                10, 
+                10, 
+                20, 
+                2
+            ], 
+            "output": 0
+        }, 
+        {
+            "comment": "", 
+            "input": [
+                50, 
+                5, 
+                55, 
+                20
+            ], 
+            "output": 0
+        }, 
+        {
+            "comment": "", 
+            "input": [
+                34, 
+                3, 
+                85, 
+                7
+            ], 
+            "output": 0
+        }, 
+        {
+            "comment": "<td class=\"statText\"><table><tr><td colspan=\"2\" class=\"statText\">Here, if you choose to walk instead of stand still, you will save 5 minutes and you will certainly be guaranteed to catch an earlier train.</td></tr></table></td>", 
+            "input": [
+                10, 
+                10, 
+                100, 
+                4
+            ], 
+            "output": 1
+        }
+    ]
+}

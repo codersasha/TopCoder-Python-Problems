@@ -1,0 +1,802 @@
+{
+    "definition": {
+        "method": "nextEvent", 
+        "names": {
+            "input": [
+                "current"
+            ]
+        }, 
+        "types": {
+            "output": "long", 
+            "input": [
+                "String"
+            ]
+        }, 
+        "class": "DigitalCounter"
+    }, 
+    "tests": [
+        {
+            "input": [
+                "1"
+            ], 
+            "output": 10
+        }, 
+        {
+            "input": [
+                "3"
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                "9"
+            ], 
+            "output": 3
+        }, 
+        {
+            "input": [
+                "99"
+            ], 
+            "output": 5
+        }, 
+        {
+            "input": [
+                "888888888888888"
+            ], 
+            "output": 1000000000000000
+        }, 
+        {
+            "input": [
+                "988888888888888"
+            ], 
+            "output": 20000000000000
+        }, 
+        {
+            "input": [
+                "654371"
+            ], 
+            "output": 43
+        }, 
+        {
+            "input": [
+                "999"
+            ], 
+            "output": 8
+        }, 
+        {
+            "input": [
+                "12542352325125"
+            ], 
+            "output": 4
+        }, 
+        {
+            "input": [
+                "124127777777"
+            ], 
+            "output": 134
+        }, 
+        {
+            "input": [
+                "124288888888"
+            ], 
+            "output": 100000000
+        }, 
+        {
+            "input": [
+                "12428888811111"
+            ], 
+            "output": 100003
+        }, 
+        {
+            "input": [
+                "111111111111111"
+            ], 
+            "output": 1000000000000000
+        }, 
+        {
+            "input": [
+                "322222222222222"
+            ], 
+            "output": 1
+        }, 
+        {
+            "input": [
+                "388888888888888"
+            ], 
+            "output": 200000000000000
+        }, 
+        {
+            "input": [
+                "788888888888888"
+            ], 
+            "output": 11120000000000
+        }, 
+        {
+            "input": [
+                "000000000000000"
+            ], 
+            "output": 6
+        }, 
+        {
+            "input": [
+                "000000000000001"
+            ], 
+            "output": 9
+        }, 
+        {
+            "input": [
+                "030133652081062"
+            ], 
+            "output": 1
+        }, 
+        {
+            "input": [
+                "056833948135792"
+            ], 
+            "output": 1
+        }, 
+        {
+            "input": [
+                "05713470"
+            ], 
+            "output": 6
+        }, 
+        {
+            "input": [
+                "057134701111111"
+            ], 
+            "output": 9000000
+        }, 
+        {
+            "input": [
+                "057134708888888"
+            ], 
+            "output": 60000000
+        }, 
+        {
+            "input": [
+                "065927413"
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                "065927413111111"
+            ], 
+            "output": 1000006
+        }, 
+        {
+            "input": [
+                "065927413888888"
+            ], 
+            "output": 2000000
+        }, 
+        {
+            "input": [
+                "1072221"
+            ], 
+            "output": 10
+        }, 
+        {
+            "input": [
+                "107222111111111"
+            ], 
+            "output": 1000000000
+        }, 
+        {
+            "input": [
+                "107222188888888"
+            ], 
+            "output": 11200000
+        }, 
+        {
+            "input": [
+                "226403832336"
+            ], 
+            "output": 12
+        }, 
+        {
+            "input": [
+                "226403832336111"
+            ], 
+            "output": 1001
+        }, 
+        {
+            "input": [
+                "226403832336888"
+            ], 
+            "output": 1200
+        }, 
+        {
+            "input": [
+                "2330"
+            ], 
+            "output": 6
+        }, 
+        {
+            "input": [
+                "233011111111111"
+            ], 
+            "output": 90000000000
+        }, 
+        {
+            "input": [
+                "233088888888888"
+            ], 
+            "output": 600000000000
+        }, 
+        {
+            "input": [
+                "23897035"
+            ], 
+            "output": 4
+        }, 
+        {
+            "input": [
+                "238970351111111"
+            ], 
+            "output": 20000003
+        }, 
+        {
+            "input": [
+                "238970358888888"
+            ], 
+            "output": 2000000
+        }, 
+        {
+            "input": [
+                "247975864814"
+            ], 
+            "output": 27
+        }, 
+        {
+            "input": [
+                "247975864814111"
+            ], 
+            "output": 3006
+        }, 
+        {
+            "input": [
+                "247975864814888"
+            ], 
+            "output": 200
+        }, 
+        {
+            "input": [
+                "30516305653579"
+            ], 
+            "output": 18
+        }, 
+        {
+            "input": [
+                "305163056535791"
+            ], 
+            "output": 126
+        }, 
+        {
+            "input": [
+                "305163056535798"
+            ], 
+            "output": 3
+        }, 
+        {
+            "input": [
+                "3312230888772"
+            ], 
+            "output": 1
+        }, 
+        {
+            "input": [
+                "331223088877211"
+            ], 
+            "output": 100
+        }, 
+        {
+            "input": [
+                "331223088877288"
+            ], 
+            "output": 100
+        }, 
+        {
+            "input": [
+                "39023125"
+            ], 
+            "output": 4
+        }, 
+        {
+            "input": [
+                "390231251111111"
+            ], 
+            "output": 20000003
+        }, 
+        {
+            "input": [
+                "390231258888888"
+            ], 
+            "output": 2000000
+        }, 
+        {
+            "input": [
+                "4"
+            ], 
+            "output": 10
+        }, 
+        {
+            "input": [
+                "41002008254663"
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                "410020082546631"
+            ], 
+            "output": 16
+        }, 
+        {
+            "input": [
+                "410020082546638"
+            ], 
+            "output": 20
+        }, 
+        {
+            "input": [
+                "411111111111111"
+            ], 
+            "output": 300000000000006
+        }, 
+        {
+            "input": [
+                "421905125"
+            ], 
+            "output": 4
+        }, 
+        {
+            "input": [
+                "421905125111111"
+            ], 
+            "output": 2000003
+        }, 
+        {
+            "input": [
+                "421905125888888"
+            ], 
+            "output": 200000
+        }, 
+        {
+            "input": [
+                "44974872362"
+            ], 
+            "output": 1
+        }, 
+        {
+            "input": [
+                "449748723621111"
+            ], 
+            "output": 10000
+        }, 
+        {
+            "input": [
+                "449748723628888"
+            ], 
+            "output": 10000
+        }, 
+        {
+            "input": [
+                "488888888888888"
+            ], 
+            "output": 20000000000000
+        }, 
+        {
+            "input": [
+                "50144227913925"
+            ], 
+            "output": 4
+        }, 
+        {
+            "input": [
+                "501442279139251"
+            ], 
+            "output": 23
+        }, 
+        {
+            "input": [
+                "501442279139258"
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                "52846"
+            ], 
+            "output": 6
+        }, 
+        {
+            "input": [
+                "528461111111111"
+            ], 
+            "output": 10000000001
+        }, 
+        {
+            "input": [
+                "528468888888888"
+            ], 
+            "output": 12000000000
+        }, 
+        {
+            "input": [
+                "61731363885861"
+            ], 
+            "output": 11
+        }, 
+        {
+            "input": [
+                "617313638858611"
+            ], 
+            "output": 101
+        }, 
+        {
+            "input": [
+                "617313638858618"
+            ], 
+            "output": 6
+        }, 
+        {
+            "input": [
+                "62238363597"
+            ], 
+            "output": 15
+        }, 
+        {
+            "input": [
+                "622383635971111"
+            ], 
+            "output": 140001
+        }, 
+        {
+            "input": [
+                "622383635978888"
+            ], 
+            "output": 1112
+        }, 
+        {
+            "input": [
+                "62731107981"
+            ], 
+            "output": 13
+        }, 
+        {
+            "input": [
+                "627311079811111"
+            ], 
+            "output": 100003
+        }, 
+        {
+            "input": [
+                "627311079818888"
+            ], 
+            "output": 1120
+        }, 
+        {
+            "input": [
+                "65151"
+            ], 
+            "output": 23
+        }, 
+        {
+            "input": [
+                "651511111111111"
+            ], 
+            "output": 200000000003
+        }, 
+        {
+            "input": [
+                "651518888888888"
+            ], 
+            "output": 1120000000
+        }, 
+        {
+            "input": [
+                "65922"
+            ], 
+            "output": 1
+        }, 
+        {
+            "input": [
+                "659221111111111"
+            ], 
+            "output": 10000000000
+        }, 
+        {
+            "input": [
+                "659228888888888"
+            ], 
+            "output": 10000000000
+        }, 
+        {
+            "input": [
+                "6829110500"
+            ], 
+            "output": 6
+        }, 
+        {
+            "input": [
+                "682911050011111"
+            ], 
+            "output": 90000
+        }, 
+        {
+            "input": [
+                "682911050088888"
+            ], 
+            "output": 600000
+        }, 
+        {
+            "input": [
+                "7"
+            ], 
+            "output": 10
+        }, 
+        {
+            "input": [
+                "711111111111111"
+            ], 
+            "output": 400000000000006
+        }, 
+        {
+            "input": [
+                "779825967"
+            ], 
+            "output": 3
+        }, 
+        {
+            "input": [
+                "779825967111111"
+            ], 
+            "output": 3000000
+        }, 
+        {
+            "input": [
+                "779825967888888"
+            ], 
+            "output": 111200
+        }, 
+        {
+            "input": [
+                "788888888888888"
+            ], 
+            "output": 11120000000000
+        }, 
+        {
+            "input": [
+                "8120409870"
+            ], 
+            "output": 6
+        }, 
+        {
+            "input": [
+                "812040987011111"
+            ], 
+            "output": 90000
+        }, 
+        {
+            "input": [
+                "812040987088888"
+            ], 
+            "output": 600000
+        }, 
+        {
+            "input": [
+                "87338"
+            ], 
+            "output": 20
+        }, 
+        {
+            "input": [
+                "873381111111111"
+            ], 
+            "output": 10000000003
+        }, 
+        {
+            "input": [
+                "873388888888888"
+            ], 
+            "output": 200000000000
+        }, 
+        {
+            "input": [
+                "9115006"
+            ], 
+            "output": 22
+        }, 
+        {
+            "input": [
+                "911500611111111"
+            ], 
+            "output": 100000001
+        }, 
+        {
+            "input": [
+                "911500688888888"
+            ], 
+            "output": 120000000
+        }, 
+        {
+            "input": [
+                "235232555255555"
+            ], 
+            "output": 4
+        }, 
+        {
+            "input": [
+                "235232999999999"
+            ], 
+            "output": 113
+        }, 
+        {
+            "input": [
+                "007"
+            ], 
+            "output": 11
+        }, 
+        {
+            "input": [
+                "111117111111111"
+            ], 
+            "output": 54000000000
+        }, 
+        {
+            "input": [
+                "88888888888888"
+            ], 
+            "output": 100000000000000
+        }, 
+        {
+            "input": [
+                "002438414123697"
+            ], 
+            "output": 5
+        }, 
+        {
+            "input": [
+                "117177111111111"
+            ], 
+            "output": 234000000000
+        }, 
+        {
+            "input": [
+                "188888888888888"
+            ], 
+            "output": 11200000000000
+        }, 
+        {
+            "input": [
+                "887888888888888"
+            ], 
+            "output": 111200000000
+        }, 
+        {
+            "input": [
+                "889888888888888"
+            ], 
+            "output": 9000000000000
+        }, 
+        {
+            "input": [
+                "99991234567876"
+            ], 
+            "output": 5
+        }, 
+        {
+            "input": [
+                "12384523068978"
+            ], 
+            "output": 9
+        }, 
+        {
+            "input": [
+                "123456789123456"
+            ], 
+            "output": 6
+        }, 
+        {
+            "input": [
+                "998888888888"
+            ], 
+            "output": 1200000000
+        }, 
+        {
+            "input": [
+                "7687612160"
+            ], 
+            "output": 6
+        }, 
+        {
+            "input": [
+                "899999999999999"
+            ], 
+            "output": 112
+        }, 
+        {
+            "input": [
+                "111111111111"
+            ], 
+            "output": 1000000000000
+        }, 
+        {
+            "input": [
+                "123456789101129"
+            ], 
+            "output": 3
+        }, 
+        {
+            "input": [
+                "000100000000007"
+            ], 
+            "output": 11
+        }, 
+        {
+            "input": [
+                "654371111111111"
+            ], 
+            "output": 40000000003
+        }, 
+        {
+            "input": [
+                "688888888888888"
+            ], 
+            "output": 120000000000000
+        }
+    ], 
+    "name": "DigitalCounter", 
+    "statement": "<td class=\"statText\"><p>\nWe have an N-digit digital counter that increments every second. The counter is cyclic: after it reaches 10^N - 1, it starts once again from zero.\n</p>\n<p>\nEach digit is shown using the standard seven-segment display. The exact forms of all the digits are shown in the ASCII art below.\n</p>\n<pre>\n    +   +---+   +---+   +   +   +---+\n    |       |       |   |   |   |\n    +   +---+   +---+   +---+   +---+\n    |   |           |       |       |\n    +   +---+   +---+       +   +---+\n\n+---+   +---+   +---+   +---+   +---+\n|           |   |   |   |   |   |   |\n+---+       +   +---+   +---+   +   +\n|   |       |   |   |       |   |   |\n+---+       +   +---+       +   +---+\n</pre>\n<p>\nEach line segment that connects two adjacent '+' symbols represents a single lit segment.  For example, '1' contains two lit segments, and '9' contains five lit segments.\n</p>\n<p>\nYou are given a String <b>current</b> that contains the current number shown by the counter. \n<br />\nThe number of characters in <b>current</b> is equal to the number N of displayed digits.\n</p>\n<p>\nReturn the smallest positive number of seconds after which the counter will have the same total number of lit segments as it does now.\n</p></td>", 
+    "constraints": [
+        "<td class=\"statText\"><b>current</b> will contain between 1 and 15 characters, inclusive.</td>", 
+        "<td class=\"statText\">Each character in <b>current</b> will be a digit ('0'-'9').</td>"
+    ], 
+    "number": 10324, 
+    "examples": [
+        {
+            "comment": "<td class=\"statText\"><table><tr><td colspan=\"2\" class=\"statText\">No other digit has exactly two segments lit, thus the next time there will be two segments lit will be in 10 seconds.</td></tr></table></td>", 
+            "input": [
+                "1"
+            ], 
+            "output": 10
+        }, 
+        {
+            "comment": "<td class=\"statText\"><table><tr><td colspan=\"2\" class=\"statText\">In 2 seconds the display will show \"5\", and \"5\" and \"3\" both have exactly five lit segments.</td></tr></table></td>", 
+            "input": [
+                "3"
+            ], 
+            "output": 2
+        }, 
+        {
+            "comment": "<td class=\"statText\"><table><tr><td colspan=\"2\" class=\"statText\">In 3 seconds, the display will show \"2\".</td></tr></table></td>", 
+            "input": [
+                "9"
+            ], 
+            "output": 3
+        }, 
+        {
+            "comment": "<td class=\"statText\"><table><tr><td colspan=\"2\" class=\"statText\">The number \"99\" is shown using 5+5=10 lit segments. In 5 seconds, the display will show \"04\", with 6+4=10 lit segments again. </td></tr></table></td>", 
+            "input": [
+                "99"
+            ], 
+            "output": 5
+        }, 
+        {
+            "comment": "", 
+            "input": [
+                "654371"
+            ], 
+            "output": 43
+        }, 
+        {
+            "comment": "<td class=\"statText\"><table><tr><td colspan=\"2\" class=\"statText\">Note that the input can have leading zeroes.</td></tr></table></td>", 
+            "input": [
+                "007"
+            ], 
+            "output": 11
+        }
+    ]
+}

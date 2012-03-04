@@ -1,0 +1,22 @@
+<html><head><title>10413. SequenceSum</title></head><body><h1>10413. SequenceSum</h1><h2>Problem</h2><p><td class="statText"><p>
+Given two sequences X=(X[0], ..., X[N-1]) and Y=(Y[0], ..., Y[M-1]), their pairwise sum is the sequence:
+</p>
+<p>
+X@Y = (X[0]+Y[0], X[0]+Y[1], ..., X[0]+Y[M-1], X[1]+Y[0], X[1]+Y[1], ..., X[N-1]+Y[M-1]).
+</p>
+<p>
+For example, if X=(0,10) and Y=(0,2,1) then X@Y=(0,2,1,10,12,11).
+</p>
+<p>
+Formally, X@Y is a sequence of length NM, where for each i in {0,...,N-1} and for each j in {0,...,M-1} we have (X@Y)[i*M+j] = X[i]+Y[j]. Note that X@Y is not necessarily the same sequence as Y@X.
+</p>
+<p>
+You are given int[]s <b>A</b>, <b>B</b>, <b>C</b>, <b>D</b>, <b>E</b>, <b>F</b>, and a String[] <b>Z</b>.
+Concatenate the elements of <b>Z</b> to get a space-separated sequence of non-negative integers NEEDLE. Sequence HAYSTACK is defined as follows:
+</p>
+<p>
+HAYSTACK = ((((<b>A</b> @ <b>B</b>) @ <b>C</b>) @ <b>D</b>) @ <b>E</b>) @ <b>F</b>
+</p>
+<p>
+Write a method that will find and return the smallest non-negative integer X such that if we delete the first X elements of the sequence HAYSTACK, then the sequence HAYSTACK will start with the sequence NEEDLE. If there is no such X, return -1 instead.
+</p></td></p><h2>Definition</h2><h3>Filename</h3><p>SequenceSum.py</p><h3>Signature</h3><p>long findSubstring(int[] A, int[] B, int[] C, int[] D, int[] E, int[] F, String[] Z)</p><h2>Constraints</h2><ul><li><td class="statText">Each of <b>A</b>, <b>B</b>, <b>C</b>, <b>D</b>, <b>E</b>, and <b>F</b> will contain between 1 and 50 elements, inclusive.</td></li><li><td class="statText">Each element in each of <b>A</b>, <b>B</b>, <b>C</b>, <b>D</b>, <b>E</b>, and <b>F</b> will be between 0 and 100,000,000, inclusive.</td></li><li><td class="statText"><b>Z</b> will contain between 1 and 50 elements, inclusive.</td></li><li><td class="statText">Each element of <b>Z</b> will contain between 0 and 50 characters, inclusive.</td></li><li><td class="statText">The concatenation of the elements of <b>Z</b> will be a non-empty sequence of non-negative integers separated by single spaces. There will be no leading or trailing spaces, no integer will have unnecessary leading zeros, and each integer will be between 0 and 600,000,000, inclusive.</td></li></ul><h2>Examples</h2><ul><li>findSubstring([0, 10], [0, 2, 1], [0], [0], [0], [0], ['1 10 12']) = 2<td class="statText"><table><tr><td colspan="2" class="statText">If Y=(0), then for any X we have X@Y=X. Hence the sequence HAYSTACK in this test case is the sequence (0,2,1,10,12,11) from the problem statement. After we delete the first 2 elements, we get the sequence (1,10,12,11) which starts with (1,10,12).</td></tr></table></td></li><li>findSubstring([0, 10], [0, 2, 1], [0], [0], [0], [0], ['1 1', '0 12']) = 2<td class="statText"><table><tr><td colspan="2" class="statText">Remember to concatenate the elements of <b>Z</b> before parsing the sequence NEEDLE.</td></tr></table></td></li><li>findSubstring([1], [2], [3], [4], [5], [6], ['21']) = 0</li><li>findSubstring([1, 2], [1, 2], [1, 2], [1, 2], [1, 2], [1, 2], ['9']) = 7<td class="statText"><table><tr><td colspan="2" class="statText">In this test case the sequence HAYSTACK starts with 6,7,7,8,7,8,8,9,..., hence we need to delete the first 7 elements.</td></tr></table></td></li><li>findSubstring([1, 2, 3, 4, 5, 6], [0], [0], [0, 0], [0, 0], [0, 0], ['3 3 3']) = 16</li></ul>

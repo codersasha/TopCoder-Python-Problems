@@ -1,0 +1,102 @@
+{
+    "definition": {
+        "method": "find", 
+        "names": {
+            "input": [
+                "lamps", 
+                "n"
+            ]
+        }, 
+        "types": {
+            "output": "String[]", 
+            "input": [
+                "String[]", 
+                "int"
+            ]
+        }, 
+        "class": "TheGarland"
+    }, 
+    "tests": [], 
+    "name": "TheGarland", 
+    "statement": "<td class=\"statText\"><p>\nWhen all the presents are delivered to the children, Santa Claus goes home to take some rest.  Then, the most exciting part of the day begins - Santa starts making garlands.  A garland is a sequence of lamps connected with a wire.  You are given a String[] <b>lamps</b> containing the available lamps.  Each element is formatted \"color size\" (quotes for clarity), where color is a string representing the lamp's color, and size is an integer representing the lamp's size.  A garland must contain every available lamp, and every pair of consecutive lamps in a garland must have different sizes.\n</p>\n<p>\nSanta will make every possible garland using these lamps.  Each time he makes a garland, he will turn it on for a while and then disassemble it to make another one.  Every garland he makes will be different.  Two garlands are different if they have different lamps in at least one position.  Santa will make one garland before another if it has a bigger first lamp.  In case of a tie, he will choose the garland whose first lamp's color comes earlier alphabetically.  If both garlands have the same first lamp, he will make his choice according to the second lamp, and so on.  He will go to sleep after making all possible garlands.\n</p>\n<p>\nReturn a String[] containing the <b>n</b>-th garland Santa will make, where <b>n</b> is a 1-based index.  The return String[] should be a permutation of the String[] <b>lamps</b>.  If Santa will make less than <b>n</b> garlands, return an empty String[] instead.\n</p>\n</td>", 
+    "constraints": [
+        "<td class=\"statText\"><b>lamps</b> will contain between 1 and 50 elements, inclusive.</td>", 
+        "<td class=\"statText\">All elements of <b>lamps</b> will be distinct.</td>", 
+        "<td class=\"statText\">Each element of <b>lamps</b> will be formatted \"color size\", where color is \"Red\", \"Green\", \"Blue\" or \"Yellow\", and size is an integer between 1 and 1,000,000,000, inclusive, with no leading zeroes (all quotes for clarity).</td>", 
+        "<td class=\"statText\"><b>n</b> will be between 1 and 1,000,000,000, inclusive.</td>"
+    ], 
+    "number": 10282, 
+    "examples": [
+        {
+            "comment": "<td class=\"statText\"><table><tr><td colspan=\"2\" class=\"statText\">Here are the first four garlands made by Santa:\n<ul>\n<li>{\"Red 9\", \"Red 5\", \"Yellow 9\", \"Green 1\"}</li>\n<li>{\"Red 9\", \"Red 5\", \"Green 1\", \"Yellow 9\"}</li>\n<li>{\"Red 9\", \"Green 1\", \"Yellow 9\", \"Red 5\"}</li>\n<li>{\"Red 9\", \"Green 1\", \"Red 5\", \"Yellow 9\"}</li>\n</ul>\n</td></tr></table></td>", 
+            "input": [
+                [
+                    "Red 5", 
+                    "Yellow 9", 
+                    "Red 9", 
+                    "Green 1"
+                ], 
+                4
+            ], 
+            "output": [
+                "Red 9", 
+                "Green 1", 
+                "Red 5", 
+                "Yellow 9"
+            ]
+        }, 
+        {
+            "comment": "<td class=\"statText\"><table><tr><td colspan=\"2\" class=\"statText\">It is impossible to make any garlands since the two lamps are of equal size and therefore cannot be next to each other.</td></tr></table></td>", 
+            "input": [
+                [
+                    "Yellow 47", 
+                    "Blue 47"
+                ], 
+                1
+            ], 
+            "output": []
+        }, 
+        {
+            "comment": "<td class=\"statText\"><table><tr><td colspan=\"2\" class=\"statText\">Only two possible garlands.</td></tr></table></td>", 
+            "input": [
+                [
+                    "Green 4", 
+                    "Blue 4", 
+                    "Yellow 100"
+                ], 
+                2
+            ], 
+            "output": [
+                "Green 4", 
+                "Yellow 100", 
+                "Blue 4"
+            ]
+        }, 
+        {
+            "comment": "", 
+            "input": [
+                [
+                    "Yellow 21", 
+                    "Blue 24", 
+                    "Red 29", 
+                    "Blue 27", 
+                    "Green 21", 
+                    "Green 27", 
+                    "Yellow 24", 
+                    "Yellow 28"
+                ], 
+                19
+            ], 
+            "output": [
+                "Red 29", 
+                "Yellow 28", 
+                "Blue 27", 
+                "Yellow 24", 
+                "Yellow 21", 
+                "Blue 24", 
+                "Green 27", 
+                "Green 21"
+            ]
+        }
+    ]
+}

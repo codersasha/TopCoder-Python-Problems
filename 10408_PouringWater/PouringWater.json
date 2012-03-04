@@ -1,0 +1,803 @@
+{
+    "definition": {
+        "method": "getMinBottles", 
+        "names": {
+            "input": [
+                "N", 
+                "K"
+            ]
+        }, 
+        "types": {
+            "output": "int", 
+            "input": [
+                "int", 
+                "int"
+            ]
+        }, 
+        "class": "PouringWater"
+    }, 
+    "tests": [
+        {
+            "input": [
+                3, 
+                1
+            ], 
+            "output": 1
+        }, 
+        {
+            "input": [
+                13, 
+                2
+            ], 
+            "output": 3
+        }, 
+        {
+            "input": [
+                1000000, 
+                5
+            ], 
+            "output": 15808
+        }, 
+        {
+            "input": [
+                1, 
+                1
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                1, 
+                1000
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                10000000, 
+                1
+            ], 
+            "output": 6777216
+        }, 
+        {
+            "input": [
+                10000000, 
+                2
+            ], 
+            "output": 485760
+        }, 
+        {
+            "input": [
+                10000000, 
+                1000
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                8388608, 
+                1
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                8941948, 
+                3
+            ], 
+            "output": 3716
+        }, 
+        {
+            "input": [
+                8388607, 
+                22
+            ], 
+            "output": 1
+        }, 
+        {
+            "input": [
+                8388607, 
+                23
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                8387584, 
+                12
+            ], 
+            "output": 1024
+        }, 
+        {
+            "input": [
+                8387584, 
+                13
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                10000000, 
+                1000
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                999999, 
+                9
+            ], 
+            "output": 1
+        }, 
+        {
+            "input": [
+                666, 
+                2
+            ], 
+            "output": 102
+        }, 
+        {
+            "input": [
+                8388609, 
+                1
+            ], 
+            "output": 8388607
+        }, 
+        {
+            "input": [
+                4414013, 
+                1
+            ], 
+            "output": 3974595
+        }, 
+        {
+            "input": [
+                7478469, 
+                1
+            ], 
+            "output": 910139
+        }, 
+        {
+            "input": [
+                5496348, 
+                1
+            ], 
+            "output": 2892260
+        }, 
+        {
+            "input": [
+                8325561, 
+                1
+            ], 
+            "output": 63047
+        }, 
+        {
+            "input": [
+                2836846, 
+                1
+            ], 
+            "output": 1357458
+        }, 
+        {
+            "input": [
+                62503, 
+                1
+            ], 
+            "output": 3033
+        }, 
+        {
+            "input": [
+                8800757, 
+                1
+            ], 
+            "output": 7976459
+        }, 
+        {
+            "input": [
+                8816669, 
+                1
+            ], 
+            "output": 7960547
+        }, 
+        {
+            "input": [
+                9439671, 
+                1
+            ], 
+            "output": 7337545
+        }, 
+        {
+            "input": [
+                9853251, 
+                1
+            ], 
+            "output": 6923965
+        }, 
+        {
+            "input": [
+                9883163, 
+                2
+            ], 
+            "output": 602597
+        }, 
+        {
+            "input": [
+                5222001, 
+                2
+            ], 
+            "output": 20879
+        }, 
+        {
+            "input": [
+                2646160, 
+                2
+            ], 
+            "output": 499568
+        }, 
+        {
+            "input": [
+                3538422, 
+                2
+            ], 
+            "output": 655882
+        }, 
+        {
+            "input": [
+                9582122, 
+                2
+            ], 
+            "output": 903638
+        }, 
+        {
+            "input": [
+                674320, 
+                3
+            ], 
+            "output": 13808
+        }, 
+        {
+            "input": [
+                9414628, 
+                3
+            ], 
+            "output": 22556
+        }, 
+        {
+            "input": [
+                240547, 
+                3
+            ], 
+            "output": 21597
+        }, 
+        {
+            "input": [
+                5417126, 
+                3
+            ], 
+            "output": 87898
+        }, 
+        {
+            "input": [
+                1327199, 
+                3
+            ], 
+            "output": 16289
+        }, 
+        {
+            "input": [
+                4592987, 
+                4
+            ], 
+            "output": 2725
+        }, 
+        {
+            "input": [
+                1300952, 
+                4
+            ], 
+            "output": 9768
+        }, 
+        {
+            "input": [
+                5045682, 
+                4
+            ], 
+            "output": 590
+        }, 
+        {
+            "input": [
+                4375782, 
+                4
+            ], 
+            "output": 15130
+        }, 
+        {
+            "input": [
+                7590137, 
+                4
+            ], 
+            "output": 12039
+        }, 
+        {
+            "input": [
+                5632545, 
+                5
+            ], 
+            "output": 3551
+        }, 
+        {
+            "input": [
+                9219160, 
+                5
+            ], 
+            "output": 5032
+        }, 
+        {
+            "input": [
+                2556304, 
+                5
+            ], 
+            "output": 112
+        }, 
+        {
+            "input": [
+                359025, 
+                5
+            ], 
+            "output": 1423
+        }, 
+        {
+            "input": [
+                2135180, 
+                5
+            ], 
+            "output": 116
+        }, 
+        {
+            "input": [
+                1, 
+                10
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                1000000, 
+                239
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                1, 
+                100
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                10, 
+                100
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                13, 
+                50
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                1, 
+                137
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                100000, 
+                239
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                2, 
+                10
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                511, 
+                512
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                5, 
+                20
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                10000000, 
+                856
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                6767, 
+                34
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                1, 
+                2
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                9, 
+                3
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                1, 
+                4
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                173141, 
+                31
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                8388615, 
+                2
+            ], 
+            "output": 1
+        }, 
+        {
+            "input": [
+                2, 
+                4
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                2, 
+                5
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                4, 
+                70
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                9990000, 
+                7
+            ], 
+            "output": 144
+        }, 
+        {
+            "input": [
+                3, 
+                5
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                5, 
+                1
+            ], 
+            "output": 3
+        }, 
+        {
+            "input": [
+                5, 
+                10
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                1, 
+                5
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                5, 
+                100
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                993445, 
+                43
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                4, 
+                444
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                500, 
+                1000
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                3452343, 
+                234
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                85, 
+                4
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                2, 
+                100
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                4, 
+                8
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                5, 
+                2
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                14, 
+                2
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                16, 
+                17
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                3602, 
+                3
+            ], 
+            "output": 494
+        }, 
+        {
+            "input": [
+                21, 
+                3
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                1, 
+                3
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                4, 
+                100
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                3, 
+                99
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                3, 
+                6
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                13, 
+                1000
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                10000000, 
+                100
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                283686, 
+                8
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                43, 
+                3
+            ], 
+            "output": 1
+        }, 
+        {
+            "input": [
+                8, 
+                10
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                20356, 
+                2
+            ], 
+            "output": 124
+        }, 
+        {
+            "input": [
+                19, 
+                2
+            ], 
+            "output": 1
+        }, 
+        {
+            "input": [
+                458746, 
+                999
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                2, 
+                23
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                128, 
+                3
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                5, 
+                3
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                9000000, 
+                1
+            ], 
+            "output": 7777216
+        }, 
+        {
+            "input": [
+                898989, 
+                4
+            ], 
+            "output": 18515
+        }, 
+        {
+            "input": [
+                5, 
+                500
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                11, 
+                10
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                10000000, 
+                3
+            ], 
+            "output": 485760
+        }, 
+        {
+            "input": [
+                8388607, 
+                1000
+            ], 
+            "output": 0
+        }
+    ], 
+    "name": "PouringWater", 
+    "statement": "<td class=\"statText\">You have <b>N</b> bottles, each with unlimited capacity.  Initially, each bottle contains exactly 1 liter of water.  You want to carry these bottles to another location, but you can only carry <b>K</b> bottles at a time.  You don't want to waste any water and you don't want to make more than one trip, so you decide to redistribute the contents of the bottles until you end up with no more than <b>K</b> non-empty bottles.\n<br /><br />\nYou are only allowed to redistribute your water using the following method.  First, pick two bottles that contain an equal amount of water.  Then, pour the entire content of one of those bottles into the other.  Repeat this process as many times as necessary.\n<br /><br />\nBecause of this restriction, it may be impossible to end up with no more than <b>K</b> non-empty bottles using only the <b>N</b> bottles that you have initially.  Fortunately, you can also buy more bottles.  Each bottle that you buy will contain exactly 1 liter of water and have unlimited capacity.  For example, consider the case where <b>N</b> is 3 and <b>K</b> is 1.  It's impossible to get from 3 bottles to 1.  If you pour one bottle into another, you end up with one 2 liter bottle and one 1 liter bottle.  At that point, you're stuck.  However, if you then buy another bottle, you can pour that bottle into the 1 liter bottle, and pour the resulting 2 liter bottle into the other 2 liter bottle to end up with just one 4 liter bottle. \n<br /><br />\nReturn the minimum number of additional bottles you must buy in order to achieve your goal.  If it's impossible, return -1 instead.</td>", 
+    "constraints": [
+        "<td class=\"statText\"><b>N</b> will be between 1 and 10^7, inclusive.</td>", 
+        "<td class=\"statText\"><b>K</b> will be between 1 and 1000, inclusive.</td>"
+    ], 
+    "number": 10408, 
+    "examples": [
+        {
+            "comment": "<td class=\"statText\"><table><tr><td colspan=\"2\" class=\"statText\">The example from the problem statement.</td></tr></table></td>", 
+            "input": [
+                3, 
+                1
+            ], 
+            "output": 1
+        }, 
+        {
+            "comment": "<td class=\"statText\"><table><tr><td colspan=\"2\" class=\"statText\">If you have 13, 14, or 15 bottles, you can't end up with one or two bottles. With 16 bottles, you can end up with one bottle.</td></tr></table></td>", 
+            "input": [
+                13, 
+                2
+            ], 
+            "output": 3
+        }, 
+        {
+            "comment": "", 
+            "input": [
+                1000000, 
+                5
+            ], 
+            "output": 15808
+        }
+    ]
+}

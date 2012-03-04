@@ -1,0 +1,405 @@
+{
+    "definition": {
+        "method": "howMany", 
+        "names": {
+            "input": [
+                "A", 
+                "B"
+            ]
+        }, 
+        "types": {
+            "output": "int", 
+            "input": [
+                "int", 
+                "int"
+            ]
+        }, 
+        "class": "Underprimes"
+    }, 
+    "tests": [
+        {
+            "input": [
+                2, 
+                10
+            ], 
+            "output": 5
+        }, 
+        {
+            "input": [
+                100, 
+                105
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                17, 
+                17
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                312, 
+                12839
+            ], 
+            "output": 7987
+        }, 
+        {
+            "input": [
+                123, 
+                456
+            ], 
+            "output": 217
+        }, 
+        {
+            "input": [
+                12345, 
+                12345
+            ], 
+            "output": 1
+        }, 
+        {
+            "input": [
+                2, 
+                100000
+            ], 
+            "output": 63255
+        }, 
+        {
+            "input": [
+                127, 
+                129
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                162, 
+                32918
+            ], 
+            "output": 20824
+        }, 
+        {
+            "input": [
+                2, 
+                99999
+            ], 
+            "output": 63255
+        }, 
+        {
+            "input": [
+                11, 
+                99998
+            ], 
+            "output": 63250
+        }, 
+        {
+            "input": [
+                111, 
+                99997
+            ], 
+            "output": 63189
+        }, 
+        {
+            "input": [
+                12345, 
+                12345
+            ], 
+            "output": 1
+        }, 
+        {
+            "input": [
+                11, 
+                13
+            ], 
+            "output": 1
+        }, 
+        {
+            "input": [
+                228, 
+                23094
+            ], 
+            "output": 14563
+        }, 
+        {
+            "input": [
+                29, 
+                2309
+            ], 
+            "output": 1456
+        }, 
+        {
+            "input": [
+                7328, 
+                23409
+            ], 
+            "output": 10228
+        }, 
+        {
+            "input": [
+                2378, 
+                32492
+            ], 
+            "output": 19142
+        }, 
+        {
+            "input": [
+                9832, 
+                98829
+            ], 
+            "output": 56250
+        }, 
+        {
+            "input": [
+                11111, 
+                22222
+            ], 
+            "output": 7045
+        }, 
+        {
+            "input": [
+                11111, 
+                11111
+            ], 
+            "output": 1
+        }, 
+        {
+            "input": [
+                1111, 
+                1111
+            ], 
+            "output": 1
+        }, 
+        {
+            "input": [
+                111, 
+                111
+            ], 
+            "output": 1
+        }, 
+        {
+            "input": [
+                12, 
+                13
+            ], 
+            "output": 1
+        }, 
+        {
+            "input": [
+                47203, 
+                47230
+            ], 
+            "output": 18
+        }, 
+        {
+            "input": [
+                12345, 
+                12346
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                888, 
+                999
+            ], 
+            "output": 79
+        }, 
+        {
+            "input": [
+                2, 
+                10000
+            ], 
+            "output": 6396
+        }, 
+        {
+            "input": [
+                12, 
+                12
+            ], 
+            "output": 1
+        }, 
+        {
+            "input": [
+                397, 
+                87993
+            ], 
+            "output": 55435
+        }, 
+        {
+            "input": [
+                17, 
+                99013
+            ], 
+            "output": 62642
+        }, 
+        {
+            "input": [
+                3, 
+                99999
+            ], 
+            "output": 63255
+        }, 
+        {
+            "input": [
+                98, 
+                99998
+            ], 
+            "output": 63197
+        }, 
+        {
+            "input": [
+                5, 
+                7000
+            ], 
+            "output": 4486
+        }, 
+        {
+            "input": [
+                12, 
+                99999
+            ], 
+            "output": 63250
+        }, 
+        {
+            "input": [
+                3, 
+                9000
+            ], 
+            "output": 5746
+        }, 
+        {
+            "input": [
+                2, 
+                99997
+            ], 
+            "output": 63254
+        }, 
+        {
+            "input": [
+                3, 
+                100000
+            ], 
+            "output": 63255
+        }, 
+        {
+            "input": [
+                56, 
+                98345
+            ], 
+            "output": 62218
+        }, 
+        {
+            "input": [
+                99999, 
+                100000
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                10, 
+                10000
+            ], 
+            "output": 6392
+        }, 
+        {
+            "input": [
+                123, 
+                2356
+            ], 
+            "output": 1425
+        }, 
+        {
+            "input": [
+                123, 
+                56798
+            ], 
+            "output": 35958
+        }, 
+        {
+            "input": [
+                5498, 
+                5499
+            ], 
+            "output": 1
+        }, 
+        {
+            "input": [
+                99842, 
+                99842
+            ], 
+            "output": 1
+        }, 
+        {
+            "input": [
+                4, 
+                4
+            ], 
+            "output": 1
+        }, 
+        {
+            "input": [
+                10, 
+                10
+            ], 
+            "output": 1
+        }, 
+        {
+            "input": [
+                2, 
+                98000
+            ], 
+            "output": 62028
+        }, 
+        {
+            "input": [
+                512, 
+                512
+            ], 
+            "output": 0
+        }
+    ], 
+    "name": "Underprimes", 
+    "statement": "<td class=\"statText\"><p>The prime factorization of a number X is the list of prime numbers that multiply together to form X.  For example, the prime factorization of 12 is 2 * 2 * 3.  Note that 1 is not a prime number.</p>\n<p>An underprime is a number whose prime factorization contains a prime number of elements.  For example, 12 is an underprime because its prime factorization contains 3 elements, and 3 is a prime number.  Given ints <b>A</b> and <b>B</b>, return the number of underprimes between <b>A</b> and <b>B</b>, inclusive.</p></td>", 
+    "constraints": [
+        "<td class=\"statText\"><b>A</b> will be between 2 and 100000, inclusive.</td>", 
+        "<td class=\"statText\"><b>B</b> will be between <b>A</b> and 100000, inclusive.</td>"
+    ], 
+    "number": 10274, 
+    "examples": [
+        {
+            "comment": "<td class=\"statText\"><table><tr><td colspan=\"2\" class=\"statText\">The underprimes in this interval are: 4, 6, 8, 9, 10.</td></tr></table></td>", 
+            "input": [
+                2, 
+                10
+            ], 
+            "output": 5
+        }, 
+        {
+            "comment": "<td class=\"statText\"><table><tr><td colspan=\"2\" class=\"statText\">The underprimes in this interval are 102 = 2 * 3 * 17 and 105 = 3 * 5 * 7.</td></tr></table></td>", 
+            "input": [
+                100, 
+                105
+            ], 
+            "output": 2
+        }, 
+        {
+            "comment": "<td class=\"statText\"><table><tr><td colspan=\"2\" class=\"statText\">17 is a prime number, so its prime factorization contains one element. 1 is not a prime, so 17 is not an underprime.</td></tr></table></td>", 
+            "input": [
+                17, 
+                17
+            ], 
+            "output": 0
+        }, 
+        {
+            "comment": "", 
+            "input": [
+                123, 
+                456
+            ], 
+            "output": 217
+        }
+    ]
+}

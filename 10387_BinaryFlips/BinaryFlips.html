@@ -1,0 +1,10 @@
+<html><head><title>10387. BinaryFlips</title></head><body><h1>10387. BinaryFlips</h1><h2>Problem</h2><p><td class="statText">You are playing a game where you initially have <b>A</b> zeros and <b>B</b> ones.  Your goal is to end up with all ones.  In each move, you must choose exactly <b>K</b> of the numbers and flip their values (zeros change to ones, and vice-versa).  You can choose any <b>K</b> numbers each time, regardless of their current values or whether you have flipped them before.  Return the minimal number of moves required to win the game, or -1 if it is impossible.
+</td></p><h2>Definition</h2><h3>Filename</h3><p>BinaryFlips.py</p><h3>Signature</h3><p>int minimalMoves(int A, int B, int K)</p><h2>Constraints</h2><ul><li><td class="statText"><b>A</b> will be between 0 and 100,000, inclusive.</td></li><li><td class="statText"><b>B</b> will be between 0 and 100,000, inclusive.</td></li><li><td class="statText"><b>K</b> will be between 1 and 100,000, inclusive.</td></li></ul><h2>Examples</h2><ul><li>minimalMoves(3, 0, 3) = 1<td class="statText"><table><tr><td colspan="2" class="statText">You initially have 3 zeros and 0 ones, and you must flip 3 numbers in each move.  Your only possible move is to flip every number.  After the first move, you end up with all ones and win the game.
+</td></tr></table></td></li><li>minimalMoves(4, 0, 3) = 4<td class="statText"><table><tr><td colspan="2" class="statText">This is similar to the previous example, but this time, you have 4 zeros.  Here's one minimal sequence of moves that will lead to a win:
+<br />
+0. 0000 (the initial state)<br />
+1. 1110 (first three numbers flipped)<br />
+2. 1001 (last three numbers flipped)<br />
+3. 0100 (first, second and fourth numbers flipped)<br />
+4. 1111 (first, third and fourth numbers flipped)<br />
+</td></tr></table></td></li><li>minimalMoves(4, 1, 3) = 2</li><li>minimalMoves(3, 2, 5) = -1</li><li>minimalMoves(100000, 100000, 578) = 174</li><li>minimalMoves(0, 0, 1) = 0</li><li>minimalMoves(4, 44, 50) = -1</li></ul>

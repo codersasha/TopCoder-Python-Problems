@@ -1,0 +1,764 @@
+{
+    "definition": {
+        "method": "minimize", 
+        "names": {
+            "input": [
+                "A", 
+                "B"
+            ]
+        }, 
+        "types": {
+            "output": "int", 
+            "input": [
+                "String", 
+                "String"
+            ]
+        }, 
+        "class": "DifferentStrings"
+    }, 
+    "tests": [
+        {
+            "input": [
+                "koder", 
+                "topcoder"
+            ], 
+            "output": 1
+        }, 
+        {
+            "input": [
+                "hello", 
+                "xello"
+            ], 
+            "output": 1
+        }, 
+        {
+            "input": [
+                "abc", 
+                "topabcoder"
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                "adaabc", 
+                "aababbc"
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                "giorgi", 
+                "igroig"
+            ], 
+            "output": 6
+        }, 
+        {
+            "input": [
+                "drdtlpfkemlvghprbgpxafedbwqt", 
+                "sxxcwniayjwmdaktqkmkbrzjlnzy"
+            ], 
+            "output": 28
+        }, 
+        {
+            "input": [
+                "kzmlggn", 
+                "egaegibovgisdrobpbrlxeqgdbicxueyqkewimbwvrhsouhuf"
+            ], 
+            "output": 6
+        }, 
+        {
+            "input": [
+                "ugqyfocfnfofertjgkoouxawrf", 
+                "csabjlcuaodfopfdvidtadakysypehhjt"
+            ], 
+            "output": 22
+        }, 
+        {
+            "input": [
+                "rxauzprgyyteidiyvmlchqrg", 
+                "aqbskipyoegcuocxfdllaanfoilhtumfvc"
+            ], 
+            "output": 22
+        }, 
+        {
+            "input": [
+                "yzfkatpuhpohr", 
+                "oitxcuzpxtsutducrotnssxtu"
+            ], 
+            "output": 10
+        }, 
+        {
+            "input": [
+                "kg", 
+                "wgykwqatsdimjnzcfyffrwjxwqzwqjufyi"
+            ], 
+            "output": 1
+        }, 
+        {
+            "input": [
+                "rordkdicnzobvxetra", 
+                "tiswyjfsbnjfcfohyqzea"
+            ], 
+            "output": 17
+        }, 
+        {
+            "input": [
+                "wplj", 
+                "phbkq"
+            ], 
+            "output": 4
+        }, 
+        {
+            "input": [
+                "rhusqvfvqfnqjciotwur", 
+                "qqixixnmrrufsxjgxznpiwymb"
+            ], 
+            "output": 18
+        }, 
+        {
+            "input": [
+                "hbfjhvqnpugn", 
+                "tgrrustdgirpyqpjaxbpe"
+            ], 
+            "output": 11
+        }, 
+        {
+            "input": [
+                "uljqrui", 
+                "huhxkdjpqoppcpwdvbunlewhux"
+            ], 
+            "output": 5
+        }, 
+        {
+            "input": [
+                "jhqkgujskpkgq", 
+                "bsqknbnorrhxjrhotcvvddenmk"
+            ], 
+            "output": 11
+        }, 
+        {
+            "input": [
+                "dfpkhgobmrzwjpezwcfizwmylvzszvrzzjoqswhpu", 
+                "mkgunsrzfkakgrpzqvartgvsorpltrophajlfhqzhseygovl"
+            ], 
+            "output": 38
+        }, 
+        {
+            "input": [
+                "ftvcsknw", 
+                "koqebmqzmhohjgkaqqd"
+            ], 
+            "output": 7
+        }, 
+        {
+            "input": [
+                "izhfchzyppipmuocjsonyrosqfx", 
+                "ydhloyffklqpmncvuihwuqjfcmbglcgh"
+            ], 
+            "output": 24
+        }, 
+        {
+            "input": [
+                "dckzaod", 
+                "eewrdqew"
+            ], 
+            "output": 7
+        }, 
+        {
+            "input": [
+                "kzwgbkmbrtwnjjz", 
+                "yxwyuyybuhrjfcmlrmfntjkgasesmzrdhx"
+            ], 
+            "output": 11
+        }, 
+        {
+            "input": [
+                "nvso", 
+                "uytrdy"
+            ], 
+            "output": 4
+        }, 
+        {
+            "input": [
+                "tubxprsqbllxrhgcndlhhc", 
+                "jwbjtkicjcmktfukmmnafdgtmrclueuamxhsv"
+            ], 
+            "output": 20
+        }, 
+        {
+            "input": [
+                "vbajryjo", 
+                "mlhnkqajvzzyofssfyljxwhvjvadlofxtoeyl"
+            ], 
+            "output": 6
+        }, 
+        {
+            "input": [
+                "ueiniu", 
+                "rmohxxhja"
+            ], 
+            "output": 6
+        }, 
+        {
+            "input": [
+                "kkuhylnumyazczawaezyoipolgmeqkxti", 
+                "yjtuykherfehmvvistqbwchxphziwumobxxtc"
+            ], 
+            "output": 28
+        }, 
+        {
+            "input": [
+                "hraekzfqza", 
+                "wftwwcpihddacuossmezlhodihbahl"
+            ], 
+            "output": 9
+        }, 
+        {
+            "input": [
+                "kzjwktv", 
+                "iivfbxkmi"
+            ], 
+            "output": 6
+        }, 
+        {
+            "input": [
+                "nlq", 
+                "dosdebh"
+            ], 
+            "output": 3
+        }, 
+        {
+            "input": [
+                "ubzh", 
+                "mexfy"
+            ], 
+            "output": 4
+        }, 
+        {
+            "input": [
+                "mpmlqzbktivcwspefcwtihyvlubhxs", 
+                "pwrtfxfksxhfxxppmytbrxfkztojiuzctvbvoll"
+            ], 
+            "output": 28
+        }, 
+        {
+            "input": [
+                "odwwwisftrivduagmcpfvltcwzfwh", 
+                "lctjbhbgzriouraqmefnaiaidgqajdbwpifliwlgatkedxse"
+            ], 
+            "output": 25
+        }, 
+        {
+            "input": [
+                "aor", 
+                "toulrdxyyiwddxji"
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                "bf", 
+                "puebombnzfuiglhddncisjd"
+            ], 
+            "output": 1
+        }, 
+        {
+            "input": [
+                "w", 
+                "zm"
+            ], 
+            "output": 1
+        }, 
+        {
+            "input": [
+                "wxoxkpeyzgtroqxvvtuhq", 
+                "obgnvroeqhpmtjujgbymwmfgqmibai"
+            ], 
+            "output": 19
+        }, 
+        {
+            "input": [
+                "knytnbav", 
+                "hrzmjinmhnvdpv"
+            ], 
+            "output": 6
+        }, 
+        {
+            "input": [
+                "jegltnailybzzgjixqvtagmbfeclzt", 
+                "bmldwhyvbxusktzwfgjabpvsvzdmlzcnirauzpgbozauaknkuq"
+            ], 
+            "output": 26
+        }, 
+        {
+            "input": [
+                "ewgzrimuwno", 
+                "qhtxichvrgdvajolxlyrkmvqqppzogrwgrnwa"
+            ], 
+            "output": 9
+        }, 
+        {
+            "input": [
+                "s", 
+                "etnzezncpddjxvgnekzcocjnjyhzfzdffpxviiegjkwxh"
+            ], 
+            "output": 1
+        }, 
+        {
+            "input": [
+                "fzybwusaphsatthibtchuahnuijdujqncixsjqgzplidohv", 
+                "henqzittmovqbbwpbrszkdrpntljsdxxkarfpfzwczbwzjgjf"
+            ], 
+            "output": 45
+        }, 
+        {
+            "input": [
+                "gknxj", 
+                "etkletjnn"
+            ], 
+            "output": 4
+        }, 
+        {
+            "input": [
+                "yqmukbrfeffvlucxwef", 
+                "womthhavzwbjbyauaelhesqeibxbnipzgrpsdznraisyhrnotc"
+            ], 
+            "output": 17
+        }, 
+        {
+            "input": [
+                "gszilbffrq", 
+                "gkzdfsnvlnsdwgv"
+            ], 
+            "output": 8
+        }, 
+        {
+            "input": [
+                "spqfmslrrysfh", 
+                "ydfdicrosrdilxofpauhlpjthkykzbmpnarnbegeurkzle"
+            ], 
+            "output": 11
+        }, 
+        {
+            "input": [
+                "y", 
+                "yxnnsprvppraivwofrh"
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                "suobkwyszevxgndtpwlfjnpjdyqnwabcpiheglrc", 
+                "vtzuaxlgaidmmfwxmhzmefgytkfdqvpiugxiqwzwblphbtu"
+            ], 
+            "output": 36
+        }, 
+        {
+            "input": [
+                "hjtyuknifbbhda", 
+                "ogipjyxmbsumllf"
+            ], 
+            "output": 14
+        }, 
+        {
+            "input": [
+                "vtnhhhzydnd", 
+                "irwfazhqjhhuglwvweut"
+            ], 
+            "output": 9
+        }, 
+        {
+            "input": [
+                "gfijpxllyhpoesvhsktyyonlqvqatuajageknokgtvg", 
+                "giygaebfatmrkjqsslzcritemmuaibndxyydhhrrdhl"
+            ], 
+            "output": 40
+        }, 
+        {
+            "input": [
+                "mbian", 
+                "cmqys"
+            ], 
+            "output": 5
+        }, 
+        {
+            "input": [
+                "xxqoxjgcuvlzzvvpeyfxbuv", 
+                "rvdpowbwekfacuobgtimfei"
+            ], 
+            "output": 23
+        }, 
+        {
+            "input": [
+                "tggcnwermqhdb", 
+                "ksouynrrlfmsm"
+            ], 
+            "output": 12
+        }, 
+        {
+            "input": [
+                "ltaigjij", 
+                "qitmmtww"
+            ], 
+            "output": 8
+        }, 
+        {
+            "input": [
+                "abcd", 
+                "jhhdsdsd"
+            ], 
+            "output": 3
+        }, 
+        {
+            "input": [
+                "abbcbcde", 
+                "xbabxbcbcdce"
+            ], 
+            "output": 3
+        }, 
+        {
+            "input": [
+                "wonokowoney", 
+                "wontwoneverhaa"
+            ], 
+            "output": 6
+        }, 
+        {
+            "input": [
+                "c", 
+                "ca"
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                "abe", 
+                "cabc"
+            ], 
+            "output": 1
+        }, 
+        {
+            "input": [
+                "abca", 
+                "abcbddd"
+            ], 
+            "output": 1
+        }, 
+        {
+            "input": [
+                "hello", 
+                "ffffff"
+            ], 
+            "output": 5
+        }, 
+        {
+            "input": [
+                "abcda", 
+                "xyabc"
+            ], 
+            "output": 5
+        }, 
+        {
+            "input": [
+                "ccdd", 
+                "abcdef"
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                "abd", 
+                "topabcoder"
+            ], 
+            "output": 1
+        }, 
+        {
+            "input": [
+                "hmeda", 
+                "ahmedaaa"
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                "ba", 
+                "xxaxx"
+            ], 
+            "output": 1
+        }, 
+        {
+            "input": [
+                "ab", 
+                "bbb"
+            ], 
+            "output": 1
+        }, 
+        {
+            "input": [
+                "deg", 
+                "abcdefd"
+            ], 
+            "output": 1
+        }, 
+        {
+            "input": [
+                "bcd", 
+                "abcde"
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                "aaa", 
+                "bcdrfaaabgaeg"
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                "abb", 
+                "abab"
+            ], 
+            "output": 1
+        }, 
+        {
+            "input": [
+                "abb", 
+                "aaaabb"
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                "ecdx", 
+                "baaeced"
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                "fjdlsajfdsfsdlajflasdkjfsdklfj", 
+                "fdsafsdafsdfsdffdsafsdafdasfsdahfnjkdasfkjsd"
+            ], 
+            "output": 18
+        }, 
+        {
+            "input": [
+                "bsteb", 
+                "anstabckl"
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                "sdfwejfjifejfilejilfjsfee", 
+                "wjeifjieerfijiewjiejflmxofekofmxmfioekf"
+            ], 
+            "output": 18
+        }, 
+        {
+            "input": [
+                "hellosdsdsdsd", 
+                "xxxxxxxxxxxxxellosdsdsdsdsdsdsd"
+            ], 
+            "output": 1
+        }, 
+        {
+            "input": [
+                "aaab", 
+                "baaabac"
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                "a", 
+                "b"
+            ], 
+            "output": 1
+        }, 
+        {
+            "input": [
+                "aaaaaaaaaaaaaaaacdccdaa", 
+                "ccccccaaaaaaaaacccccaaaaaaddddcdaaa"
+            ], 
+            "output": 8
+        }, 
+        {
+            "input": [
+                "abc", 
+                "aabc"
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                "abcd", 
+                "abcde"
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                "x", 
+                "aaaaaaaaxaaaaaaaaa"
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                "xyz", 
+                "abcd"
+            ], 
+            "output": 3
+        }, 
+        {
+            "input": [
+                "jkdnjkfdsfsdf", 
+                "kldjklcjklgfdgfdgdf"
+            ], 
+            "output": 9
+        }, 
+        {
+            "input": [
+                "bac", 
+                "aaba"
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                "aabaa", 
+                "aababbc"
+            ], 
+            "output": 1
+        }, 
+        {
+            "input": [
+                "aa", 
+                "caac"
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                "aaaa", 
+                "abba"
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                "ccdef", 
+                "abcdefghi"
+            ], 
+            "output": 1
+        }, 
+        {
+            "input": [
+                "abc", 
+                "abbdbc"
+            ], 
+            "output": 1
+        }, 
+        {
+            "input": [
+                "tabctop", 
+                "tttopcbatoptt"
+            ], 
+            "output": 3
+        }, 
+        {
+            "input": [
+                "abc", 
+                "abcabcdhjdhjd"
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                "ankne", 
+                "rranvneyy"
+            ], 
+            "output": 1
+        }, 
+        {
+            "input": [
+                "nxxcd", 
+                "xpxabcdx"
+            ], 
+            "output": 3
+        }, 
+        {
+            "input": [
+                "abc", 
+                "defgh"
+            ], 
+            "output": 3
+        }, 
+        {
+            "input": [
+                "zero", 
+                "fjkerop"
+            ], 
+            "output": 1
+        }, 
+        {
+            "input": [
+                "bc", 
+                "abdcd"
+            ], 
+            "output": 1
+        }
+    ], 
+    "name": "DifferentStrings", 
+    "statement": "<td class=\"statText\">If X and Y are two Strings of equal length N, then the difference between them is defined as the number of indices i where the i-th character of X and the i-th character of Y are different.  For example, the difference between the words \"ant\" and \"art\" is 1.<br /><br />\n\nYou are given two Strings, <b>A</b> and <b>B</b>, where the length of <b>A</b> is less than or equal to the length of <b>B</b>.  You can apply an arbitrary number of operations to <b>A</b>, where each operation is one of the following:\n\n<ul>\n<li>Choose a character c and add it to the beginning of <b>A</b>.</li>\n<li>Choose a character c and add it to the end of <b>A</b>.</li>\n</ul>\n\nApply the operations in such a way that <b>A</b> and <b>B</b> have the same length and the difference between them is as small as possible.  Return this minimum possible difference.</td>", 
+    "constraints": [
+        "<td class=\"statText\"><b>A</b> and <b>B</b> will each contain between 1 and 50 characters, inclusive.</td>", 
+        "<td class=\"statText\"><b>A</b> and <b>B</b> will both contain only lowercase letters ('a'-'z').</td>", 
+        "<td class=\"statText\">The length of <b>A</b> will be less than or equal to the length of <b>B</b>.</td>"
+    ], 
+    "number": 10376, 
+    "examples": [
+        {
+            "comment": "<td class=\"statText\"><table><tr><td colspan=\"2\" class=\"statText\">You can prepend \"top\" to \"koder\" and you'll get \"topkoder\". The difference between \"topkoder\" and \"topcoder\" is 1.</td></tr></table></td>", 
+            "input": [
+                "koder", 
+                "topcoder"
+            ], 
+            "output": 1
+        }, 
+        {
+            "comment": "<td class=\"statText\"><table><tr><td colspan=\"2\" class=\"statText\"><b>A</b> and <b>B</b> already have the same length so you cannot add any characters to <b>A</b>.</td></tr></table></td>", 
+            "input": [
+                "hello", 
+                "xello"
+            ], 
+            "output": 1
+        }, 
+        {
+            "comment": "", 
+            "input": [
+                "abc", 
+                "topabcoder"
+            ], 
+            "output": 0
+        }, 
+        {
+            "comment": "", 
+            "input": [
+                "adaabc", 
+                "aababbc"
+            ], 
+            "output": 2
+        }, 
+        {
+            "comment": "", 
+            "input": [
+                "giorgi", 
+                "igroig"
+            ], 
+            "output": 6
+        }
+    ]
+}

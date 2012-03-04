@@ -1,0 +1,43 @@
+<html><head><title>10286. DiamondMining</title></head><body><h1>10286. DiamondMining</h1><h2>Problem</h2><p><td class="statText"><p>
+A diamond mine is a matrix of ones and zeroes with <b>R</b> rows and <b>C</b> columns.
+</p>
+<p>
+A diamond is a pattern of ones forming the boundary of a 45-degree rotated square. The diamonds of size 1, 2, and 3 are shown below.
+</p>
+<pre>
+size 1:   size 2:      size 3:
+                          1
+             1           1 1
+   1        1 1         1   1
+             1           1 1
+                          1
+</pre>
+<p>
+The diamond mine in this problem will be pseudo-randomly generated using the following method:
+</p>
+<p>
+You are given two ints: <b>seed</b> and <b>threshold</b>. Let x<sub>0</sub>=<b>seed</b> 
+and for all i>=0 let x<sub>i+1</sub> = (x<sub>i</sub> * 25173 + 13849) modulo 65536.
+</p>
+<p>
+Process the cells of the matrix in row major order (i.e., first row left to right, second row left to right, etc.).
+Each time you process a cell, look at the next x<sub>i</sub> (starting with x<sub>1</sub> for the upper left corner).
+If it is greater than or equal to <b>threshold</b>, the current cell will contain a 1, otherwise it will contain a 0.
+</p>
+<p>
+Your method shall compute and return the size of the largest diamond that can be found in the mine.
+If there are no diamonds, return 0.
+</p></td></p><h2>Definition</h2><h3>Filename</h3><p>DiamondMining.py</p><h3>Signature</h3><p>int largestDiamond(int R, int C, int seed, int threshold)</p><h2>Constraints</h2><ul><li><td class="statText"><b>R</b> will be between 1 and 750, inclusive.</td></li><li><td class="statText"><b>C</b> will be between 1 and 750, inclusive.</td></li><li><td class="statText"><b>seed</b> will be between 0 and 65,535, inclusive.</td></li><li><td class="statText"><b>threshold</b> will be between 0 and 65,536, inclusive.</td></li></ul><h2>Examples</h2><ul><li>largestDiamond(5, 5, 47, 20598) = 3<td class="statText"><table><tr><td colspan="2" class="statText">The generated pseudo-random sequence is 17332, 39133, 37242, 14235, 656, 12265, 20598, 6471, 51372, 44853, 44210, 45363, 37384, 49857, 49710, 19295, 39588, 22157, 60650, 29643, 24192, 38553, 51430, 63095, and 39324.
+<br />
+The resulting diamond mine looks as follows:
+<pre>0 1 1 0 0
+0 1 0 1 1
+1 1 1 1 1
+0 1 1 1 1
+1 1 1 1 1
+</pre></td></tr></table></td></li><li>largestDiamond(5, 5, 47, 20599) = 2<td class="statText"><table><tr><td colspan="2" class="statText">The pseudo-random sequence is the same, but the threshold is larger. The only change in the resulting diamond mine is that now the cell in row 2, column 2 contains a 0, and therefore there is no diamond of size 3.</td></tr></table></td></li><li>largestDiamond(4, 4, 11, 65500) = 0<td class="statText"><table><tr><td colspan="2" class="statText">No diamonds at all.</td></tr></table></td></li><li>largestDiamond(3, 6, 47, 15000) = 2<td class="statText"><table><tr><td colspan="2" class="statText"><pre>
+1 1 1 0 0 0
+1 0 1 1 1 1
+1 1 1 1 1 1
+</pre>
+The only diamond of size 2 is located on the left side of the mine.</td></tr></table></td></li><li>largestDiamond(200, 300, 42, 0) = 100<td class="statText"><table><tr><td colspan="2" class="statText">Regardless of the seed, if the threshold is 0, each cell contains a 1. Therefore the size of the largest diamond is only limited by the dimensions of the mine.</td></tr></table></td></li><li>largestDiamond(741, 2, 16435, 65535) = 0</li></ul>

@@ -1,0 +1,12 @@
+<html><head><title>10380. PalindromeFactory</title></head><body><h1>10380. PalindromeFactory</h1><h2>Problem</h2><p><td class="statText">A palindrome is a string that reads the same forward and backward. Not all strings are palindromes and we are going to fix that.<br />
+In this problem we consider four edit operations:<br />
+<ol>
+<li>Insert a character at any position of a string (including the beginning and the end)</li>
+<li>Delete a character at any position of a string</li>
+<li>Change a character at any position of a string</li>
+<li>Swap any two different characters (not necessarily  adjacent)</li>
+</ol>
+<br />
+You can apply the first three operations any number of times, but the last operation can be applied at most once.<br />
+<br />
+You are given a String <b>initial</b>. Return the minimal number of operations needed to make a palindrome from it.</td></p><h2>Definition</h2><h3>Filename</h3><p>PalindromeFactory.py</p><h3>Signature</h3><p>int getEditDistance(String initial)</p><h2>Constraints</h2><ul><li><td class="statText"><b>initial</b> will contain between 1 and 50 lowercase letters ('a'-'z'), inclusive.</td></li></ul><h2>Examples</h2><ul><li>getEditDistance('abba') = 0<td class="statText"><table><tr><td colspan="2" class="statText">The string is already a palindrome.</td></tr></table></td></li><li>getEditDistance('dabba') = 1<td class="statText"><table><tr><td colspan="2" class="statText">We can delete the first letter to make a palindrome.</td></tr></table></td></li><li>getEditDistance('babacvabba') = 2<td class="statText"><table><tr><td colspan="2" class="statText">Delete&#160;'v'&#160;and&#160;swap&#160;the&#160;first&#160;two&#160;characters.</td></tr></table></td></li><li>getEditDistance('abc') = 1<td class="statText"><table><tr><td colspan="2" class="statText">We can change 'c' to 'a' to get a palindrome in one operation.</td></tr></table></td></li><li>getEditDistance('acxcba') = 1<td class="statText"><table><tr><td colspan="2" class="statText">Insert 'b' after the first character.</td></tr></table></td></li><li>getEditDistance('abcacbd') = 1<td class="statText"><table><tr><td colspan="2" class="statText">Swap 'd' with 'a' in the middle.</td></tr></table></td></li></ul>

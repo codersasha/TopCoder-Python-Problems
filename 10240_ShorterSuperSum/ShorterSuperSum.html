@@ -1,0 +1,7 @@
+<html><head><title>10240. ShorterSuperSum</title></head><body><h1>10240. ShorterSuperSum</h1><h2>Problem</h2><p><td class="statText">SuperSum is a function defined as:<br />
+<ul>
+<li> SuperSum(0 , <b>n</b>) = <b>n</b>, for all positive <b>n</b>.</li>
+<li> SuperSum(<b>k</b> , <b>n</b>) = SuperSum(<b>k</b>-1 , 1) + SuperSum(<b>k</b>-1 , 2) + ... + SuperSum(<b>k</b>-1 , <b>n</b>), for all positive <b>k</b>, <b>n</b>.</li>
+</ul>
+<p>Given <b>k</b> and <b>n</b>, return the value for SuperSum(<b>k</b> , <b>n</b>).</p>
+</td></p><h2>Definition</h2><h3>Filename</h3><p>ShorterSuperSum.py</p><h3>Signature</h3><p>int calculate(int k, int n)</p><h2>Constraints</h2><ul><li><td class="statText"><b>k</b> will be between 1 and 14, inclusive.</td></li><li><td class="statText"><b>n</b> will be between 1 and 14, inclusive.</td></li></ul><h2>Examples</h2><ul><li>calculate(1, 3) = 6<td class="statText"><table><tr><td colspan="2" class="statText">When <b>k</b> = 1, SuperSum is equal to the sum of the first <b>n</b> = 3 numbers: 1 + 2 + 3 = 6.</td></tr></table></td></li><li>calculate(2, 3) = 10<td class="statText"><table><tr><td colspan="2" class="statText">SuperSum(2 , 3) = SuperSum(1 , 1) + SuperSum(1 , 2) + SuperSum(1 , 3) = 1 + 3 + 6 = 10.</td></tr></table></td></li><li>calculate(4, 10) = 2002</li><li>calculate(10, 10) = 167960</li></ul>

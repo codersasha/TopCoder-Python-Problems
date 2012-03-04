@@ -1,0 +1,15 @@
+<html><head><title>10356. UnluckyIntervals</title></head><body><h1>10356. UnluckyIntervals</h1><h2>Problem</h2><p><td class="statText">You are given a set of integers called <b>luckySet</b>.  An interval [A,B], where B is greater than A, and A and B are positive integers, is considered unlucky if none of the integers between A and B, inclusive, belongs to <b>luckySet</b>.<br /><br />
+
+An integer x is considered to be luckier than another integer y if the number of unlucky intervals that contain x is smaller than the number of unlucky intervals that contain y.  In case both x and y belong to an equal number of unlucky intervals, or both belong to an infinite number of unlucky intervals, the smallest of them is considered to be luckier than the other.<br /><br />
+
+Given a int[] <b>luckySet</b>, return the top <b>n</b> luckiest positive integers sorted in descending order by luckiness (in other words, each element of the int[] must be luckier than the next element).</td></p><h2>Definition</h2><h3>Filename</h3><p>UnluckyIntervals.py</p><h3>Signature</h3><p>int[] getLuckiest(int[] luckySet, int n)</p><h2>Constraints</h2><ul><li><td class="statText"><b>luckySet</b> will contain between 1 and 50 elements, inclusive.</td></li><li><td class="statText">Each element of <b>luckySet</b> will be between 1 and 1000000000, inclusive.</td></li><li><td class="statText">Each element of <b>luckySet</b> will be distinct.</td></li><li><td class="statText"><b>n</b> will be between 1 and 100, inclusive.</td></li></ul><h2>Examples</h2><ul><li>getLuckiest([3], 6) = [3, 1, 2, 4, 5, 6]<td class="statText"><table><tr><td colspan="2" class="statText">0 unlucky intervals contain 3.<br />
+1 unlucky interval contains 1: [1,2].<br />
+1 unlucky interval contains 2: [1, 2].<br />
+Since 1 and 2 are inside an equal number of intervals, 1 is considered luckier because it is less than 2.<br />
+For every number greater than 3, there is an infinite number of unlucky intervals that contain it. However, 4 and 5 are considered to be the luckiest among them, as they are smallest.</td></tr></table></td></li><li>getLuckiest([5, 11, 18], 9) = [5, 11, 18, 1, 4, 6, 10, 2, 3]<td class="statText"><table><tr><td colspan="2" class="statText">3 unlucky intervals: [1,2], [1,3] and [1,4] include 1. <br />
+3 unlucky intervals: [1,4], [2,4] and [3,4] include 4. <br />
+4 unlucky intervals: [6,7], [6,8], [6,9] and [6,10] include 6. <br />
+4 unlucky intervals: [6,10], [7,10], [8,10] and [9,10] include 10. <br />
+5 unlucky intervals: [1,2], [1,3], [1,4], [2,3] and [2,4] include 2. <br />
+5 unlucky intervals: [1,3], [1,4], [2,3], [2,4] and [3,4] include 3. <br />
+</td></tr></table></td></li><li>getLuckiest([7, 13, 18], 9) = [7, 13, 18, 14, 17, 8, 12, 1, 6]</li><li>getLuckiest([1000, 1004, 4000, 4003, 5000], 19) = [1000, 1004, 4000, 4003, 5000, 4001, 4002, 1001, 1003, 1002, 4004, 4999, 1, 999, 4005, 4998, 2, 998, 4006]</li><li>getLuckiest([1000000000], 8) = [1000000000, 1, 999999999, 2, 999999998, 3, 999999997, 4]</li></ul>

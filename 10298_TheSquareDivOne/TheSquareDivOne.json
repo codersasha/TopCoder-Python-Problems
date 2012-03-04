@@ -1,0 +1,92 @@
+{
+    "definition": {
+        "method": "solve", 
+        "names": {
+            "input": [
+                "board"
+            ]
+        }, 
+        "types": {
+            "output": "String[]", 
+            "input": [
+                "String[]"
+            ]
+        }, 
+        "class": "TheSquareDivOne"
+    }, 
+    "tests": [], 
+    "name": "TheSquareDivOne", 
+    "statement": "<td class=\"statText\">John and Brus like puzzles. They have been playing a new game which involves placing checkers on a square board. The board is a grid containing the same number of columns and rows.<br />\n<br />\nThe game begins with John placing checkers on specific cells of the board.  Then, R[i] is calculated for each row i, where R[i] is the number of checkers in the i-th row.  Brus must then move the checkers in such a way that for each column i in the final board, the number of checkers in that column is equal to R[i].  Note that R[i] is calculated for the initial placement of checkers and is not modified afterwards.  In a single turn, Brus can move a checker up, down, left or right into an adjacent empty cell.  He must use as few turns as possible to reach the goal.<br />\n<br />\nYou are give a String[] <b>board</b>, where the j-th character of the i-th element is uppercase 'C' if the cell at row i, column j contains a checker and '.' otherwise.  Return the final placement of checkers using the same format as the input.  Since there may be many possible final placements, return the one that comes first lexicographically.</td>", 
+    "constraints": [
+        "<td class=\"statText\"><b>board</b> will contain exactly n elements, where n is between 1 and 18, inclusive.</td>", 
+        "<td class=\"statText\">Each element of <b>board</b> will contain exactly n characters.</td>", 
+        "<td class=\"statText\">Each element of <b>board</b> will contain only uppercase 'C' or '.'.</td>"
+    ], 
+    "number": 10298, 
+    "examples": [
+        {
+            "comment": "<td class=\"statText\"><table><tr><td colspan=\"2\" class=\"statText\">Initially, R[0] = 0, R[1] = 0, R[2] = 1.<br />\nThere is currently a checker in column 0 which must be moved to column 2. It can be done in two turns.</td></tr></table></td>", 
+            "input": [
+                [
+                    "...", 
+                    "...", 
+                    "C.."
+                ]
+            ], 
+            "output": [
+                "...", 
+                "...", 
+                "..C"
+            ]
+        }, 
+        {
+            "comment": "<td class=\"statText\"><table><tr><td colspan=\"2\" class=\"statText\"><pre>\nCCC    CCC    C.C    C.C\n.C. -> ..C -> .CC -> C.C\nCCC    CCC    CCC    CCC\n</pre>\n<br />\nThe following sequence also takes three turns, but its final placement does not come earlier lexicographically:<br /><br />\n<pre>\nCCC    CCC    CCC    CCC\n.C. -> C.. -> CC. -> C.C\nCCC    CCC    C.C    C.C\n</pre><br /></td></tr></table></td>", 
+            "input": [
+                [
+                    "CCC", 
+                    ".C.", 
+                    "CCC"
+                ]
+            ], 
+            "output": [
+                "C.C", 
+                "C.C", 
+                "CCC"
+            ]
+        }, 
+        {
+            "comment": "<td class=\"statText\"><table><tr><td colspan=\"2\" class=\"statText\">No move is necessary.</td></tr></table></td>", 
+            "input": [
+                [
+                    "C..", 
+                    ".C.", 
+                    "..C"
+                ]
+            ], 
+            "output": [
+                "C..", 
+                ".C.", 
+                "..C"
+            ]
+        }, 
+        {
+            "comment": "", 
+            "input": [
+                [
+                    "C....", 
+                    "CCCCC", 
+                    "...CC", 
+                    ".CC..", 
+                    ".C.C."
+                ]
+            ], 
+            "output": [
+                ".C...", 
+                "CCCCC", 
+                ".C..C", 
+                ".CC..", 
+                ".C.C."
+            ]
+        }
+    ]
+}

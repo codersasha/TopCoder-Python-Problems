@@ -1,0 +1,42 @@
+<html><head><title>10337. DoNotTurn</title></head><body><h1>10337. DoNotTurn</h1><h2>Problem</h2><p><td class="statText">There is a <b>N</b>x<b>N</b> maze where each cell contains either a wall or empty space.  You are currently in the top-left cell at coordinates (0, 0) and your goal is to reach the bottom-right cell at coordinates (<b>N</b>-1, <b>N</b>-1) making as few turns as possible.  You can choose any of the four cardinal directions as your starting direction.  Then, from each cell, you can either move forward one cell in your current direction or turn left or right by 90 degrees.  You can only walk into empty cells, not walls.<br />
+
+You are given ints <b>M</b>, <b>X0</b>, <b>Y0</b>, <b>A</b>, <b>B</b>, <b>C</b> and <b>D</b>. Generate lists X and Y, each of length <b>M</b>, using the following recursive definitions:<br />
+X[0] = <b>X0</b> MOD <b>P</b> <br />
+X[i] = (X[i-1]*<b>A</b>+<b>B</b>) MOD <b>P</b> (note that X[i-1]*<b>A</b>+<b>B</b> may overflow a 32-bit integer)<br />
+
+Y[0] = <b>Y0</b> MOD <b>P</b> <br />
+Y[i] = (Y[i-1]*<b>C</b>+<b>D</b>) MOD <b>P</b> (note that Y[i-1]*<b>C</b>+<b>D</b> may overflow a 32-bit integer) <br />
+
+Cell (x, y) of the maze contains a wall if and only if it is neither the top-left cell nor the bottom-right cell and there exists a value of i between 0 and <b>M</b>-1, inclusive, such that x=X[i] MOD <b>N</b> and y=Y[i] MOD <b>N</b>.  Return the minimum number of turns you must make to reach the bottom-right cell of this maze, or return -1 if it is impossible.
+</td></p><h2>Definition</h2><h3>Filename</h3><p>DoNotTurn.py</p><h3>Signature</h3><p>int minimumTurns(int N, int X0, int A, int B, int Y0, int C, int D, int P, int M)</p><h2>Constraints</h2><ul><li><td class="statText"><b>N</b> will be between 2 and 500, inclusive. <br /></td></li><li><td class="statText"><b>M</b> will be between 0 and 1,000,000, inclusive. <br /></td></li><li><td class="statText"><b>X0</b>, <b>Y0</b>, <b>A</b>, <b>B</b>, <b>C</b> and <b>D</b> will each be between 0 and 1,000,000, inclusive.<br /></td></li><li><td class="statText"><b>P</b> will be between 1 and 1,000,000, inclusive.</td></li></ul><h2>Examples</h2><ul><li>minimumTurns(2, 0, 0, 1, 0, 0, 1, 10, 2) = 1<td class="statText"><table><tr><td colspan="2" class="statText">There are no walls, so you will have to make only one turn.</td></tr></table></td></li><li>minimumTurns(3, 0, 1, 1, 1, 1, 0, 3, 3) = -1<td class="statText"><table><tr><td colspan="2" class="statText"><p>The maze in this case looks as follows ('#' denotes a wall, '.' denotes an empty cell):</p>
+<pre>
+.#.
+.#.
+.#.
+</pre>
+<p>The target is unreachable.</p></td></tr></table></td></li><li>minimumTurns(3, 0, 1, 1, 1, 1, 1, 3, 3) = 3<td class="statText"><table><tr><td colspan="2" class="statText"><p>The maze in this case looks as follows ('#' denotes a wall, '.' denotes an empty cell):</p>
+<pre>
+.#.
+..#
+#..
+</pre>
+<p>There is only one possible path and it requires 3 turns.</p></td></tr></table></td></li><li>minimumTurns(10, 911111, 845499, 866249, 688029, 742197, 312197, 384409, 40) = 12<td class="statText"><table><tr><td colspan="2" class="statText"><p>The maze and the optimal path in it are given below ('#' denotes a wall, '.' denotes an empty cell, the path is illustrated using 'p' characters):</p>
+<pre>
+pp##..#..#
+#pp..###..
+.#p#.....#
+##p...#.#.
+.#p.##.#..
+##p##.#...
+#pp####...
+pp#.#...#.
+p#pppp#...
+ppp##ppppp
+</pre></td></tr></table></td></li><li>minimumTurns(5, 23, 2, 3, 35, 5, 7, 9, 3) = 2<td class="statText"><table><tr><td colspan="2" class="statText"><p>The maze in this case looks as follows ('#' denotes a wall, '.' denotes an empty cell):</p>
+<pre>
+...#.
+.....
+...#.
+.....
+..#..
+</pre></td></tr></table></td></li><li>minimumTurns(2, 0, 0, 0, 0, 0, 0, 1, 0) = 1</li></ul>

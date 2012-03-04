@@ -1,0 +1,680 @@
+{
+    "definition": {
+        "method": "bestPosition", 
+        "names": {
+            "input": [
+                "skiFriction", 
+                "pathFriction"
+            ]
+        }, 
+        "types": {
+            "output": "int", 
+            "input": [
+                "String", 
+                "String"
+            ]
+        }, 
+        "class": "SkiFriction"
+    }, 
+    "tests": [
+        {
+            "input": [
+                "66", 
+                "1543627"
+            ], 
+            "output": 56
+        }, 
+        {
+            "input": [
+                "46575", 
+                "1832537"
+            ], 
+            "output": 26
+        }, 
+        {
+            "input": [
+                "3244", 
+                "9753877146"
+            ], 
+            "output": 68
+        }, 
+        {
+            "input": [
+                "6988", 
+                "3241243"
+            ], 
+            "output": 37
+        }, 
+        {
+            "input": [
+                "144", 
+                "758"
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                "117", 
+                "7268"
+            ], 
+            "output": 13
+        }, 
+        {
+            "input": [
+                "835", 
+                "188"
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                "3684", 
+                "941117"
+            ], 
+            "output": 21
+        }, 
+        {
+            "input": [
+                "6", 
+                "466927394"
+            ], 
+            "output": 94
+        }, 
+        {
+            "input": [
+                "28615", 
+                "955881"
+            ], 
+            "output": 13
+        }, 
+        {
+            "input": [
+                "916", 
+                "87671937"
+            ], 
+            "output": 74
+        }, 
+        {
+            "input": [
+                "9981", 
+                "77372"
+            ], 
+            "output": 16
+        }, 
+        {
+            "input": [
+                "5", 
+                "6326517873"
+            ], 
+            "output": 90
+        }, 
+        {
+            "input": [
+                "3", 
+                "3179146"
+            ], 
+            "output": 43
+        }, 
+        {
+            "input": [
+                "45", 
+                "15196"
+            ], 
+            "output": 33
+        }, 
+        {
+            "input": [
+                "3254", 
+                "1236932972"
+            ], 
+            "output": 75
+        }, 
+        {
+            "input": [
+                "4987", 
+                "41859346"
+            ], 
+            "output": 68
+        }, 
+        {
+            "input": [
+                "691", 
+                "1693659848"
+            ], 
+            "output": 112
+        }, 
+        {
+            "input": [
+                "6", 
+                "65"
+            ], 
+            "output": 12
+        }, 
+        {
+            "input": [
+                "377", 
+                "511844"
+            ], 
+            "output": 38
+        }, 
+        {
+            "input": [
+                "93582", 
+                "725112"
+            ], 
+            "output": 16
+        }, 
+        {
+            "input": [
+                "845", 
+                "1773"
+            ], 
+            "output": 12
+        }, 
+        {
+            "input": [
+                "3", 
+                "939544"
+            ], 
+            "output": 45
+        }, 
+        {
+            "input": [
+                "345", 
+                "5466"
+            ], 
+            "output": 11
+        }, 
+        {
+            "input": [
+                "44", 
+                "6148446941"
+            ], 
+            "output": 86
+        }, 
+        {
+            "input": [
+                "6723", 
+                "562516639"
+            ], 
+            "output": 61
+        }, 
+        {
+            "input": [
+                "7841", 
+                "716637922"
+            ], 
+            "output": 70
+        }, 
+        {
+            "input": [
+                "85497", 
+                "22669919"
+            ], 
+            "output": 52
+        }, 
+        {
+            "input": [
+                "1", 
+                "52579343"
+            ], 
+            "output": 42
+        }, 
+        {
+            "input": [
+                "124", 
+                "8249894"
+            ], 
+            "output": 47
+        }, 
+        {
+            "input": [
+                "465258884236", 
+                "8934286315697816879499"
+            ], 
+            "output": 157
+        }, 
+        {
+            "input": [
+                "8549775554566126852891858339228769734259473773367", 
+                "24278778569344914499136372597926113969715516896214"
+            ], 
+            "output": 18
+        }, 
+        {
+            "input": [
+                "8452244882942868434458", 
+                "248559847166978757588325448586699452113686273737"
+            ], 
+            "output": 433
+        }, 
+        {
+            "input": [
+                "751765871", 
+                "646317526632483928262699152812845265"
+            ], 
+            "output": 409
+        }, 
+        {
+            "input": [
+                "95257363432248177879937981475744936442673666242", 
+                "2659938719356683646941464995211175945786711147211"
+            ], 
+            "output": 35
+        }, 
+        {
+            "input": [
+                "725278853951894738392791525625287672366339418789", 
+                "86355196565772218414747655393991593793226691518429"
+            ], 
+            "output": 35
+        }, 
+        {
+            "input": [
+                "7191553259142169761994897681", 
+                "5335337748936354922391338972557989211"
+            ], 
+            "output": 160
+        }, 
+        {
+            "input": [
+                "54426858229348169666882589377", 
+                "4965193583675864259517421283855228737755993378"
+            ], 
+            "output": 288
+        }, 
+        {
+            "input": [
+                "81541171168322523363938517514169181865861581412", 
+                "357353559931989758513252412721843547761433499264"
+            ], 
+            "output": 15
+        }, 
+        {
+            "input": [
+                "92216147986767", 
+                "92765518727632791"
+            ], 
+            "output": 49
+        }, 
+        {
+            "input": [
+                "911925791438", 
+                "278621677532646521492214875271395854"
+            ], 
+            "output": 383
+        }, 
+        {
+            "input": [
+                "8241236382493384129549242888316", 
+                "279193384655638626165974842846531"
+            ], 
+            "output": 34
+        }, 
+        {
+            "input": [
+                "316568813418992756418247171", 
+                "7269292759553329234597559827339943659795"
+            ], 
+            "output": 224
+        }, 
+        {
+            "input": [
+                "476483526983239944", 
+                "63673993485792131369637759421"
+            ], 
+            "output": 188
+        }, 
+        {
+            "input": [
+                "2715245248984", 
+                "749553416851792871356268"
+            ], 
+            "output": 176
+        }, 
+        {
+            "input": [
+                "96359932", 
+                "569943573364813838996369327926369933287481641"
+            ], 
+            "output": 610
+        }, 
+        {
+            "input": [
+                "24481786487856483355451168222971187135772236872", 
+                "753892959859599684689138364114878867932786634362"
+            ], 
+            "output": 17
+        }, 
+        {
+            "input": [
+                "174112363364812766666149653714412529423438816951", 
+                "96998861231349268199339818583522812485495336242738"
+            ], 
+            "output": 34
+        }, 
+        {
+            "input": [
+                "584472652", 
+                "4444389727947531493246957643"
+            ], 
+            "output": 286
+        }, 
+        {
+            "input": [
+                "5128438935272346449158288652771359883763", 
+                "5927358439618463869549738633239628124764424248"
+            ], 
+            "output": 103
+        }, 
+        {
+            "input": [
+                "2425712765864167346453784", 
+                "131859964644188841997921143834317182955216584178"
+            ], 
+            "output": 364
+        }, 
+        {
+            "input": [
+                "456346", 
+                "87881187146881967241216122445971458546949695"
+            ], 
+            "output": 495
+        }, 
+        {
+            "input": [
+                "811959933952385935", 
+                "646993178121818657558499464169423719194694"
+            ], 
+            "output": 417
+        }, 
+        {
+            "input": [
+                "54588931741574889599777556613", 
+                "7639486772156682257142526953189541276723817265478"
+            ], 
+            "output": 337
+        }, 
+        {
+            "input": [
+                "522816766545755899422929252599329", 
+                "9975337465881874794685877777868634"
+            ], 
+            "output": 18
+        }, 
+        {
+            "input": [
+                "667999661234897259934691", 
+                "3955351618494975221962461"
+            ], 
+            "output": 18
+        }, 
+        {
+            "input": [
+                "94583758151811628915414491334391428771", 
+                "75536495986214623453559592246281713122588816245"
+            ], 
+            "output": 155
+        }, 
+        {
+            "input": [
+                "575934295318368762561946622", 
+                "559924627881886845584942758377722692933"
+            ], 
+            "output": 201
+        }, 
+        {
+            "input": [
+                "1237985418947342724462465173197287685896687281", 
+                "39554669866163552289576132549459194439313627949168"
+            ], 
+            "output": 70
+        }, 
+        {
+            "input": [
+                "151859376495", 
+                "8981698937692575145521811365299"
+            ], 
+            "output": 302
+        }, 
+        {
+            "input": [
+                "85742315164992493633611", 
+                "171247823332524378247347869441125836685617"
+            ], 
+            "output": 309
+        }, 
+        {
+            "input": [
+                "3896455728866268348464427263918375889331826519", 
+                "418549937867855127676696581797716359221816661849"
+            ], 
+            "output": 35
+        }, 
+        {
+            "input": [
+                "96234652498", 
+                "684622832435784693987891249528274325478318"
+            ], 
+            "output": 505
+        }, 
+        {
+            "input": [
+                "85924981669681619225536163673438697885852587345", 
+                "357873613273372968752391575799792478439624752827"
+            ], 
+            "output": 17
+        }, 
+        {
+            "input": [
+                "623883347715596655", 
+                "724951246328811474"
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                "181835792229711432575763344615983764", 
+                "239326726125581923264548239963973682253764381382"
+            ], 
+            "output": 201
+        }, 
+        {
+            "input": [
+                "95559162937993251", 
+                "6332654534344998289678626647128558611"
+            ], 
+            "output": 346
+        }, 
+        {
+            "input": [
+                "331374341299565271796512759341", 
+                "63797298287841356295723896599395462151949"
+            ], 
+            "output": 191
+        }, 
+        {
+            "input": [
+                "215338423815471877961392351969289612", 
+                "214986365832589752872748625996114472877339"
+            ], 
+            "output": 103
+        }, 
+        {
+            "input": [
+                "8525813", 
+                "28874922652486172534893"
+            ], 
+            "output": 228
+        }, 
+        {
+            "input": [
+                "528329715476167719", 
+                "639244459373579566371426464"
+            ], 
+            "output": 145
+        }, 
+        {
+            "input": [
+                "619138", 
+                "6938953989836451262817912999958351123311374"
+            ], 
+            "output": 563
+        }, 
+        {
+            "input": [
+                "16633783351", 
+                "281138356166357328894294954995111881"
+            ], 
+            "output": 376
+        }, 
+        {
+            "input": [
+                "169895929217819973", 
+                "37329319889273853242143693567539"
+            ], 
+            "output": 246
+        }, 
+        {
+            "input": [
+                "3984972552279778897923825", 
+                "8956955782316726281956626722"
+            ], 
+            "output": 52
+        }, 
+        {
+            "input": [
+                "64436922279177546133127678927273593965169766517", 
+                "89169734324911247334519453772469166726245346137"
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                "5999761987798179634765915366514", 
+                "937488445822881282745649885188668474986"
+            ], 
+            "output": 136
+        }, 
+        {
+            "input": [
+                "6732512138474569127774147", 
+                "5441597699617688192762636166214747"
+            ], 
+            "output": 145
+        }, 
+        {
+            "input": [
+                "743319685363334784129256367972543544212", 
+                "16938185486498714272393547667827287793212528466"
+            ], 
+            "output": 134
+        }, 
+        {
+            "input": [
+                "7449373748184935673312395378841655572", 
+                "2362179135737747689248354796412415312"
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                "12", 
+                "132"
+            ], 
+            "output": 5
+        }, 
+        {
+            "input": [
+                "6724", 
+                "56254639"
+            ], 
+            "output": 48
+        }, 
+        {
+            "input": [
+                "123", 
+                "1234"
+            ], 
+            "output": 6
+        }, 
+        {
+            "input": [
+                "91", 
+                "9111"
+            ], 
+            "output": 28
+        }, 
+        {
+            "input": [
+                "6238833596655", 
+                "724951246328811474"
+            ], 
+            "output": 79
+        }, 
+        {
+            "input": [
+                "567", 
+                "7898"
+            ], 
+            "output": 16
+        }, 
+        {
+            "input": [
+                "3334444522436", 
+                "5456426543654279992"
+            ], 
+            "output": 78
+        }, 
+        {
+            "input": [
+                "6", 
+                "657"
+            ], 
+            "output": 23
+        }
+    ], 
+    "name": "SkiFriction", 
+    "statement": "<td class=\"statText\">Kate is standing on a pair of skis at the beginning of a straight path.  The path consists of n segments of equal length.  You are given a String <b>pathFriction</b> representing the friction of the path. The i-th character of <b>pathFriction</b> is a digit between '1' and '9', inclusive, representing the friction of the i-th segment of the path. (All indices in this problem are 0-based.)<br />\n<br />\nIn this problem, we will treat Kate's skis as one single ski. The ski consists of m segments of equal length. A ski segment has the same length as a path segment. The friction of the ski is given in the String <b>skiFriction</b>, where the i-th character is a digit between '1' and '9', inclusive, representing the friction of the i-th segment of the ski.<br />\n<br />\nInitially, Kate is standing in such a way that the i-th segment of her ski touches the i-th segment of the path.  She will move forward one segment at a time until the (m-1)-th segment of her ski touches the (n-1)-th segment of the path.  Each time she moves forward one segment, she moves at the speed of the slowest segment of her ski.  The time required for a segment of her ski to move forward by one segment is equal to the friction of that ski segment plus the friction of the path segment it currently touches.<br />\n<br />\nReturn the total time required for Kate to ski to the end of the path.<br /></td>", 
+    "constraints": [
+        "<td class=\"statText\"><b>skiFriction</b> will contain between 1 and 50 characters, inclusive.</td>", 
+        "<td class=\"statText\"><b>skiFriction</b> will contain only digits between '1' and '9', inclusive.</td>", 
+        "<td class=\"statText\"><b>pathFriction</b> will contain between m and 50 characters, inclusive, where m is the number of characters in <b>skiFriction</b>.</td>", 
+        "<td class=\"statText\"><b>pathFriction</b> will contain only digits between '1' and '9', inclusive.</td>"
+    ], 
+    "number": 10294, 
+    "examples": [
+        {
+            "comment": "<td class=\"statText\"><table><tr><td colspan=\"2\" class=\"statText\">At the beginning of Kate's first move, the segment of her ski with friction 4 touches the segment of the path with friction 1 (for a total friction of 5).  The segment of her ski with friction 5 touches the segment of the path with friction 5 (for a total friction of 10).  The biggest total friction is 10, so Kate needs 10 seconds to move forward one segment.  On her second move, the total frictions are 4+5 and 5+1, so the biggest one is 9.  On her last move, the total frictions are 4+1 and 5+9, so the the biggest one is 14.  Kate takes a total of 10+9+14 = 33 seconds to ski to the end of the path.</td></tr></table></td>", 
+            "input": [
+                "45", 
+                "15196"
+            ], 
+            "output": 33
+        }, 
+        {
+            "comment": "", 
+            "input": [
+                "6", 
+                "65"
+            ], 
+            "output": 12
+        }, 
+        {
+            "comment": "", 
+            "input": [
+                "6723", 
+                "562516639"
+            ], 
+            "output": 61
+        }, 
+        {
+            "comment": "<td class=\"statText\"><table><tr><td colspan=\"2\" class=\"statText\">Kate is already standing at the end of the path.</td></tr></table></td>", 
+            "input": [
+                "623883347715596655", 
+                "724951246328811474"
+            ], 
+            "output": 0
+        }
+    ]
+}

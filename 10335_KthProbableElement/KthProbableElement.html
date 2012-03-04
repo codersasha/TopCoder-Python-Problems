@@ -1,0 +1,12 @@
+<html><head><title>10335. KthProbableElement</title></head><body><h1>10335. KthProbableElement</h1><h2>Problem</h2><p><td class="statText"><b>M</b> integers are randomly independently chosen from the interval <b>lowerBound</b>...<b>upperBound</b>, inclusive.  Return the probability that the <b>K</b>-th smallest element of the generated set is equal to <b>N</b>.  <b>K</b>=1 refers to the smallest element, <b>K</b>=2 refers to the second smallest element, and so on.
+</td></p><h2>Definition</h2><h3>Filename</h3><p>KthProbableElement.py</p><h3>Signature</h3><p>double probability(int M, int lowerBound, int upperBound, int N, int K)</p><h2>Constraints</h2><ul><li><td class="statText"><b>M</b> will be between 1 and 100, inclusive.</td></li><li><td class="statText"><b>lowerBound</b> will be between 1 and 1000, inclusive.</td></li><li><td class="statText"><b>upperBound</b> will be between <b>lowerBound</b> and 1000, inclusive.</td></li><li><td class="statText"><b>N</b> will be between <b>lowerBound</b> and <b>upperBound</b>, inclusive.</td></li><li><td class="statText"><b>K</b> will be between 1 and <b>M</b>, inclusive.</td></li></ul><h2>Examples</h2><ul><li>probability(1, 1, 10, 3, 1) = 0<td class="statText"><table><tr><td colspan="2" class="statText">The probability that the only chosen number will be equal to 3 is 0.1.</td></tr></table></td></li><li>probability(3, 1, 2, 2, 2) = 0<td class="statText"><table><tr><td colspan="2" class="statText">There are 8 ways to choose 3 numbers from the interval 1..2:
+<pre>Numbers | 2nd smallest element
+ 1 1 1  |  1
+ 1 1 2  |  1
+ 1 2 1  |  1
+ 1 2 2  |  2
+ 2 1 1  |  1
+ 2 1 2  |  2
+ 2 2 1  |  2
+ 2 2 2  |  2</pre>
+Exactly 4 of the ways have the 2nd smallest element equal to 2.</td></tr></table></td></li><li>probability(3, 1, 3, 2, 2) = 0<td class="statText"><table><tr><td colspan="2" class="statText">There are 27 ways to choose 3 numbers from the interval 1..3, 13 of them have the 2nd smallest element equal to 2.</td></tr></table></td></li><li>probability(10, 1, 10, 1, 10) = 0<td class="statText"><table><tr><td colspan="2" class="statText">Only one of 10<sup>10</sup> ways to choose 10 numbers from the interval 1..10 has 1 as the 10th smallest element.</td></tr></table></td></li><li>probability(4, 61, 65, 62, 3) = 0</li></ul>

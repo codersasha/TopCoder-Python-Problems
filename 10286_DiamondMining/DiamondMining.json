@@ -1,0 +1,95 @@
+{
+    "definition": {
+        "method": "largestDiamond", 
+        "names": {
+            "input": [
+                "R", 
+                "C", 
+                "seed", 
+                "threshold"
+            ]
+        }, 
+        "types": {
+            "output": "int", 
+            "input": [
+                "int", 
+                "int", 
+                "int", 
+                "int"
+            ]
+        }, 
+        "class": "DiamondMining"
+    }, 
+    "tests": [], 
+    "name": "DiamondMining", 
+    "statement": "<td class=\"statText\"><p>\nA diamond mine is a matrix of ones and zeroes with <b>R</b> rows and <b>C</b> columns.\n</p>\n<p>\nA diamond is a pattern of ones forming the boundary of a 45-degree rotated square. The diamonds of size 1, 2, and 3 are shown below.\n</p>\n<pre>\nsize 1:   size 2:      size 3:\n                          1\n             1           1 1\n   1        1 1         1   1\n             1           1 1\n                          1\n</pre>\n<p>\nThe diamond mine in this problem will be pseudo-randomly generated using the following method:\n</p>\n<p>\nYou are given two ints: <b>seed</b> and <b>threshold</b>. Let x<sub>0</sub>=<b>seed</b> \nand for all i>=0 let x<sub>i+1</sub> = (x<sub>i</sub> * 25173 + 13849) modulo 65536.\n</p>\n<p>\nProcess the cells of the matrix in row major order (i.e., first row left to right, second row left to right, etc.).\nEach time you process a cell, look at the next x<sub>i</sub> (starting with x<sub>1</sub> for the upper left corner).\nIf it is greater than or equal to <b>threshold</b>, the current cell will contain a 1, otherwise it will contain a 0.\n</p>\n<p>\nYour method shall compute and return the size of the largest diamond that can be found in the mine.\nIf there are no diamonds, return 0.\n</p></td>", 
+    "constraints": [
+        "<td class=\"statText\"><b>R</b> will be between 1 and 750, inclusive.</td>", 
+        "<td class=\"statText\"><b>C</b> will be between 1 and 750, inclusive.</td>", 
+        "<td class=\"statText\"><b>seed</b> will be between 0 and 65,535, inclusive.</td>", 
+        "<td class=\"statText\"><b>threshold</b> will be between 0 and 65,536, inclusive.</td>"
+    ], 
+    "number": 10286, 
+    "examples": [
+        {
+            "comment": "<td class=\"statText\"><table><tr><td colspan=\"2\" class=\"statText\">The generated pseudo-random sequence is 17332, 39133, 37242, 14235, 656, 12265, 20598, 6471, 51372, 44853, 44210, 45363, 37384, 49857, 49710, 19295, 39588, 22157, 60650, 29643, 24192, 38553, 51430, 63095, and 39324.\n<br />\nThe resulting diamond mine looks as follows:\n<pre>0 1 1 0 0\n0 1 0 1 1\n1 1 1 1 1\n0 1 1 1 1\n1 1 1 1 1\n</pre></td></tr></table></td>", 
+            "input": [
+                5, 
+                5, 
+                47, 
+                20598
+            ], 
+            "output": 3
+        }, 
+        {
+            "comment": "<td class=\"statText\"><table><tr><td colspan=\"2\" class=\"statText\">The pseudo-random sequence is the same, but the threshold is larger. The only change in the resulting diamond mine is that now the cell in row 2, column 2 contains a 0, and therefore there is no diamond of size 3.</td></tr></table></td>", 
+            "input": [
+                5, 
+                5, 
+                47, 
+                20599
+            ], 
+            "output": 2
+        }, 
+        {
+            "comment": "<td class=\"statText\"><table><tr><td colspan=\"2\" class=\"statText\">No diamonds at all.</td></tr></table></td>", 
+            "input": [
+                4, 
+                4, 
+                11, 
+                65500
+            ], 
+            "output": 0
+        }, 
+        {
+            "comment": "<td class=\"statText\"><table><tr><td colspan=\"2\" class=\"statText\"><pre>\n1 1 1 0 0 0\n1 0 1 1 1 1\n1 1 1 1 1 1\n</pre>\nThe only diamond of size 2 is located on the left side of the mine.</td></tr></table></td>", 
+            "input": [
+                3, 
+                6, 
+                47, 
+                15000
+            ], 
+            "output": 2
+        }, 
+        {
+            "comment": "<td class=\"statText\"><table><tr><td colspan=\"2\" class=\"statText\">Regardless of the seed, if the threshold is 0, each cell contains a 1. Therefore the size of the largest diamond is only limited by the dimensions of the mine.</td></tr></table></td>", 
+            "input": [
+                200, 
+                300, 
+                42, 
+                0
+            ], 
+            "output": 100
+        }, 
+        {
+            "comment": "", 
+            "input": [
+                741, 
+                2, 
+                16435, 
+                65535
+            ], 
+            "output": 0
+        }
+    ]
+}

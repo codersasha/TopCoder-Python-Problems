@@ -1,0 +1,1687 @@
+{
+    "definition": {
+        "method": "findMax", 
+        "names": {
+            "input": [
+                "n", 
+                "k"
+            ]
+        }, 
+        "types": {
+            "output": "int", 
+            "input": [
+                "int", 
+                "int"
+            ]
+        }, 
+        "class": "TheSwap"
+    }, 
+    "tests": [
+        {
+            "input": [
+                16375, 
+                1
+            ], 
+            "output": 76315
+        }, 
+        {
+            "input": [
+                432, 
+                1
+            ], 
+            "output": 423
+        }, 
+        {
+            "input": [
+                90, 
+                4
+            ], 
+            "output": -1
+        }, 
+        {
+            "input": [
+                5, 
+                2
+            ], 
+            "output": -1
+        }, 
+        {
+            "input": [
+                91, 
+                3
+            ], 
+            "output": 19
+        }, 
+        {
+            "input": [
+                65, 
+                7
+            ], 
+            "output": 56
+        }, 
+        {
+            "input": [
+                45, 
+                7
+            ], 
+            "output": 54
+        }, 
+        {
+            "input": [
+                757148, 
+                1
+            ], 
+            "output": 857147
+        }, 
+        {
+            "input": [
+                301413, 
+                5
+            ], 
+            "output": 433110
+        }, 
+        {
+            "input": [
+                659598, 
+                6
+            ], 
+            "output": 998655
+        }, 
+        {
+            "input": [
+                391749, 
+                2
+            ], 
+            "output": 997143
+        }, 
+        {
+            "input": [
+                35766, 
+                3
+            ], 
+            "output": 76653
+        }, 
+        {
+            "input": [
+                473038, 
+                7
+            ], 
+            "output": 874330
+        }, 
+        {
+            "input": [
+                3615, 
+                7
+            ], 
+            "output": 6531
+        }, 
+        {
+            "input": [
+                392289, 
+                3
+            ], 
+            "output": 998322
+        }, 
+        {
+            "input": [
+                100757, 
+                1
+            ], 
+            "output": 700751
+        }, 
+        {
+            "input": [
+                401413, 
+                1
+            ], 
+            "output": 441013
+        }, 
+        {
+            "input": [
+                759598, 
+                2
+            ], 
+            "output": 997558
+        }, 
+        {
+            "input": [
+                491749, 
+                2
+            ], 
+            "output": 997144
+        }, 
+        {
+            "input": [
+                135766, 
+                1
+            ], 
+            "output": 735166
+        }, 
+        {
+            "input": [
+                900757, 
+                9
+            ], 
+            "output": 977500
+        }, 
+        {
+            "input": [
+                901413, 
+                9
+            ], 
+            "output": 943110
+        }, 
+        {
+            "input": [
+                959598, 
+                10
+            ], 
+            "output": 999855
+        }, 
+        {
+            "input": [
+                991749, 
+                10
+            ], 
+            "output": 999741
+        }, 
+        {
+            "input": [
+                935766, 
+                9
+            ], 
+            "output": 976653
+        }, 
+        {
+            "input": [
+                999996, 
+                1
+            ], 
+            "output": 999996
+        }, 
+        {
+            "input": [
+                999992, 
+                5
+            ], 
+            "output": 999992
+        }, 
+        {
+            "input": [
+                999990, 
+                6
+            ], 
+            "output": 999990
+        }, 
+        {
+            "input": [
+                999997, 
+                2
+            ], 
+            "output": 999997
+        }, 
+        {
+            "input": [
+                1000000, 
+                3
+            ], 
+            "output": 1000000
+        }, 
+        {
+            "input": [
+                1000000, 
+                1
+            ], 
+            "output": 1000000
+        }, 
+        {
+            "input": [
+                1000000, 
+                10
+            ], 
+            "output": 1000000
+        }, 
+        {
+            "input": [
+                999999, 
+                10
+            ], 
+            "output": 999999
+        }, 
+        {
+            "input": [
+                999999, 
+                1
+            ], 
+            "output": 999999
+        }, 
+        {
+            "input": [
+                2199, 
+                2
+            ], 
+            "output": 9921
+        }, 
+        {
+            "input": [
+                1299, 
+                2
+            ], 
+            "output": 9921
+        }, 
+        {
+            "input": [
+                543219, 
+                10
+            ], 
+            "output": 954312
+        }, 
+        {
+            "input": [
+                543219, 
+                6
+            ], 
+            "output": 954312
+        }, 
+        {
+            "input": [
+                543219, 
+                4
+            ], 
+            "output": 954312
+        }, 
+        {
+            "input": [
+                543219, 
+                5
+            ], 
+            "output": 954321
+        }, 
+        {
+            "input": [
+                70, 
+                8
+            ], 
+            "output": -1
+        }, 
+        {
+            "input": [
+                10, 
+                1
+            ], 
+            "output": -1
+        }, 
+        {
+            "input": [
+                4, 
+                7
+            ], 
+            "output": -1
+        }, 
+        {
+            "input": [
+                33445, 
+                3
+            ], 
+            "output": 54433
+        }, 
+        {
+            "input": [
+                5, 
+                1
+            ], 
+            "output": -1
+        }, 
+        {
+            "input": [
+                436659, 
+                2
+            ], 
+            "output": 966354
+        }, 
+        {
+            "input": [
+                436659, 
+                10
+            ], 
+            "output": 966543
+        }, 
+        {
+            "input": [
+                21996, 
+                2
+            ], 
+            "output": 99216
+        }, 
+        {
+            "input": [
+                579201, 
+                7
+            ], 
+            "output": 975201
+        }, 
+        {
+            "input": [
+                194523, 
+                10
+            ], 
+            "output": 954312
+        }, 
+        {
+            "input": [
+                87993, 
+                2
+            ], 
+            "output": 99873
+        }, 
+        {
+            "input": [
+                331, 
+                2
+            ], 
+            "output": 331
+        }, 
+        {
+            "input": [
+                800, 
+                3
+            ], 
+            "output": 800
+        }, 
+        {
+            "input": [
+                123456, 
+                10
+            ], 
+            "output": 654312
+        }, 
+        {
+            "input": [
+                120000, 
+                10
+            ], 
+            "output": 210000
+        }, 
+        {
+            "input": [
+                30199, 
+                2
+            ], 
+            "output": 99130
+        }, 
+        {
+            "input": [
+                721865, 
+                10
+            ], 
+            "output": 876512
+        }, 
+        {
+            "input": [
+                10033, 
+                2
+            ], 
+            "output": 33010
+        }, 
+        {
+            "input": [
+                6399, 
+                2
+            ], 
+            "output": 9963
+        }, 
+        {
+            "input": [
+                100, 
+                2
+            ], 
+            "output": 100
+        }, 
+        {
+            "input": [
+                436659, 
+                4
+            ], 
+            "output": 966543
+        }, 
+        {
+            "input": [
+                8699, 
+                2
+            ], 
+            "output": 9986
+        }, 
+        {
+            "input": [
+                967983, 
+                7
+            ], 
+            "output": 998763
+        }, 
+        {
+            "input": [
+                101, 
+                2
+            ], 
+            "output": 110
+        }, 
+        {
+            "input": [
+                665, 
+                1
+            ], 
+            "output": 665
+        }, 
+        {
+            "input": [
+                654321, 
+                9
+            ], 
+            "output": 654312
+        }, 
+        {
+            "input": [
+                10022, 
+                2
+            ], 
+            "output": 22010
+        }, 
+        {
+            "input": [
+                1022, 
+                2
+            ], 
+            "output": 2210
+        }, 
+        {
+            "input": [
+                3445, 
+                2
+            ], 
+            "output": 5443
+        }, 
+        {
+            "input": [
+                120, 
+                1
+            ], 
+            "output": 210
+        }, 
+        {
+            "input": [
+                1000, 
+                1
+            ], 
+            "output": 1000
+        }, 
+        {
+            "input": [
+                3221, 
+                1
+            ], 
+            "output": 3221
+        }, 
+        {
+            "input": [
+                900, 
+                10
+            ], 
+            "output": 900
+        }, 
+        {
+            "input": [
+                10000, 
+                1
+            ], 
+            "output": 10000
+        }, 
+        {
+            "input": [
+                765432, 
+                10
+            ], 
+            "output": 765432
+        }, 
+        {
+            "input": [
+                332, 
+                1
+            ], 
+            "output": 332
+        }, 
+        {
+            "input": [
+                992307, 
+                9
+            ], 
+            "output": 997320
+        }, 
+        {
+            "input": [
+                100, 
+                1
+            ], 
+            "output": 100
+        }, 
+        {
+            "input": [
+                986541, 
+                10
+            ], 
+            "output": 986541
+        }, 
+        {
+            "input": [
+                1000000, 
+                2
+            ], 
+            "output": 1000000
+        }, 
+        {
+            "input": [
+                6577, 
+                2
+            ], 
+            "output": 7765
+        }, 
+        {
+            "input": [
+                654332, 
+                9
+            ], 
+            "output": 654332
+        }, 
+        {
+            "input": [
+                122, 
+                2
+            ], 
+            "output": 221
+        }, 
+        {
+            "input": [
+                554321, 
+                1
+            ], 
+            "output": 554321
+        }, 
+        {
+            "input": [
+                1234, 
+                5
+            ], 
+            "output": 4312
+        }, 
+        {
+            "input": [
+                1000000, 
+                8
+            ], 
+            "output": 1000000
+        }, 
+        {
+            "input": [
+                999999, 
+                2
+            ], 
+            "output": 999999
+        }, 
+        {
+            "input": [
+                9000, 
+                3
+            ], 
+            "output": 9000
+        }, 
+        {
+            "input": [
+                1000000, 
+                5
+            ], 
+            "output": 1000000
+        }, 
+        {
+            "input": [
+                100, 
+                10
+            ], 
+            "output": 100
+        }, 
+        {
+            "input": [
+                325664, 
+                2
+            ], 
+            "output": 665324
+        }, 
+        {
+            "input": [
+                5000, 
+                4
+            ], 
+            "output": 5000
+        }, 
+        {
+            "input": [
+                512939, 
+                2
+            ], 
+            "output": 992531
+        }, 
+        {
+            "input": [
+                991, 
+                1
+            ], 
+            "output": 991
+        }, 
+        {
+            "input": [
+                99999, 
+                10
+            ], 
+            "output": 99999
+        }, 
+        {
+            "input": [
+                90000, 
+                4
+            ], 
+            "output": 90000
+        }, 
+        {
+            "input": [
+                109, 
+                3
+            ], 
+            "output": 901
+        }, 
+        {
+            "input": [
+                311222, 
+                10
+            ], 
+            "output": 322211
+        }, 
+        {
+            "input": [
+                436659, 
+                7
+            ], 
+            "output": 966543
+        }, 
+        {
+            "input": [
+                970903, 
+                7
+            ], 
+            "output": 997300
+        }, 
+        {
+            "input": [
+                967845, 
+                10
+            ], 
+            "output": 987654
+        }, 
+        {
+            "input": [
+                849769, 
+                2
+            ], 
+            "output": 998764
+        }, 
+        {
+            "input": [
+                12, 
+                1
+            ], 
+            "output": 21
+        }, 
+        {
+            "input": [
+                3321, 
+                1
+            ], 
+            "output": 3321
+        }, 
+        {
+            "input": [
+                76455, 
+                2
+            ], 
+            "output": 76554
+        }, 
+        {
+            "input": [
+                456789, 
+                10
+            ], 
+            "output": 987645
+        }, 
+        {
+            "input": [
+                951491, 
+                10
+            ], 
+            "output": 995411
+        }, 
+        {
+            "input": [
+                16373, 
+                2
+            ], 
+            "output": 76331
+        }, 
+        {
+            "input": [
+                897654, 
+                9
+            ], 
+            "output": 987654
+        }, 
+        {
+            "input": [
+                10000, 
+                10
+            ], 
+            "output": 10000
+        }, 
+        {
+            "input": [
+                900, 
+                1
+            ], 
+            "output": 900
+        }, 
+        {
+            "input": [
+                1000, 
+                2
+            ], 
+            "output": 1000
+        }, 
+        {
+            "input": [
+                10000, 
+                3
+            ], 
+            "output": 10000
+        }, 
+        {
+            "input": [
+                2000, 
+                2
+            ], 
+            "output": 2000
+        }, 
+        {
+            "input": [
+                53662, 
+                2
+            ], 
+            "output": 66532
+        }, 
+        {
+            "input": [
+                1252, 
+                6
+            ], 
+            "output": 5221
+        }, 
+        {
+            "input": [
+                9443, 
+                1
+            ], 
+            "output": 9443
+        }, 
+        {
+            "input": [
+                626, 
+                1
+            ], 
+            "output": 662
+        }, 
+        {
+            "input": [
+                544321, 
+                1
+            ], 
+            "output": 544321
+        }, 
+        {
+            "input": [
+                1001, 
+                1
+            ], 
+            "output": 1100
+        }, 
+        {
+            "input": [
+                900, 
+                4
+            ], 
+            "output": 900
+        }, 
+        {
+            "input": [
+                6477, 
+                2
+            ], 
+            "output": 7764
+        }, 
+        {
+            "input": [
+                436659, 
+                5
+            ], 
+            "output": 966543
+        }, 
+        {
+            "input": [
+                21772, 
+                2
+            ], 
+            "output": 77212
+        }, 
+        {
+            "input": [
+                440, 
+                1
+            ], 
+            "output": 440
+        }, 
+        {
+            "input": [
+                12, 
+                5
+            ], 
+            "output": 21
+        }, 
+        {
+            "input": [
+                909, 
+                2
+            ], 
+            "output": 990
+        }, 
+        {
+            "input": [
+                10, 
+                2
+            ], 
+            "output": -1
+        }, 
+        {
+            "input": [
+                919, 
+                1
+            ], 
+            "output": 991
+        }, 
+        {
+            "input": [
+                32888, 
+                2
+            ], 
+            "output": 88832
+        }, 
+        {
+            "input": [
+                1000000, 
+                6
+            ], 
+            "output": 1000000
+        }, 
+        {
+            "input": [
+                1000, 
+                7
+            ], 
+            "output": 1000
+        }, 
+        {
+            "input": [
+                11100, 
+                1
+            ], 
+            "output": 11100
+        }, 
+        {
+            "input": [
+                12345, 
+                10
+            ], 
+            "output": 54321
+        }, 
+        {
+            "input": [
+                101, 
+                3
+            ], 
+            "output": 110
+        }, 
+        {
+            "input": [
+                987654, 
+                9
+            ], 
+            "output": 987645
+        }, 
+        {
+            "input": [
+                984566, 
+                2
+            ], 
+            "output": 986654
+        }, 
+        {
+            "input": [
+                101128, 
+                4
+            ], 
+            "output": 821110
+        }, 
+        {
+            "input": [
+                4332, 
+                1
+            ], 
+            "output": 4332
+        }, 
+        {
+            "input": [
+                987654, 
+                10
+            ], 
+            "output": 987654
+        }, 
+        {
+            "input": [
+                9000, 
+                1
+            ], 
+            "output": 9000
+        }, 
+        {
+            "input": [
+                200, 
+                1
+            ], 
+            "output": 200
+        }, 
+        {
+            "input": [
+                500, 
+                1
+            ], 
+            "output": 500
+        }, 
+        {
+            "input": [
+                100, 
+                9
+            ], 
+            "output": 100
+        }, 
+        {
+            "input": [
+                198765, 
+                10
+            ], 
+            "output": 987615
+        }, 
+        {
+            "input": [
+                400, 
+                1
+            ], 
+            "output": 400
+        }, 
+        {
+            "input": [
+                90, 
+                1
+            ], 
+            "output": -1
+        }, 
+        {
+            "input": [
+                2199, 
+                9
+            ], 
+            "output": 9921
+        }, 
+        {
+            "input": [
+                4366, 
+                2
+            ], 
+            "output": 6643
+        }, 
+        {
+            "input": [
+                101, 
+                1
+            ], 
+            "output": 110
+        }, 
+        {
+            "input": [
+                723623, 
+                9
+            ], 
+            "output": 763322
+        }, 
+        {
+            "input": [
+                1000, 
+                10
+            ], 
+            "output": 1000
+        }, 
+        {
+            "input": [
+                91, 
+                2
+            ], 
+            "output": 91
+        }, 
+        {
+            "input": [
+                109, 
+                1
+            ], 
+            "output": 901
+        }, 
+        {
+            "input": [
+                552, 
+                1
+            ], 
+            "output": 552
+        }, 
+        {
+            "input": [
+                439494, 
+                3
+            ], 
+            "output": 994443
+        }, 
+        {
+            "input": [
+                22222, 
+                10
+            ], 
+            "output": 22222
+        }, 
+        {
+            "input": [
+                999990, 
+                10
+            ], 
+            "output": 999990
+        }, 
+        {
+            "input": [
+                9661, 
+                1
+            ], 
+            "output": 9661
+        }, 
+        {
+            "input": [
+                40000, 
+                1
+            ], 
+            "output": 40000
+        }, 
+        {
+            "input": [
+                9910, 
+                1
+            ], 
+            "output": 9910
+        }, 
+        {
+            "input": [
+                9000, 
+                2
+            ], 
+            "output": 9000
+        }, 
+        {
+            "input": [
+                312, 
+                2
+            ], 
+            "output": 312
+        }, 
+        {
+            "input": [
+                661, 
+                2
+            ], 
+            "output": 661
+        }, 
+        {
+            "input": [
+                9810, 
+                1
+            ], 
+            "output": 9801
+        }, 
+        {
+            "input": [
+                123345, 
+                3
+            ], 
+            "output": 543321
+        }, 
+        {
+            "input": [
+                983472, 
+                9
+            ], 
+            "output": 987432
+        }, 
+        {
+            "input": [
+                25, 
+                5
+            ], 
+            "output": 52
+        }, 
+        {
+            "input": [
+                210, 
+                1
+            ], 
+            "output": 201
+        }, 
+        {
+            "input": [
+                901421, 
+                10
+            ], 
+            "output": 942110
+        }, 
+        {
+            "input": [
+                978909, 
+                5
+            ], 
+            "output": 999870
+        }, 
+        {
+            "input": [
+                99, 
+                3
+            ], 
+            "output": 99
+        }, 
+        {
+            "input": [
+                432, 
+                2
+            ], 
+            "output": 432
+        }, 
+        {
+            "input": [
+                234, 
+                2
+            ], 
+            "output": 423
+        }, 
+        {
+            "input": [
+                165432, 
+                10
+            ], 
+            "output": 654312
+        }, 
+        {
+            "input": [
+                30000, 
+                2
+            ], 
+            "output": 30000
+        }, 
+        {
+            "input": [
+                222222, 
+                10
+            ], 
+            "output": 222222
+        }, 
+        {
+            "input": [
+                5552, 
+                1
+            ], 
+            "output": 5552
+        }, 
+        {
+            "input": [
+                983657, 
+                9
+            ], 
+            "output": 987653
+        }, 
+        {
+            "input": [
+                12345, 
+                4
+            ], 
+            "output": 54321
+        }, 
+        {
+            "input": [
+                654321, 
+                7
+            ], 
+            "output": 654312
+        }, 
+        {
+            "input": [
+                985466, 
+                2
+            ], 
+            "output": 986654
+        }, 
+        {
+            "input": [
+                466639, 
+                3
+            ], 
+            "output": 966643
+        }, 
+        {
+            "input": [
+                510, 
+                1
+            ], 
+            "output": 501
+        }, 
+        {
+            "input": [
+                50, 
+                1
+            ], 
+            "output": -1
+        }, 
+        {
+            "input": [
+                3166, 
+                2
+            ], 
+            "output": 6631
+        }, 
+        {
+            "input": [
+                9921, 
+                1
+            ], 
+            "output": 9921
+        }, 
+        {
+            "input": [
+                636, 
+                1
+            ], 
+            "output": 663
+        }, 
+        {
+            "input": [
+                700, 
+                1
+            ], 
+            "output": 700
+        }, 
+        {
+            "input": [
+                4402, 
+                1
+            ], 
+            "output": 4420
+        }, 
+        {
+            "input": [
+                31188, 
+                2
+            ], 
+            "output": 88131
+        }, 
+        {
+            "input": [
+                90000, 
+                2
+            ], 
+            "output": 90000
+        }, 
+        {
+            "input": [
+                6263, 
+                1
+            ], 
+            "output": 6623
+        }, 
+        {
+            "input": [
+                2155, 
+                2
+            ], 
+            "output": 5521
+        }, 
+        {
+            "input": [
+                10000, 
+                2
+            ], 
+            "output": 10000
+        }, 
+        {
+            "input": [
+                22, 
+                6
+            ], 
+            "output": 22
+        }, 
+        {
+            "input": [
+                661, 
+                1
+            ], 
+            "output": 661
+        }, 
+        {
+            "input": [
+                512909, 
+                2
+            ], 
+            "output": 992501
+        }, 
+        {
+            "input": [
+                3456, 
+                7
+            ], 
+            "output": 6534
+        }, 
+        {
+            "input": [
+                8799, 
+                2
+            ], 
+            "output": 9987
+        }, 
+        {
+            "input": [
+                10000, 
+                5
+            ], 
+            "output": 10000
+        }, 
+        {
+            "input": [
+                9818, 
+                2
+            ], 
+            "output": 9881
+        }, 
+        {
+            "input": [
+                23, 
+                3
+            ], 
+            "output": 32
+        }, 
+        {
+            "input": [
+                231268, 
+                9
+            ], 
+            "output": 863221
+        }, 
+        {
+            "input": [
+                849991, 
+                3
+            ], 
+            "output": 999841
+        }, 
+        {
+            "input": [
+                982313, 
+                3
+            ], 
+            "output": 983321
+        }, 
+        {
+            "input": [
+                2055, 
+                2
+            ], 
+            "output": 5520
+        }, 
+        {
+            "input": [
+                436659, 
+                9
+            ], 
+            "output": 966543
+        }, 
+        {
+            "input": [
+                123, 
+                3
+            ], 
+            "output": 321
+        }, 
+        {
+            "input": [
+                1055, 
+                2
+            ], 
+            "output": 5510
+        }, 
+        {
+            "input": [
+                321000, 
+                1
+            ], 
+            "output": 321000
+        }, 
+        {
+            "input": [
+                654321, 
+                6
+            ], 
+            "output": 654321
+        }, 
+        {
+            "input": [
+                354, 
+                6
+            ], 
+            "output": 543
+        }, 
+        {
+            "input": [
+                476890, 
+                4
+            ], 
+            "output": 987604
+        }, 
+        {
+            "input": [
+                123321, 
+                3
+            ], 
+            "output": 332211
+        }, 
+        {
+            "input": [
+                1000000, 
+                4
+            ], 
+            "output": 1000000
+        }, 
+        {
+            "input": [
+                11, 
+                1
+            ], 
+            "output": 11
+        }, 
+        {
+            "input": [
+                100000, 
+                8
+            ], 
+            "output": 100000
+        }, 
+        {
+            "input": [
+                100000, 
+                1
+            ], 
+            "output": 100000
+        }, 
+        {
+            "input": [
+                13, 
+                10
+            ], 
+            "output": 13
+        }, 
+        {
+            "input": [
+                6000, 
+                4
+            ], 
+            "output": 6000
+        }, 
+        {
+            "input": [
+                135790, 
+                10
+            ], 
+            "output": 975310
+        }, 
+        {
+            "input": [
+                89, 
+                3
+            ], 
+            "output": 98
+        }, 
+        {
+            "input": [
+                12, 
+                3
+            ], 
+            "output": 21
+        }, 
+        {
+            "input": [
+                362858, 
+                3
+            ], 
+            "output": 886352
+        }, 
+        {
+            "input": [
+                96632, 
+                1
+            ], 
+            "output": 96632
+        }, 
+        {
+            "input": [
+                987656, 
+                4
+            ], 
+            "output": 987665
+        }, 
+        {
+            "input": [
+                110, 
+                1
+            ], 
+            "output": 110
+        }, 
+        {
+            "input": [
+                481102, 
+                8
+            ], 
+            "output": 842110
+        }, 
+        {
+            "input": [
+                3312, 
+                1
+            ], 
+            "output": 3321
+        }, 
+        {
+            "input": [
+                25536, 
+                3
+            ], 
+            "output": 65532
+        }
+    ], 
+    "name": "TheSwap", 
+    "statement": "<td class=\"statText\"><p>\nThere is nothing more beautiful than just an integer number.\n</p>\n<p>\nYou are given an integer <b>n</b>.  Write down <b>n</b> in decimal notation with no leading zeroes, and let M be the number of written digits.  Perform the following operation exactly <b>k</b> times:\n<ul>\n<li>Choose two different 1-based positions, i and j, such that 1 <= i < j <= M. Swap the digits at positions i and j.  This swap must not cause the resulting number to have a leading zero, i.e., if the digit at position j is zero, then i must be strictly greater than 1.</li>\n</ul>\n</p>\n<p>\nReturn the maximal possible number you can get at the end of this procedure.  If it's not possible to perform <b>k</b> operations, return -1 instead.\n</p>\n</td>", 
+    "constraints": [
+        "<td class=\"statText\"><b>n</b> will be between 1 and 1,000,000, inclusive.</td>", 
+        "<td class=\"statText\"><b>k</b> will be between 1 and 10, inclusive.</td>"
+    ], 
+    "number": 10369, 
+    "examples": [
+        {
+            "comment": "<td class=\"statText\"><table><tr><td colspan=\"2\" class=\"statText\">The optimal way is to swap 1 and 7.</td></tr></table></td>", 
+            "input": [
+                16375, 
+                1
+            ], 
+            "output": 76315
+        }, 
+        {
+            "comment": "<td class=\"statText\"><table><tr><td colspan=\"2\" class=\"statText\">In this case the result is less than the given number.</td></tr></table></td>", 
+            "input": [
+                432, 
+                1
+            ], 
+            "output": 423
+        }, 
+        {
+            "comment": "<td class=\"statText\"><table><tr><td colspan=\"2\" class=\"statText\">We can't make even a single operation because it would cause the resulting number to have a leading zero.</td></tr></table></td>", 
+            "input": [
+                90, 
+                4
+            ], 
+            "output": -1
+        }, 
+        {
+            "comment": "<td class=\"statText\"><table><tr><td colspan=\"2\" class=\"statText\">Here we can't choose two different positions for an operation.</td></tr></table></td>", 
+            "input": [
+                5, 
+                2
+            ], 
+            "output": -1
+        }, 
+        {
+            "comment": "", 
+            "input": [
+                436659, 
+                2
+            ], 
+            "output": 966354
+        }
+    ]
+}

@@ -1,0 +1,68 @@
+{
+    "definition": {
+        "method": "getEditDistance", 
+        "names": {
+            "input": [
+                "initial"
+            ]
+        }, 
+        "types": {
+            "output": "int", 
+            "input": [
+                "String"
+            ]
+        }, 
+        "class": "PalindromeFactory"
+    }, 
+    "tests": [], 
+    "name": "PalindromeFactory", 
+    "statement": "<td class=\"statText\">A palindrome is a string that reads the same forward and backward. Not all strings are palindromes and we are going to fix that.<br />\nIn this problem we consider four edit operations:<br />\n<ol>\n<li>Insert a character at any position of a string (including the beginning and the end)</li>\n<li>Delete a character at any position of a string</li>\n<li>Change a character at any position of a string</li>\n<li>Swap any two different characters (not necessarily  adjacent)</li>\n</ol>\n<br />\nYou can apply the first three operations any number of times, but the last operation can be applied at most once.<br />\n<br />\nYou are given a String <b>initial</b>. Return the minimal number of operations needed to make a palindrome from it.</td>", 
+    "constraints": [
+        "<td class=\"statText\"><b>initial</b> will contain between 1 and 50 lowercase letters ('a'-'z'), inclusive.</td>"
+    ], 
+    "number": 10380, 
+    "examples": [
+        {
+            "comment": "<td class=\"statText\"><table><tr><td colspan=\"2\" class=\"statText\">The string is already a palindrome.</td></tr></table></td>", 
+            "input": [
+                "abba"
+            ], 
+            "output": 0
+        }, 
+        {
+            "comment": "<td class=\"statText\"><table><tr><td colspan=\"2\" class=\"statText\">We can delete the first letter to make a palindrome.</td></tr></table></td>", 
+            "input": [
+                "dabba"
+            ], 
+            "output": 1
+        }, 
+        {
+            "comment": "<td class=\"statText\"><table><tr><td colspan=\"2\" class=\"statText\">Delete\u00a0'v'\u00a0and\u00a0swap\u00a0the\u00a0first\u00a0two\u00a0characters.</td></tr></table></td>", 
+            "input": [
+                "babacvabba"
+            ], 
+            "output": 2
+        }, 
+        {
+            "comment": "<td class=\"statText\"><table><tr><td colspan=\"2\" class=\"statText\">We can change 'c' to 'a' to get a palindrome in one operation.</td></tr></table></td>", 
+            "input": [
+                "abc"
+            ], 
+            "output": 1
+        }, 
+        {
+            "comment": "<td class=\"statText\"><table><tr><td colspan=\"2\" class=\"statText\">Insert 'b' after the first character.</td></tr></table></td>", 
+            "input": [
+                "acxcba"
+            ], 
+            "output": 1
+        }, 
+        {
+            "comment": "<td class=\"statText\"><table><tr><td colspan=\"2\" class=\"statText\">Swap 'd' with 'a' in the middle.</td></tr></table></td>", 
+            "input": [
+                "abcacbd"
+            ], 
+            "output": 1
+        }
+    ]
+}

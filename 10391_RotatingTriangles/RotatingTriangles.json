@@ -1,0 +1,72 @@
+{
+    "definition": {
+        "method": "count", 
+        "names": {
+            "input": [
+                "grid"
+            ]
+        }, 
+        "types": {
+            "output": "int", 
+            "input": [
+                "String[]"
+            ]
+        }, 
+        "class": "RotatingTriangles"
+    }, 
+    "tests": [], 
+    "name": "RotatingTriangles", 
+    "statement": "<td class=\"statText\"><i>NOTE: This problem statement contains images that may not display properly if viewed outside of the applet.</i>\n<br />\n<br />\nYou are given a white rectangular <b>grid</b> made up of square cells.  Some cells contain black squares, and some contain black squares that have been folded in half to form right triangles.  Each of these triangles can be rotated left or right by any multiple of 90 degrees.  They can also be unfolded to become squares.  However, black squares cannot be folded to become triangles.<br />\n<br />\nYour task is to generate proper black triangles in the grid using the aforementioned operations.  A black triangle is considered proper within a grid configuration if no other black shape shares a line segment with it.  However, black shapes may still share one or more points with the triangle.<br />\n<br />\nThe <b>grid</b> will be given as a String[], where the j-th character of the i-th element represents the cell at row i, column j.  '.' represents an empty cell, '#' represents a cell containing a black square, and '/' represents a cell containing a black triangle.  Return the total number of distinct proper black triangles that can be formed in this grid.  Two triangles are considered distinct if they differ in at least one vertex.<br />\n<br />\nFor example, consider the following input grid:<br />\n<br />\n<img src=\"http://www.topcoder.com/contest/problem/RotatingTriangles/input.png\" /><br />\n<br />\nIt is possible to generate 5 distinct proper black triangles:<br />\n<br />\n<pre><img src=\"http://www.topcoder.com/contest/problem/RotatingTriangles/t1.png\" /> <img src=\"http://www.topcoder.com/contest/problem/RotatingTriangles/t2.png\" /></pre>\n<pre><img src=\"http://www.topcoder.com/contest/problem/RotatingTriangles/t3.png\" /> <img src=\"http://www.topcoder.com/contest/problem/RotatingTriangles/t4.png\" /></pre>\n<img src=\"http://www.topcoder.com/contest/problem/RotatingTriangles/t5.png\" /></td>", 
+    "constraints": [
+        "<td class=\"statText\"><b>grid</b> will contain between 1 and 50 elements, inclusive.</td>", 
+        "<td class=\"statText\">Each element of <b>grid</b> will contain between 1 and 50 characters, inclusive.</td>", 
+        "<td class=\"statText\">Each element of <b>grid</b> will contain the same number of characters.</td>", 
+        "<td class=\"statText\">Each character in <b>grid</b> will be '.', '#' or '/'.</td>"
+    ], 
+    "number": 10391, 
+    "examples": [
+        {
+            "comment": "", 
+            "input": [
+                [
+                    "//"
+                ]
+            ], 
+            "output": 10
+        }, 
+        {
+            "comment": "<td class=\"statText\"><table><tr><td colspan=\"2\" class=\"statText\">This is the example from the statement.</td></tr></table></td>", 
+            "input": [
+                [
+                    "#//#./#/#", 
+                    "####.#/##", 
+                    "...../#.#", 
+                    ".....####"
+                ]
+            ], 
+            "output": 5
+        }, 
+        {
+            "comment": "", 
+            "input": [
+                [
+                    ".#.", 
+                    "#/#", 
+                    ".#."
+                ]
+            ], 
+            "output": 0
+        }, 
+        {
+            "comment": "", 
+            "input": [
+                [
+                    ".../...", 
+                    "..///./", 
+                    ".//#/./"
+                ]
+            ], 
+            "output": 46
+        }
+    ]
+}

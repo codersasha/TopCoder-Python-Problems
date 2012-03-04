@@ -1,0 +1,10 @@
+<html><head><title>10376. DifferentStrings</title></head><body><h1>10376. DifferentStrings</h1><h2>Problem</h2><p><td class="statText">If X and Y are two Strings of equal length N, then the difference between them is defined as the number of indices i where the i-th character of X and the i-th character of Y are different.  For example, the difference between the words "ant" and "art" is 1.<br /><br />
+
+You are given two Strings, <b>A</b> and <b>B</b>, where the length of <b>A</b> is less than or equal to the length of <b>B</b>.  You can apply an arbitrary number of operations to <b>A</b>, where each operation is one of the following:
+
+<ul>
+<li>Choose a character c and add it to the beginning of <b>A</b>.</li>
+<li>Choose a character c and add it to the end of <b>A</b>.</li>
+</ul>
+
+Apply the operations in such a way that <b>A</b> and <b>B</b> have the same length and the difference between them is as small as possible.  Return this minimum possible difference.</td></p><h2>Definition</h2><h3>Filename</h3><p>DifferentStrings.py</p><h3>Signature</h3><p>int minimize(String A, String B)</p><h2>Constraints</h2><ul><li><td class="statText"><b>A</b> and <b>B</b> will each contain between 1 and 50 characters, inclusive.</td></li><li><td class="statText"><b>A</b> and <b>B</b> will both contain only lowercase letters ('a'-'z').</td></li><li><td class="statText">The length of <b>A</b> will be less than or equal to the length of <b>B</b>.</td></li></ul><h2>Examples</h2><ul><li>minimize('koder', 'topcoder') = 1<td class="statText"><table><tr><td colspan="2" class="statText">You can prepend "top" to "koder" and you'll get "topkoder". The difference between "topkoder" and "topcoder" is 1.</td></tr></table></td></li><li>minimize('hello', 'xello') = 1<td class="statText"><table><tr><td colspan="2" class="statText"><b>A</b> and <b>B</b> already have the same length so you cannot add any characters to <b>A</b>.</td></tr></table></td></li><li>minimize('abc', 'topabcoder') = 0</li><li>minimize('adaabc', 'aababbc') = 2</li><li>minimize('giorgi', 'igroig') = 6</li></ul>

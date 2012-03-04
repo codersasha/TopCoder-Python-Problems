@@ -1,0 +1,49 @@
+<html><head><title>10401. Automaton</title></head><body><h1>10401. Automaton</h1><h2>Problem</h2><p><td class="statText"><p>
+<i>A finite automaton</i> is a mathematical object that consists of the following components:
+</p>
+<ul>
+<li><i>Alphabet A.</i> This is simply a set of characters.</li>
+<li><i>Set of states S.</i> One of the states is called <i>starting</i> and some of the states are called <i>accepting</i>.</li>
+<li><i>Transition function F.</i> For each state i from S and for each character j from A the result of this function is some state F(i, j) from S.</li>
+</ul>
+<p>
+For each string composed of alphabet characters, an automaton either accepts or rejects it. This is done as follows. First, the automaton is set to its starting state. Then it subsequently reads all the characters from the given string. For each character c it reads, the automaton's state is changed to F(cur, c), where cur is the automaton's state immediately before reading this character. After all characters are read, the automaton checks its final state. If it is accepting, then the string is accepted, otherwise it is rejected.
+</p>
+<p>
+You are given a String[] <b>transitions</b> describing a finite automaton. The number of elements in <b>transitions</b> is the number of states in the automaton.  States are denoted by consecutive uppercase letters starting from 'A'. The first state is the starting state and the last state is the only accepting state. The input alphabet consists of consecutive lowercase letters starting from 'a', and the size of the alphabet is equal to the length of <b>transitions</b>[0].
+</p>
+<p>
+The transition function is defined as follows.  From the i-th state (where state 0 is 'A'), the j-th symbol (where symbol 0 is 'a') will lead to the X-th state, where X = <b>transitions</b>[i][j].
+</p>
+<p>
+First, the automaton is given an input string of length <b>stringLength</b> consisting entirely of 'a' symbols.  The automaton either accepts or rejects the string.  Then, the following happens <b>modifications</b> times.  One of the symbols in the input string is modified, the automaton is reset to its starting state, and it is then given the new input string, which it either accepts or rejects.
+</p>
+<p>
+To generate the sequence of modifications you should generate arrays x and c using the following code:
+</p>
+<pre>
+int initElements = length(<b>x0</b>);
+int letters = length(<b>transitions</b>[0]);
+
+for (int i = 0; i < initElements; i++) {
+	x[i] = <b>x0</b>[i] mod <b>stringLength</b>;
+	c[i] = <b>c0</b>[i] mod letters;
+}
+
+for (int i = initElements; i < modifications; i++) {
+	x[i] = 0;
+	c[i] = 0;	
+	for (int j = i - initElements; j < i; j++) {
+		x[i] = (x[i] + <b>xa</b>[j - i + initElements] * x[j]) mod <b>stringLength</b>;
+		c[i] = (c[i] + <b>ca</b>[j - i + initElements] * c[j]) mod letters;
+	}
+}
+</pre>
+<p>
+The i-th element of the array x is the position where the i-th modification occurs. The symbol at position x[i] of the string should be modified to the c[i]-th symbol of the alphabet (where symbol 0 is 'a'). All indices are 0-based.
+</p>
+<p>
+Return the number of times the automaton accepts a string.
+</p></td></p><h2>Definition</h2><h3>Filename</h3><p>Automaton.py</p><h3>Signature</h3><p>int numberOfMatchings(String[] transitions, int stringLength, int[] x0, int[] xa, int[] c0, int[] ca, int modifications)</p><h2>Constraints</h2><ul><li><td class="statText"><b>transitions</b> will contain between 1 and 10 elements, inclusive.</td></li><li><td class="statText">Each element of <b>transitions</b> will contain between 1 and 10 charactes, inclusive.</td></li><li><td class="statText">All elements of <b>transitions</b> will contain the same number of characters.</td></li><li><td class="statText"><b>transitions</b> will only contain uppercase letters between 'A' and 'A' + n - 1, inclusive, where n is the number of elements in <b>transitions</b>.</td></li><li><td class="statText"><b>stringLength</b> and <b>modifications</b> will each be between 1 and 125000, inclusive.</td></li><li><td class="statText"><b>ca</b> will contain between 1 and 50 elements, inclusive.</td></li><li><td class="statText"><b>ca</b> will contain at most <b>modifications</b> elements.</td></li><li><td class="statText"><b>ca</b>, <b>xa</b>, <b>x0</b> and <b>c0</b> will each contain the same number of elements.</td></li><li><td class="statText">Each element of <b>ca</b>, <b>xa</b>, <b>x0</b> and <b>c0</b> will be between 0 and 10000, inclusive.</td></li></ul><h2>Examples</h2><ul><li>numberOfMatchings(['AA'], 1, [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [1, 0, 1, 0, 1], [0, 0, 0, 0, 0], 5) = 6<td class="statText"><table><tr><td colspan="2" class="statText">An automaton with only one state accepts all strings, so the answer is 6.
+</td></tr></table></td></li><li>numberOfMatchings(['BA', 'AB'], 1, [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [1, 0, 1, 0, 1], [0, 0, 0, 0, 0], 5) = 3<td class="statText"><table><tr><td colspan="2" class="statText">This automaton has 2 states.  It changes state on the symbol 'a' and does nothing on the symbol 'b', so it only accepts strings containing an odd number of 'a's.  Of the 6 given strings ("a", "b", "a", "b", "a" and "b"), it accepts only 3.
+</td></tr></table></td></li><li>numberOfMatchings(['BC', 'CA', 'AB'], 5, [0, 1, 2, 3, 4], [0, 0, 0, 0, 0], [1, 1, 1, 1, 1], [0, 0, 0, 0, 0], 5) = 2<td class="statText"><table><tr><td colspan="2" class="statText">The automaton is consecutively given 6 strings: "aaaaa", "baaaa", "bbaaa", "bbbaa", "bbbba" and "bbbbb". Two of them ("aaaaa" and "bbbaa") are accepted.</td></tr></table></td></li><li>numberOfMatchings(['ABB', 'BAA'], 2, [0, 1], [1, 1], [0, 1], [1, 1], 10) = 5<td class="statText"><table><tr><td colspan="2" class="statText">The automaton is consecutively given 11 strings: "aa", "aa", "ab", "ab", "cb", "ca", "cc", "cc", "cb", "ca", "ba". Five of them ("ab", "ab", "ca", "ca", "ba") are accepted.</td></tr></table></td></li><li>numberOfMatchings(['BA', 'AB'], 2, [0, 3, 5], [10, 9, 7], [1, 2, 4], [5, 1, 3], 2400) = 1601</li></ul>

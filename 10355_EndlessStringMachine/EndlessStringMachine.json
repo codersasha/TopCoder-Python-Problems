@@ -1,0 +1,1436 @@
+{
+    "definition": {
+        "method": "getFragment", 
+        "names": {
+            "input": [
+                "input", 
+                "program", 
+                "s", 
+                "min", 
+                "max"
+            ]
+        }, 
+        "types": {
+            "output": "String", 
+            "input": [
+                "String", 
+                "String", 
+                "int", 
+                "int", 
+                "int"
+            ]
+        }, 
+        "class": "EndlessStringMachine"
+    }, 
+    "tests": [
+        {
+            "input": [
+                "a", 
+                "$meric$", 
+                6, 
+                1, 
+                35
+            ], 
+            "output": "americamericamericamericamericameri"
+        }, 
+        {
+            "input": [
+                "top", 
+                "$coder", 
+                1, 
+                1, 
+                20
+            ], 
+            "output": "topcoder------------"
+        }, 
+        {
+            "input": [
+                "abc", 
+                "$x$y$z$", 
+                10, 
+                30, 
+                50
+            ], 
+            "output": "bcyabcxabcyabczabczab"
+        }, 
+        {
+            "input": [
+                "a", 
+                "$t", 
+                1000000000, 
+                999999950, 
+                1000000049
+            ], 
+            "output": "tttttttttttttttttttttttttttttttttttttttttttttttttttt------------------------------------------------"
+        }, 
+        {
+            "input": [
+                "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 
+                "$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$", 
+                1000000000, 
+                1000000000, 
+                1000000099
+            ], 
+            "output": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        }, 
+        {
+            "input": [
+                "abcdebcdfghjklmpqstuwyzabcdefghijklmnopqrstuvwxvex", 
+                "$$$$$$$$$$$$$$$$$$$$$$orian$$$$$$$$$$$$$$$$$$$$$$$", 
+                1000000000, 
+                1098, 
+                1105
+            ], 
+            "output": "vexorian"
+        }, 
+        {
+            "input": [
+                "a", 
+                "$ts", 
+                1000000000, 
+                999999950, 
+                1000000049
+            ], 
+            "output": "tstststststststststststststststststststststststststststststststststststststststststststststststststs"
+        }, 
+        {
+            "input": [
+                "xy", 
+                "$a$bb", 
+                12, 
+                5000, 
+                5099
+            ], 
+            "output": "xybbbbaxyaxybbaxyaxybbbbbbbbaxyaxybbaxyaxybbbbaxyaxybbaxyaxybbbbbbaxyaxybbaxyaxybbbbaxyaxybbaxyaxybb"
+        }, 
+        {
+            "input": [
+                "quatbdjyhctrucozwpfegpwittbfdvyjaujscqu", 
+                "$tgvm$jib$$e$gssbs$l$", 
+                512924604, 
+                641137502, 
+                641137567
+            ], 
+            "output": "squatbdjyhctrucozwpfegpwittbfdvyjaujscqutgvmquatbdjyhctrucozwpfegp"
+        }, 
+        {
+            "input": [
+                "buybqcrpkuxnvlzpzpdpchccglngla", 
+                "$uyizbddfaqzfew", 
+                2004, 
+                8001, 
+                8100
+            ], 
+            "output": "bddfaqzfewuyizbddfaqzfewuyizbddfaqzfewuyizbddfaqzfewuyizbddfaqzfewuyizbddfaqzfewuyizbddfaqzfewuyizbd"
+        }, 
+        {
+            "input": [
+                "vowjhhwptisbderuqvcfb", 
+                "$ehwnhh", 
+                314726292, 
+                274893044, 
+                274893048
+            ], 
+            "output": "hhehw"
+        }, 
+        {
+            "input": [
+                "fnuyqqsojyqdwspuvtruvgdisxtpvdxqoeoexxizhs", 
+                "$ppppvtzfpelwcbvxccjltphahzzd$va$a$opp$hloqracma$q", 
+                27462792, 
+                448214932, 
+                448214977
+            ], 
+            "output": "xxizhsvafnuyqqsojyqdwspuvtruvgdisxtpvdxqoeoexx"
+        }, 
+        {
+            "input": [
+                "vmganhwpaavspdohdzwjxgwhfzhjamforjtnnijnvsapmztoli", 
+                "$n$k$p$k$$r$$jv$", 
+                118393530, 
+                57852605, 
+                57852614
+            ], 
+            "output": "olikvmganh"
+        }, 
+        {
+            "input": [
+                "vefinillcjmzehcpajrwpaphcdjfrxkpjbpzwslkmkkj", 
+                "$xwlzxojt$jn$$d$$$qxy$$$x$g$$qan$fb$$l$zpn$a$k", 
+                43206163, 
+                335735911, 
+                335736000
+            ], 
+            "output": "nillcjmzehcpajrwpaphcdjfrxkpjbpzwslkmkkjxvefinillcjmzehcpajrwpaphcdjfrxkpjbpzwslkmkkjgvefi"
+        }, 
+        {
+            "input": [
+                "tttttttt", 
+                "$abcdz$", 
+                19574969, 
+                97874803, 
+                97874902
+            ], 
+            "output": "zttttttttabcdzttttttttabcdzttttttttabcdzttttttttabcdzttttttttabcdzttttttttabcdzttttttttabcdztttttttt"
+        }, 
+        {
+            "input": [
+                "afkxpjghkyzeullbqwgfbxkij", 
+                "$$w$$wi$$", 
+                111144377, 
+                331790229, 
+                331790230
+            ], 
+            "output": "ki"
+        }, 
+        {
+            "input": [
+                "nodgglpzunlovgejcdqjfcajeanmqerjfp", 
+                "$daumue$qlmwfmhf$gn$eyuaf$du$ng", 
+                337997483, 
+                249729207, 
+                249729299
+            ], 
+            "output": "fpdunodgglpzunlovgejcdqjfcajeanmqerjfpngdunodgglpzunlovgejcdqjfcajeanmqerjfpdaumuenodgglpzunl"
+        }, 
+        {
+            "input": [
+                "jxozvgpgljwqclzvcrzrkpjyrcfyclepnllafq", 
+                "$k$zohhk$d$$$", 
+                346277697, 
+                685046137, 
+                685046192
+            ], 
+            "output": "rcfyclepnllafqzohhkjxozvgpgljwqclzvcrzrkpjyrcfyclepnllaf"
+        }, 
+        {
+            "input": [
+                "akuftfna", 
+                "$r$", 
+                642399694, 
+                929437285, 
+                929437315
+            ], 
+            "output": "ftfnarakuftfnarakuftfnarakuftfn"
+        }, 
+        {
+            "input": [
+                "datpjtbtmmpfuvt", 
+                "$wrqe$b$fhg", 
+                396576202, 
+                636820434, 
+                636820477
+            ], 
+            "output": "jtbtmmpfuvtbdatpjtbtmmpfuvtfhgwrqedatpjtbtmm"
+        }, 
+        {
+            "input": [
+                "dbsjccehwqizinmgibrfnd", 
+                "$lxl$", 
+                45164931, 
+                955474361, 
+                955474363
+            ], 
+            "output": "izi"
+        }, 
+        {
+            "input": [
+                "zrfbtydjjfsorzqtaouaz", 
+                "$u$rbhs$qiqevbc$cmykn$$bztjypmyzna$", 
+                72101555, 
+                362397496, 
+                362397518
+            ], 
+            "output": "ztjypmyznazrfbtydjjfsor"
+        }, 
+        {
+            "input": [
+                "su", 
+                "$zblreofztn", 
+                146936686, 
+                233335696, 
+                233335764
+            ], 
+            "output": "reofztnzblreofztnzblreofztnzblreofztnzblreofztnzblreofztnzblreofztnzb"
+        }, 
+        {
+            "input": [
+                "cwhqmgvaflqaclrebudlpmidohqitcxfbnbuuciwiqyhlqxt", 
+                "$s$", 
+                41126053, 
+                41126003, 
+                41126102
+            ], 
+            "output": "flqaclrebudlpmidohqitcxfbnbuuciwiqyhlqxtscwhqmgvaflqaclrebudlpmidohqitcxfbnbuuciwiqyhlqxtscwhqmgvafl"
+        }, 
+        {
+            "input": [
+                "chgbgkrxcf", 
+                "$rla$", 
+                405910860, 
+                2001407, 
+                2001423
+            ], 
+            "output": "gkrxcfrlachgbgkrx"
+        }, 
+        {
+            "input": [
+                "vvtjubqazxnhrcfqgrrdwamv", 
+                "$$$$h$$p$p$v$$u$s$$a$v$$$iur$$ng$$a$$", 
+                428070, 
+                248906175, 
+                248906225
+            ], 
+            "output": "vvvtjubqazxnhrcfqgrrdwamviurvvtjubqazxnhrcfqgrrdwam"
+        }, 
+        {
+            "input": [
+                "fbjptbie", 
+                "$eq$icxvien$pvyubpnw$vlqyayx", 
+                146766540, 
+                762257159, 
+                762257244
+            ], 
+            "output": "bieicxvienfbjptbiepvyubpnwfbjptbievlqyayxicxvienfbjptbieeqfbjptbieicxvienfbjptbiepvyub"
+        }, 
+        {
+            "input": [
+                "hbhpzyfryucj", 
+                "$yh$bzx$oqgnsktukrsm$du$$fehpvjpru", 
+                198877039, 
+                119754170, 
+                119754224
+            ], 
+            "output": "rufehpvjpruyhhbhpzyfryucjyhhbhpzyfryucjbzxhbhpzyfryucjo"
+        }, 
+        {
+            "input": [
+                "xxx", 
+                "$f$bu", 
+                371601051, 
+                263745671, 
+                263745748
+            ], 
+            "output": "xxxbufxxxfxxxbubufxxxfxxxbufxxxfxxxbububufxxxfxxxbufxxxfxxxbubufxxxfxxxbufxxxf"
+        }, 
+        {
+            "input": [
+                "grzdkowjqqnlfhowkhnvuzfueapsswabtjyszqlybgltbzoq", 
+                "$ivf$$sagvobx$$", 
+                487719354, 
+                479561207, 
+                479561266
+            ], 
+            "output": "psswabtjyszqlybgltbzoqgrzdkowjqqnlfhowkhnvuzfueapsswabtjyszq"
+        }, 
+        {
+            "input": [
+                "xrvmwrnrenrivu", 
+                "$dlcqqgmijmzmrgediew$zatltmtjhgvbbkyjudzwl$ksonbdl", 
+                91275704, 
+                9875138, 
+                9875140
+            ], 
+            "output": "mwr"
+        }, 
+        {
+            "input": [
+                "wuipegnnsrtpyolkcssqo", 
+                "$wfgmuixftszccfrhhegol$vfmjqng", 
+                208282240, 
+                573052301, 
+                573052345
+            ], 
+            "output": "szccfrhhegolwuipegnnsrtpyolkcssqovfmjqngvfmjq"
+        }, 
+        {
+            "input": [
+                "xjjnxfqdipbspcktothqsffcyba", 
+                "$xnnb$$$$h$yhd$$$e$jg$wq$", 
+                619124835, 
+                131133929, 
+                131133981
+            ], 
+            "output": "pcktothqsffcybaxjjnxfqdipbspcktothqsffcybaexjjnxfqdip"
+        }, 
+        {
+            "input": [
+                "dbvteesrkqaezgdvylvhwpetgdciqcooqqgfocyrrq", 
+                "$$k$tk$$", 
+                133160218, 
+                268157829, 
+                268157832
+            ], 
+            "output": "focy"
+        }, 
+        {
+            "input": [
+                "mmztcngqmilksrlmb", 
+                "$$$xspb$$pl$aq$", 
+                469263779, 
+                740829873, 
+                740829920
+            ], 
+            "output": "lksrlmbxspbmmztcngqmilksrlmbmmztcngqmilksrlmbplm"
+        }, 
+        {
+            "input": [
+                "ngzilwgymcvpxncriivdmwauewrctisoaoenecrufunoax", 
+                "$x", 
+                661136806, 
+                694866288, 
+                694866300
+            ], 
+            "output": "-------------"
+        }, 
+        {
+            "input": [
+                "yvamcbp", 
+                "$hhsd$sebz$ra$g", 
+                12453513, 
+                61763882, 
+                61763938
+            ], 
+            "output": "bpgrayvamcbphhsdyvamcbpsebzyvamcbprayvamcbpggsebzyvamcbph"
+        }, 
+        {
+            "input": [
+                "sjunsvjyymmskzahnya", 
+                "$t$szaqj$$$sw$soejztay$as$zq$$t$$", 
+                442252855, 
+                956421180, 
+                956421212
+            ], 
+            "output": "junsvjyymmskzahnyaassjunsvjyymmsk"
+        }, 
+        {
+            "input": [
+                "zqjkvozlxshqkirclrsmrsasuuxnca", 
+                "$exef$su$$$f$fi$xhi$l$g$wo$$etpmsvmg$g$q$ica$$j$a", 
+                554493711, 
+                722444847, 
+                722444929
+            ], 
+            "output": "ozlxshqkirclrsmrsasuuxncagzqjkvozlxshqkirclrsmrsasuuxncaqzqjkvozlxshqkirclrsmrsasuu"
+        }, 
+        {
+            "input": [
+                "shnmbyithnihiviixabnaighsqjetbevkfsokoyb", 
+                "$$$wd$tijx$$y$jmxr$p$k$$$z$ejve$$$$hal$q$", 
+                2719802, 
+                57883827, 
+                57883868
+            ], 
+            "output": "etbevkfsokoybshnmbyithnihiviixabnaighsqjet"
+        }, 
+        {
+            "input": [
+                "fuqwgcejlyp", 
+                "$npxowgku$zaztzbnabdtyrb$$poo$jo", 
+                274205225, 
+                264235996, 
+                264236019
+            ], 
+            "output": "ypfuqwgcejlyppoofuqwgcej"
+        }, 
+        {
+            "input": [
+                "hxkofhytkeofrwzlfofqpumhxqxxnksdjlrytsvtdzgukibuo", 
+                "$toqxndkyunspzjtss$$m$$e$z$dje$$d$gqnl", 
+                440810858, 
+                161464725, 
+                161464777
+            ], 
+            "output": "hxkofhytkeofrwzlfofqpumhxqxxnksdjlrytsvtdzgukibuotoqx"
+        }, 
+        {
+            "input": [
+                "wfzrfkrvqmrbzrqruneutqstpmzhzpdnhysbyatmwbrqm", 
+                "$j$$x$$x$$$b$o$my$$$r$m$$i$a$p$xs$$$$$$$rl$uip$$", 
+                7183025, 
+                260224684, 
+                260224749
+            ], 
+            "output": "hysbyatmwbrqmxswfzrfkrvqmrbzrqruneutqstpmzhzpdnhysbyatmwbrqmwfzrfk"
+        }, 
+        {
+            "input": [
+                "vgursdktbqqzv", 
+                "$vadf$lmuztn", 
+                36282481, 
+                718267821, 
+                718267833
+            ], 
+            "output": "tbqqzvlmuztnl"
+        }, 
+        {
+            "input": [
+                "vrzkaspmcyhbtqjildwzwbaytfopsywtoibfigykn", 
+                "$kdbcrhf$izngo$$eckrpncrrmhedolpptvgzogyfnloc", 
+                114077885, 
+                723761144, 
+                723761216
+            ], 
+            "output": "fnloceckrpncrrmhedolpptvgzogyfnlocvrzkaspmcyhbtqjildwzwbaytfopsywtoibfigy"
+        }, 
+        {
+            "input": [
+                "effqqwztzctbsmepaskjhxvuipzizlihgqdntbpklphkbiyaf", 
+                "$ebbomiytm$$", 
+                59218958, 
+                92711613, 
+                92711671
+            ], 
+            "output": "biyafebbomiytmeffqqwztzctbsmepaskjhxvuipzizlihgqdntbpklphkb"
+        }, 
+        {
+            "input": [
+                "iwvyjhxvshqlfugjzflcbrobuddedarbwmv", 
+                "$wv$c$kxh$jqchrnjvrucscrfjinn$mm", 
+                52687514, 
+                937775560, 
+                937775597
+            ], 
+            "output": "wvyjhxvshqlfugjzflcbrobuddedarbwmvjqch"
+        }, 
+        {
+            "input": [
+                "rnykcmkxt", 
+                "$e", 
+                41812842, 
+                608754893, 
+                608754912
+            ], 
+            "output": "--------------------"
+        }, 
+        {
+            "input": [
+                "nqxtdkxvkmyvmuakzagsytx", 
+                "$rxk$$", 
+                164910141, 
+                84608858, 
+                84608915
+            ], 
+            "output": "xvkmyvmuakzagsytxnqxtdkxvkmyvmuakzagsytxrxknqxtdkxvkmyvmua"
+        }, 
+        {
+            "input": [
+                "gupxmes", 
+                "$xljmjzzivnkxit$lomnovihvvxktnb$ngxslkjenn", 
+                19874308, 
+                853172305, 
+                853172397
+            ], 
+            "output": "gupxmesxljmjzzivnkxitgupxmeslomnovihvvxktnbgupxmesngxslkjennngxslkjennxljmjzzivnkxitgupxmesxl"
+        }, 
+        {
+            "input": [
+                "emqkcmv", 
+                "$nn$cr$gzw$yz$xm$$q$ez$k$dg$dx$$q$$$$e$", 
+                124161353, 
+                119544195, 
+                119544206
+            ], 
+            "output": "kcmvemqkcmve"
+        }, 
+        {
+            "input": [
+                "casxxzauvfrprieaahhfgrlelcquvuwvpauwkjpnqjkjxxur", 
+                "$hexftknthylysopc$pjcl$cou$a$f$$", 
+                324056108, 
+                246440087, 
+                246440182
+            ], 
+            "output": "uvuwvpauwkjpnqjkjxxurhexftknthylysopccasxxzauvfrprieaahhfgrlelcquvuwvpauwkjpnqjkjxxurpjclcasxxza"
+        }, 
+        {
+            "input": [
+                "slhlquofwzambx", 
+                "$oji$szpygshseusj$fflsf", 
+                232286688, 
+                612688400, 
+                612688465
+            ], 
+            "output": "zpygshseusjslhlquofwzambxojislhlquofwzambxszpygshseusjslhlquofwzam"
+        }, 
+        {
+            "input": [
+                "upcdixidgdurakrtegpbqhcvykxcwznwxou", 
+                "$qw$j$$anu$zj$$g$", 
+                118685515, 
+                412291131, 
+                412291162
+            ], 
+            "output": "oujupcdixidgdurakrtegpbqhcvykxcw"
+        }, 
+        {
+            "input": [
+                "sjvzfvorqmjkvzgivqbpos", 
+                "$vql$w$z$iadywcxk", 
+                7004727, 
+                291435907, 
+                291435985
+            ], 
+            "output": "fvorqmjkvzgivqbposvqlsjvzfvorqmjkvzgivqbposwsjvzfvorqmjkvzgivqbposzsjvzfvorqmjk"
+        }, 
+        {
+            "input": [
+                "gsyyjgouypvfngitvcaru", 
+                "$y$jzwc", 
+                100683210, 
+                689394246, 
+                689394332
+            ], 
+            "output": "fngitvcarujzwcygsyyjgouypvfngitvcaruygsyyjgouypvfngitvcarujzwcjzwcjzwcjzwcjzwcygsyyjgou"
+        }, 
+        {
+            "input": [
+                "iegeaemeolzmblxuqokxifwdpavkeimlcbjljhildaz", 
+                "$h$h$j$i$meh$$$d$twx$$$qllgs$$$j$vl$mf$", 
+                114237498, 
+                49455933, 
+                49455978
+            ], 
+            "output": "ljhildaziiegeaemeolzmblxuqokxifwdpavkeimlcbjlj"
+        }, 
+        {
+            "input": [
+                "ngjkbgaaisnsvvzfrdgqkalwodncgsansyvhydsfgfpzv", 
+                "$uyivkv$iqsmblocajhumn$d$y$n$$", 
+                26907483, 
+                508534562, 
+                508534642
+            ], 
+            "output": "vvzfrdgqkalwodncgsansyvhydsfgfpzvuyivkvngjkbgaaisnsvvzfrdgqkalwodncgsansyvhydsfgf"
+        }, 
+        {
+            "input": [
+                "hzeg", 
+                "$iasqzkcwc$bf$qzbveqzyzfmzrugm$rv$rjoaqvlpe", 
+                6, 
+                56010, 
+                56100
+            ], 
+            "output": "vlpeiasqzkcwchzegiasqzkcwchzegbfhzegqzbveqzyzfmzrugmhzegrvhzegrjoaqvlpeiasqzkcwchzegiasqzkc"
+        }, 
+        {
+            "input": [
+                "sxqcagqjcvcvjkifuhzxdrupvchpkhkmabcfbhpg", 
+                "$acscb$b$xwd$pw$roxzjbqlacjy$smaij$cydxaicq", 
+                4, 
+                950460532, 
+                950460545
+            ], 
+            "output": "--------------"
+        }, 
+        {
+            "input": [
+                "irdekefwjuwskdgsz", 
+                "$xrklt$r$syexslhz", 
+                10, 
+                818937081, 
+                818937113
+            ], 
+            "output": "---------------------------------"
+        }, 
+        {
+            "input": [
+                "behsmmliepwqpzjdyfkndlcjpemzbdrjsweiifqa", 
+                "$$$azle$ncilqfm$nvbxledf$$ll", 
+                7, 
+                443049036, 
+                443049130
+            ], 
+            "output": "-----------------------------------------------------------------------------------------------"
+        }, 
+        {
+            "input": [
+                "cbjurminvctpdvvt", 
+                "$$u$w$s$$r$$q$ere$$", 
+                8, 
+                856181291, 
+                856181311
+            ], 
+            "output": "minvctpdvvtqcbjurminv"
+        }, 
+        {
+            "input": [
+                "tcdxiakvobuavkuuhehdwdvbltjtpod", 
+                "$epxvtfn$jo", 
+                1, 
+                239873201, 
+                239873278
+            ], 
+            "output": "------------------------------------------------------------------------------"
+        }, 
+        {
+            "input": [
+                "xmljlgvgzzilvvkowiohnwogkjdrv", 
+                "$vafx", 
+                3, 
+                933247544, 
+                933247602
+            ], 
+            "output": "-----------------------------------------------------------"
+        }, 
+        {
+            "input": [
+                "sasg", 
+                "$y$", 
+                2, 
+                595795817, 
+                595795818
+            ], 
+            "output": "--"
+        }, 
+        {
+            "input": [
+                "uegiwewijmrtccqfgthioysyoswvgcsivvrcsmvmr", 
+                "$jbbcjfexzj$gqlnyfqbxk", 
+                6, 
+                278248690, 
+                278248699
+            ], 
+            "output": "----------"
+        }, 
+        {
+            "input": [
+                "cnwu", 
+                "$op$$$ajriv$$$w$$$tix$m$q$$chunp$$z$h$$irs$$$", 
+                9, 
+                668203837, 
+                668203853
+            ], 
+            "output": "cnwuhcnwucnwuirsc"
+        }, 
+        {
+            "input": [
+                "x", 
+                "$y$yy$yyy", 
+                1000, 
+                1, 
+                100
+            ], 
+            "output": "xyxyyxyyyyxyxyyxyyyyyxyxyyxyyyyyyyxyxyyxyyyyxyxyyxyyyyyxyxyyxyyyyyyyyxyxyyxyyyyxyxyyxyyyyyxyxyyxyyyy"
+        }, 
+        {
+            "input": [
+                "x", 
+                "$y$yy$yyy", 
+                1000, 
+                1000000000, 
+                1000000099
+            ], 
+            "output": "yyxyyyyyyyyxyxyyxyyyyxyxyyxyyyyyxyxyyxyyyyyyyyyyyyyyxyxyyxyyyyxyxyyxyyyyyxyxyyxyyyyyyyxyxyyxyyyyxyxy"
+        }, 
+        {
+            "input": [
+                "x", 
+                "$$r", 
+                2, 
+                1, 
+                20
+            ], 
+            "output": "xxrxxrr-------------"
+        }, 
+        {
+            "input": [
+                "x", 
+                "$$r", 
+                1000000000, 
+                999999950, 
+                1000000049
+            ], 
+            "output": "rrrxxrxxrrxxrxxrrrxxrxxrrxxrxxrrrrrrrrxxrxxrrxxrxxrrrxxrxxrrxxrxxrrrrxxrxxrrxxrxxrrrxxrxxrrxxrxxrrrr"
+        }, 
+        {
+            "input": [
+                "a", 
+                "$b$$c$$$d$$$$e$$$$$f", 
+                1000000000, 
+                1, 
+                100
+            ], 
+            "output": "abaacaaadaaaaeaaaaafbabaacaaadaaaaeaaaaafabaacaaadaaaaeaaaaafcabaacaaadaaaaeaaaaafabaacaaadaaaaeaaaa"
+        }, 
+        {
+            "input": [
+                "x", 
+                "$$s", 
+                28, 
+                536870815, 
+                536870914
+            ], 
+            "output": "sxxsxxsssssxxsxxssxxsxxsssxxsxxssxxsxxssssxxsxxssxxsxxsssxxsxxssxxsxxssssssssssssssssssssssssssss---"
+        }, 
+        {
+            "input": [
+                "abc", 
+                "$x$y$z$", 
+                999999999, 
+                999999900, 
+                999999999
+            ], 
+            "output": "zabcyabcxabcyabczabczabcxabcyabczabczabcxabcyabczabcxabcxabcyabczabcyabcxabcyabczabczabcxabcyabczabc"
+        }, 
+        {
+            "input": [
+                "asdf", 
+                "$dagg$", 
+                1000000000, 
+                1000000000, 
+                1000000099
+            ], 
+            "output": "gasdfdaggasdfdaggasdfdaggasdfdaggasdfdaggasdfdaggasdfdaggasdfdaggasdfdaggasdfdaggasdfdaggasdfdaggasd"
+        }, 
+        {
+            "input": [
+                "xy", 
+                "$a$bb", 
+                999999999, 
+                500000, 
+                500099
+            ], 
+            "output": "xybbbbaxyaxybbaxyaxybbbbbbaxyaxybbaxyaxybbbbaxyaxybbaxyaxybbbbbbbbaxyaxybbaxyaxybbbbaxyaxybbaxyaxybb"
+        }, 
+        {
+            "input": [
+                "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 
+                "$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$", 
+                1000000000, 
+                1000000000, 
+                1000000099
+            ], 
+            "output": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        }, 
+        {
+            "input": [
+                "a", 
+                "$a", 
+                1000000000, 
+                1000000000, 
+                1000000099
+            ], 
+            "output": "aa--------------------------------------------------------------------------------------------------"
+        }, 
+        {
+            "input": [
+                "x", 
+                "$a", 
+                1000000000, 
+                1000000000, 
+                1000000099
+            ], 
+            "output": "aa--------------------------------------------------------------------------------------------------"
+        }, 
+        {
+            "input": [
+                "xy", 
+                "$a$bb", 
+                10000000, 
+                5000, 
+                5099
+            ], 
+            "output": "xybbbbaxyaxybbaxyaxybbbbbbbbaxyaxybbaxyaxybbbbaxyaxybbaxyaxybbbbbbaxyaxybbaxyaxybbbbaxyaxybbaxyaxybb"
+        }, 
+        {
+            "input": [
+                "a", 
+                "$a", 
+                1000000000, 
+                1000000000, 
+                1000000001
+            ], 
+            "output": "aa"
+        }, 
+        {
+            "input": [
+                "abcdefghijklmnopabcdefghijklmnop", 
+                "$ffd$s$f$ss$$$ds$d$a$a$d$d$ad$a$$$", 
+                1000000000, 
+                500000000, 
+                500000099
+            ], 
+            "output": "dabcdefghijklmnopabcdefghijklmnopaabcdefghijklmnopabcdefghijklmnopabcdefghijklmnopabcdefghijklmnopab"
+        }, 
+        {
+            "input": [
+                "a", 
+                "$meric$", 
+                100000000, 
+                1, 
+                35
+            ], 
+            "output": "americamericamericamericamericameri"
+        }, 
+        {
+            "input": [
+                "aasmdndytawetasndasdbjhazmhfbyfzeyurgfyzgfjygjyzeg", 
+                "$mbas$dbashbamwyegdasmb$$llll$llsdkajdasjh$wqtrqwt", 
+                1000000000, 
+                777877777, 
+                777877875
+            ], 
+            "output": "gfyzgfjygjyzegmbasaasmdndytawetasndasdbjhazmhfbyfzeyurgfyzgfjygjyzegdbashbamwyegdasmbaasmdndytaweta"
+        }, 
+        {
+            "input": [
+                "acjdkfdjksgfmnfdsfhdsfdhsfdhs", 
+                "$$$$$$$$f$$", 
+                100000000, 
+                1, 
+                100
+            ], 
+            "output": "acjdkfdjksgfmnfdsfhdsfdhsfdhsacjdkfdjksgfmnfdsfhdsfdhsfdhsacjdkfdjksgfmnfdsfhdsfdhsfdhsacjdkfdjksgfm"
+        }, 
+        {
+            "input": [
+                "xy", 
+                "$a$bb", 
+                1000000000, 
+                500000000, 
+                500000099
+            ], 
+            "output": "bbaxyaxybbbbbbaxyaxybbaxyaxybbbbaxyaxybbaxyaxybbbbbbbbaxyaxybbaxyaxybbbbaxyaxybbaxyaxybbbbbbaxyaxybb"
+        }, 
+        {
+            "input": [
+                "x", 
+                "$w", 
+                1000000000, 
+                999999900, 
+                999999999
+            ], 
+            "output": "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww"
+        }, 
+        {
+            "input": [
+                "a", 
+                "$xyzxyz", 
+                10000000, 
+                999999999, 
+                1000000000
+            ], 
+            "output": "--"
+        }, 
+        {
+            "input": [
+                "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstwxyz", 
+                "$abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstw$", 
+                1000000000, 
+                500000000, 
+                500000099
+            ], 
+            "output": "qrstuvwxyzabcdefghijklmnopqrstwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstwabcdefghijklmnopqrs"
+        }, 
+        {
+            "input": [
+                "aaa", 
+                "$a", 
+                1000000000, 
+                1000000000, 
+                1000000099
+            ], 
+            "output": "aaaa------------------------------------------------------------------------------------------------"
+        }, 
+        {
+            "input": [
+                "aaa", 
+                "$$$$$$$$$aaaaaaaa", 
+                1000000000, 
+                1, 
+                100
+            ], 
+            "output": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        }, 
+        {
+            "input": [
+                "abcdefghghsdfsdadfghfdasdjhdsthiouiuiuydfsdfsdfsd", 
+                "$a$bb$ab$abcd$sdsf", 
+                1000000000, 
+                5000, 
+                5099
+            ], 
+            "output": "sdfsdaabcdefghghsdfsdadfghfdasdjhdsthiouiuiuydfsdfsdfsdbbabcdefghghsdfsdadfghfdasdjhdsthiouiuiuydfsd"
+        }, 
+        {
+            "input": [
+                "ana", 
+                "$u$x$lad$e", 
+                23446, 
+                45, 
+                67
+            ], 
+            "output": "axanaladanaeladanauanax"
+        }, 
+        {
+            "input": [
+                "n", 
+                "$ac", 
+                888888888, 
+                777777777, 
+                777777789
+            ], 
+            "output": "cacacacacacac"
+        }, 
+        {
+            "input": [
+                "a", 
+                "$ab", 
+                1000000000, 
+                100000000, 
+                100000098
+            ], 
+            "output": "abababababababababababababababababababababababababababababababababababababababababababababababababa"
+        }, 
+        {
+            "input": [
+                "xy", 
+                "$a$bb", 
+                9999999, 
+                5000, 
+                5099
+            ], 
+            "output": "xybbbbaxyaxybbaxyaxybbbbbbbbaxyaxybbaxyaxybbbbaxyaxybbaxyaxybbbbbbaxyaxybbaxyaxybbbbaxyaxybbaxyaxybb"
+        }, 
+        {
+            "input": [
+                "x", 
+                "$a", 
+                1000000000, 
+                999999990, 
+                999999999
+            ], 
+            "output": "aaaaaaaaaa"
+        }, 
+        {
+            "input": [
+                "a", 
+                "$bcd", 
+                1000000000, 
+                1000000000, 
+                1000000099
+            ], 
+            "output": "dbcdbcdbcdbcdbcdbcdbcdbcdbcdbcdbcdbcdbcdbcdbcdbcdbcdbcdbcdbcdbcdbcdbcdbcdbcdbcdbcdbcdbcdbcdbcdbcdbcd"
+        }, 
+        {
+            "input": [
+                "top", 
+                "$coder", 
+                1000000000, 
+                1000000000, 
+                1000000099
+            ], 
+            "output": "odercodercodercodercodercodercodercodercodercodercodercodercodercodercodercodercodercodercodercoderc"
+        }, 
+        {
+            "input": [
+                "a", 
+                "$qwe", 
+                333333363, 
+                1000000000, 
+                1000000099
+            ], 
+            "output": "eqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqwe---------"
+        }, 
+        {
+            "input": [
+                "a", 
+                "$alexfetisov", 
+                1000000000, 
+                1000000000, 
+                1000000099
+            ], 
+            "output": "sovalexfetisovalexfetisovalexfetisovalexfetisovalexfetisovalexfetisovalexfetisovalexfetisovalexfetis"
+        }, 
+        {
+            "input": [
+                "a", 
+                "$a", 
+                1000000000, 
+                999999900, 
+                999999999
+            ], 
+            "output": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        }, 
+        {
+            "input": [
+                "aaaaasassaaaasssssaaaaavvv", 
+                "$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$", 
+                99999999, 
+                50, 
+                100
+            ], 
+            "output": "vvvaaaaasassaaaasssssaaaaavvvaaaaasassaaaasssssaaaa"
+        }, 
+        {
+            "input": [
+                "kurerckurkurerckurkurerckurkurerckurkurerckurkur", 
+                "$s$s$s$ss$s$s$$s$s$s$ss$s$s$$s$s$s$ss$s$s$ssssss", 
+                99898458, 
+                90000000, 
+                90000099
+            ], 
+            "output": "kurkurerckurkurerckurkurskurerckurkurerckurkurerckurkurerckurkurerckurkurkurerckurkurerckurkurerckur"
+        }, 
+        {
+            "input": [
+                "asdf", 
+                "$a", 
+                1000000000, 
+                999999900, 
+                999999999
+            ], 
+            "output": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        }, 
+        {
+            "input": [
+                "xy", 
+                "$a", 
+                10000000, 
+                1, 
+                99
+            ], 
+            "output": "xyaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        }, 
+        {
+            "input": [
+                "a", 
+                "$a", 
+                1000000000, 
+                1, 
+                1
+            ], 
+            "output": "a"
+        }, 
+        {
+            "input": [
+                "lkdsajfksdjfalsdkfj", 
+                "$$$$$$$$", 
+                1000000000, 
+                999999900, 
+                999999999
+            ], 
+            "output": "alsdkfjlkdsajfksdjfalsdkfjlkdsajfksdjfalsdkfjlkdsajfksdjfalsdkfjlkdsajfksdjfalsdkfjlkdsajfksdjfalsdk"
+        }, 
+        {
+            "input": [
+                "ljaslkdukashdfijhalksjdfhlkaushldfkadskjfhalskjgdl", 
+                "$$ja$sklj$bk$a$djf$lbn$kl$jdfl$jash$l$kjha$dlkfjh$", 
+                987238978, 
+                897893749, 
+                897893848
+            ], 
+            "output": "fkadskjfhalskjgdldjfljaslkdukashdfijhalksjdfhlkaushldfkadskjfhalskjgdllbnljaslkdukashdfijhalksjdfhlk"
+        }, 
+        {
+            "input": [
+                "aghjksldghjksadgb", 
+                "$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$", 
+                500000000, 
+                400000000, 
+                400000080
+            ], 
+            "output": "sadgbaghjksldghjksadgbaghjksldghjksadgbaghjksldghjksadgbaghjksldghjksadgbaghjksld"
+        }, 
+        {
+            "input": [
+                "abcdef", 
+                "$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$", 
+                1000000000, 
+                1000000000, 
+                1000000099
+            ], 
+            "output": "defabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefa"
+        }, 
+        {
+            "input": [
+                "top", 
+                "$coder", 
+                2, 
+                1, 
+                20
+            ], 
+            "output": "topcodercoder-------"
+        }, 
+        {
+            "input": [
+                "a", 
+                "$a", 
+                1000000000, 
+                999000000, 
+                999000099
+            ], 
+            "output": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        }, 
+        {
+            "input": [
+                "a", 
+                "$b", 
+                1000000000, 
+                900000001, 
+                900000100
+            ], 
+            "output": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+        }, 
+        {
+            "input": [
+                "b", 
+                "$c", 
+                10000000, 
+                9999999, 
+                10000098
+            ], 
+            "output": "ccc-------------------------------------------------------------------------------------------------"
+        }, 
+        {
+            "input": [
+                "b", 
+                "$a", 
+                200, 
+                1, 
+                100
+            ], 
+            "output": "baaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        }, 
+        {
+            "input": [
+                "a", 
+                "$b", 
+                1000000000, 
+                1000000000, 
+                1000000000
+            ], 
+            "output": "b"
+        }, 
+        {
+            "input": [
+                "abcffddgg", 
+                "$bcdefghijklmnopqrstuvwxyz", 
+                39999999, 
+                999999910, 
+                1000000000
+            ], 
+            "output": "bcdefghijklmnopqrstuvwxyzbcdefghijklmnopqrstuvwxyzbcdefghijklmnopqrstuvwxyz----------------"
+        }, 
+        {
+            "input": [
+                "asdasdasdas", 
+                "$$a$$$$$$$$$$$$$$$$$$$$$$$$$$$b", 
+                1000000000, 
+                1, 
+                100
+            ], 
+            "output": "asdasdasdasasdasdasdasaasdasdasdasasdasdasdasasdasdasdasasdasdasdasasdasdasdasasdasdasdasasdasdasdas"
+        }, 
+        {
+            "input": [
+                "x", 
+                "$a", 
+                1000000000, 
+                999999900, 
+                999999999
+            ], 
+            "output": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        }, 
+        {
+            "input": [
+                "a", 
+                "$meric$", 
+                1000000000, 
+                250000000, 
+                250000050
+            ], 
+            "output": "ricamericamericamericamericamericamericamericameric"
+        }, 
+        {
+            "input": [
+                "aa", 
+                "$bb", 
+                1000000000, 
+                999999910, 
+                1000000000
+            ], 
+            "output": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+        }, 
+        {
+            "input": [
+                "a", 
+                "$b", 
+                1000000000, 
+                999999900, 
+                999999999
+            ], 
+            "output": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+        }, 
+        {
+            "input": [
+                "a", 
+                "$b", 
+                1000000000, 
+                990080000, 
+                990080099
+            ], 
+            "output": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+        }, 
+        {
+            "input": [
+                "a", 
+                "$b", 
+                1000000000, 
+                1, 
+                100
+            ], 
+            "output": "abbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+        }, 
+        {
+            "input": [
+                "a", 
+                "$$", 
+                7, 
+                512, 
+                543
+            ], 
+            "output": "--------------------------------"
+        }, 
+        {
+            "input": [
+                "top", 
+                "$$coder", 
+                1000000000, 
+                1000000000, 
+                1000000020
+            ], 
+            "output": "pcodertoptopcodercode"
+        }, 
+        {
+            "input": [
+                "a", 
+                "$$", 
+                1000000000, 
+                1, 
+                1
+            ], 
+            "output": "a"
+        }, 
+        {
+            "input": [
+                "c", 
+                "$a", 
+                1000000000, 
+                999999901, 
+                1000000000
+            ], 
+            "output": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        }, 
+        {
+            "input": [
+                "aasdfasdfdfhfdghjdtrrlkdsajfksdjfalsdkfj", 
+                "$$$$$$$$$$$$$$$$$$$$$$$$$$", 
+                1000000000, 
+                1, 
+                100
+            ], 
+            "output": "aasdfasdfdfhfdghjdtrrlkdsajfksdjfalsdkfjaasdfasdfdfhfdghjdtrrlkdsajfksdjfalsdkfjaasdfasdfdfhfdghjdtr"
+        }, 
+        {
+            "input": [
+                "a", 
+                "$b", 
+                1000000000, 
+                1000000000, 
+                1000000099
+            ], 
+            "output": "bb--------------------------------------------------------------------------------------------------"
+        }, 
+        {
+            "input": [
+                "aaaaaa", 
+                "$bbbbb", 
+                1000000000, 
+                1000000000, 
+                1000000099
+            ], 
+            "output": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+        }, 
+        {
+            "input": [
+                "xy", 
+                "$abbc", 
+                1000000000, 
+                1, 
+                100
+            ], 
+            "output": "xyabbcabbcabbcabbcabbcabbcabbcabbcabbcabbcabbcabbcabbcabbcabbcabbcabbcabbcabbcabbcabbcabbcabbcabbcab"
+        }, 
+        {
+            "input": [
+                "ad", 
+                "$b$", 
+                80, 
+                1000, 
+                1090
+            ], 
+            "output": "adbadbadbadbadbadbadbadbadbadbadbadbadbadbadbadbadbadbadbadbadbadbadbadbadbadbadbadbadbadba"
+        }
+    ], 
+    "name": "EndlessStringMachine", 
+    "statement": "<td class=\"statText\">A certain theoretical machine works by executing a program exactly <b>s</b> times.  The first time it is executed, the program is given the String <b>input</b> as its input.  For each subsequent execution, the program uses the output of the previous execution as its input.<br /><br />\n\nThe initial <b>input</b> is a string containing only lowercase letters.  A <b>program</b> is defined as a string containing lowercase letters and '$' characters.  The output of a program is simply this string with all instances of the '$' character replaced by the program's input.  For example, if the <b>input</b> is \"a\" and the <b>program</b> is \"$meric$\", the first output would be \"america\".  The second time it is executed, it will use \"america\" as its input, and its output will be \"americamericamerica\".  This process is repeated <b>s</b> times, so for a large <b>s</b>, the output would be: \"americamericamericamericamericamericamericamericamericamericamericamericamericamericamerica...\".<br /><br />\n\nGiven the <b>input</b>, the <b>program</b> and <b>s</b>, return the substring of the machine's final output starting at index <b>min</b> and ending at index <b>max</b>, where <b>min</b> and <b>max</b> are inclusive 1-based indices.  If an index between <b>min</b> and <b>max</b> exceeds the bounds of the final output, put a placeholder '-' character in its place.\n\n</td>", 
+    "constraints": [
+        "<td class=\"statText\"><b>input</b> will contain between 1 and 50 characters, inclusive.</td>", 
+        "<td class=\"statText\"><b>program</b> will contain between 2 and 50 characters, inclusive.</td>", 
+        "<td class=\"statText\">Each character in <b>input</b> will be a lowercase letter ('a'-'z').</td>", 
+        "<td class=\"statText\">Each character in <b>program</b> will be '$' or a lowercase letter ('a'-'z').</td>", 
+        "<td class=\"statText\">The first character in <b>program</b> will be '$'.</td>", 
+        "<td class=\"statText\"><b>s</b> will be between 1 and 1000000000, inclusive.</td>", 
+        "<td class=\"statText\"><b>min</b> will be between 1 and 1000000000, inclusive.</td>", 
+        "<td class=\"statText\"><b>max</b> will be between <b>min</b> and <b>min</b>+99, inclusive.</td>"
+    ], 
+    "number": 10355, 
+    "examples": [
+        {
+            "comment": "<td class=\"statText\"><table><tr><td colspan=\"2\" class=\"statText\">This is the example from the statement.</td></tr></table></td>", 
+            "input": [
+                "a", 
+                "$meric$", 
+                6, 
+                1, 
+                35
+            ], 
+            "output": "americamericamericamericamericameri"
+        }, 
+        {
+            "comment": "<td class=\"statText\"><table><tr><td colspan=\"2\" class=\"statText\">One execution is not enough to cover all 20 requested characters. Use the placeholder - character for the indexes that exceed the final output's size.</td></tr></table></td>", 
+            "input": [
+                "top", 
+                "$coder", 
+                1, 
+                1, 
+                20
+            ], 
+            "output": "topcoder------------"
+        }, 
+        {
+            "comment": "", 
+            "input": [
+                "abc", 
+                "$x$y$z$", 
+                10, 
+                30, 
+                50
+            ], 
+            "output": "bcyabcxabcyabczabczab"
+        }, 
+        {
+            "comment": "", 
+            "input": [
+                "xy", 
+                "$a$bb", 
+                12, 
+                5000, 
+                5099
+            ], 
+            "output": "xybbbbaxyaxybbaxyaxybbbbbbbbaxyaxybbaxyaxybbbbaxyaxybbaxyaxybbbbbbaxyaxybbaxyaxybbbbaxyaxybbaxyaxybb"
+        }
+    ]
+}

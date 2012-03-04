@@ -1,0 +1,18 @@
+<html><head><title>10377. ErdosNumber</title></head><body><h1>10377. ErdosNumber</h1><h2>Problem</h2><p><td class="statText">The Erdos number is a way of describing the "collaborative distance" between a scientist and Paul Erdos
+by authorship of scientific publications.
+<br />
+Paul Erdos is the only person who has an Erdos number equal to zero.
+To be assigned a finite Erdos number, a scientist must publish a paper in co-authorship
+with a scientist with a finite Erdos number. The Erdos number of a scientist is the lowest
+Erdos number of his coauthors + 1.
+The order of publications and numbers assignment doesn't matter, i.e., after each publication 
+the list of assigned numbers is updated accordingly.
+<br />
+You will be given a String[] <b>publications</b>, each element of which describes 
+the list of authors of a single publication and is formatted as "AUTHOR_1 AUTHOR_2 ... AUTHOR_N"
+(quotes for clarity only). Paul Erdos will be given as "ERDOS".
+<br />
+Return the list of Erdos numbers which will be assigned to the authors of the listed publications.
+Each element of your return should be formatted as "AUTHOR NUMBER" if AUTHOR can be assigned
+a finite Erdos number, and just "AUTHOR" otherwise. 
+The authors in your return must be ordered lexicographically.</td></p><h2>Definition</h2><h3>Filename</h3><p>ErdosNumber.py</p><h3>Signature</h3><p>String[] calculateNumbers(String[] publications)</p><h2>Constraints</h2><ul><li><td class="statText"><b>publications</b> will contain between 1 and 50 elements, inclusive.</td></li><li><td class="statText">Each element of <b>publications</b> will contain between 1 and 50 characters, inclusive.</td></li><li><td class="statText">An author is a string of between 1 and 50 uppercase letters ('A'-'Z'), inclusive.</td></li><li><td class="statText">Each element of <b>publications</b> will be a list of authors, separated by single spaces.</td></li><li><td class="statText">Each element of <b>publications</b> will not have any trailing spaces.</td></li><li><td class="statText">The authors in each element of <b>publication</b> will be distinct.</td></li><li><td class="statText">There will be at most 100 distinct authors in all publications.</td></li><li><td class="statText">Paul Erdos will be given as "ERDOS", and at least one publication will list him as one of the authors.</td></li></ul><h2>Examples</h2><ul><li>calculateNumbers(['ERDOS']) = ['ERDOS 0']<td class="statText"><table><tr><td colspan="2" class="statText">The only author is Erdos himself, with Erdos number equal to 0.</td></tr></table></td></li><li>calculateNumbers(['KLEITMAN LANDER', 'ERDOS KLEITMAN']) = ['ERDOS 0', 'KLEITMAN 1', 'LANDER 2']<td class="statText"><table><tr><td colspan="2" class="statText"><b>publications</b>[1] defines Kleitman's number as 1, and <b>publications</b>[0] defines Lander's number as 2.</td></tr></table></td></li><li>calculateNumbers(['ERDOS A', 'A B', 'B AA C']) = ['A 1', 'AA 3', 'B 2', 'C 3', 'ERDOS 0']</li><li>calculateNumbers(['ERDOS B', 'A B C', 'B A E', 'D F']) = ['A 2', 'B 1', 'C 2', 'D', 'E 2', 'ERDOS 0', 'F']<td class="statText"><table><tr><td colspan="2" class="statText">E has coauthors B (Erdos number 1) and A (Erdos number 2), so his Erdos number is defined through the coauthor with the lowest Erdos number. D and F aren't connected to Erdos and thus have no numbers assigned.</td></tr></table></td></li><li>calculateNumbers(['ERDOS KLEITMAN', 'CHUNG GODDARD KLEITMAN WAYNE', 'WAYNE GODDARD KLEITMAN', 'ALON KLEITMAN', 'DEAN GODDARD WAYNE KLEITMAN STURTEVANT']) = ['ALON 2', 'CHUNG 2', 'DEAN 2', 'ERDOS 0', 'GODDARD 2', 'KLEITMAN 1', 'STURTEVANT 2', 'WAYNE 2']</li></ul>

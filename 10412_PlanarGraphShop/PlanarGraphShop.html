@@ -1,0 +1,15 @@
+<html><head><title>10412. PlanarGraphShop</title></head><body><h1>10412. PlanarGraphShop</h1><h2>Problem</h2><p><td class="statText"><p>
+In the Kocurkovo village there is a shop that sells simple planar graphs. (See Notes for a definition.)
+</p>
+<p>
+The cost of any graph with X vertices and Y edges is (X^3 + Y^2) gold coins.
+</p>
+<p>
+Monika has <b>N</b> gold coins, and she wants to spend all of them on simple planar graphs.
+</p>
+<p>
+Write a method that gets the value <b>N</b> and computes the minimum number of simple planar graphs Monika has to buy in order to spend exactly <b>N</b> gold coins.
+She is allowed to buy multiple graphs of the same type.
+</p></td></p><h2>Definition</h2><h3>Filename</h3><p>PlanarGraphShop.py</p><h3>Signature</h3><p>int bestCount(int N)</p><h2>Constraints</h2><ul><li><td class="statText"><b>N</b> will be between 1 and 50,000, inclusive.</td></li></ul><h2>Examples</h2><ul><li>bestCount(36) = 1<td class="statText"><table><tr><td colspan="2" class="statText">For 36 gold coins she can buy a triangle: a simple planar graph with 3 vertices and 3 edges.</td></tr></table></td></li><li>bestCount(7) = 7<td class="statText"><table><tr><td colspan="2" class="statText">The only simple planar graph that costs 7 gold coins or less is the graph that consists of a single vertex (and no edges). This graph costs 1^3 + 0^2 = 1, so Monika has to buy 7 of them.</td></tr></table></td></li><li>bestCount(72) = 2<td class="statText"><table><tr><td colspan="2" class="statText">She can buy 2 triangles for 36 gold coins each. No simple planar graph costs exactly 72 gold coins, hence the optimal answer in this case is 2.</td></tr></table></td></li><li>bestCount(46) = 3<td class="statText"><table><tr><td colspan="2" class="statText"><p>All the graphs Monika can afford are shown in the following picture:</p>
+<p><img src="http://www.topcoder.com/contest/problem/PlanarGraphShop/graphs.gif" /></p>
+<p>One optimal solution is to buy graphs worth 1 + 9 + 36 gold coins.</p></td></tr></table></td></li></ul>

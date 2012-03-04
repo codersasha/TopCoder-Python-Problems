@@ -1,0 +1,90 @@
+{
+    "definition": {
+        "method": "minimalTime", 
+        "names": {
+            "input": [
+                "cityMap"
+            ]
+        }, 
+        "types": {
+            "output": "int", 
+            "input": [
+                "String[]"
+            ]
+        }, 
+        "class": "TheLongWay"
+    }, 
+    "tests": [], 
+    "name": "TheLongWay", 
+    "statement": "<td class=\"statText\"><p>\nWhen all the presents are packed, Santa Claus has to deliver them to the children.  He will start by delivering to the children in his own city. \n  The city is a rectangular grid containing square blocks of equal size.  You are given a String[] <b>cityMap</b>, where the j-th character of the i-th element is the block at row i, column j.  There are four types of city blocks:\n</p>\n<ul>\n<li>'S' - The block where Santa's home is located.  This is his starting position.</li>\n<li>'C' - A block where Santa must deliver presents to children. There are exactly 2 such blocks in the city.</li>\n<li>'#' - A closed block occupied by a factory.  Santa cannot enter these blocks.</li>\n<li>'.' - An open block with no children.</li>\n</ul>\n<p>\nIt takes Santa one minute to move one city block north, south, east or west.  He can only move in those four directions, and he cannot leave the city.  When he enters a block containing children, he will deliver presents to all of them.  This happens instantaneously and does not take any additional time.  Since he doesn't want anybody to see him, he must change his direction after each minute and can make no stops.  This means he can never make two consecutive moves in the same direction.  Return the minimal number of minutes required for Santa to deliver presents to all the children in the city.  If it is impossible, return -1 instead.\n</p>\n</td>", 
+    "constraints": [
+        "<td class=\"statText\"><b>cityMap</b> will contain between 1 and 50 elements, inclusive.</td>", 
+        "<td class=\"statText\">Each element of <b>cityMap</b> will contain between 1 and 50 characters, inclusive.</td>", 
+        "<td class=\"statText\">All elements of <b>cityMap</b> will contain the same number of characters.</td>", 
+        "<td class=\"statText\">There will be exactly 2 characters 'C' in <b>cityMap</b>.</td>", 
+        "<td class=\"statText\">Each element of <b>cityMap</b> will contain only 'S', 'C', '#' and '.' characters.</td>", 
+        "<td class=\"statText\">There will be exactly one character 'S' in <b>cityMap</b>.</td>"
+    ], 
+    "number": 10280, 
+    "examples": [
+        {
+            "comment": "<td class=\"statText\"><table><tr><td colspan=\"2\" class=\"statText\">Santa cannot take a straight path because he must change his direction after every move.\n</td></tr></table></td>", 
+            "input": [
+                [
+                    "SCC", 
+                    "..."
+                ]
+            ], 
+            "output": 4
+        }, 
+        {
+            "comment": "<td class=\"statText\"><table><tr><td colspan=\"2\" class=\"statText\">Mission is impossible.</td></tr></table></td>", 
+            "input": [
+                [
+                    "C.C.S"
+                ]
+            ], 
+            "output": -1
+        }, 
+        {
+            "comment": "<td class=\"statText\"><table><tr><td colspan=\"2\" class=\"statText\">One of the optimal ways is: west, east, north, south, east.</td></tr></table></td>", 
+            "input": [
+                [
+                    "#.#", 
+                    "CSC", 
+                    "#.#"
+                ]
+            ], 
+            "output": 5
+        }, 
+        {
+            "comment": "", 
+            "input": [
+                [
+                    "#.#....", 
+                    "##...#.", 
+                    "C#...#.", 
+                    ".....#.", 
+                    "..#....", 
+                    "..#S.#.", 
+                    ".##..#.", 
+                    "###..##", 
+                    "..C.#.#", 
+                    "###.#.."
+                ]
+            ], 
+            "output": 24
+        }, 
+        {
+            "comment": "", 
+            "input": [
+                [
+                    "#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#C", 
+                    ".................S..................", 
+                    "C#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#"
+                ]
+            ], 
+            "output": 155
+        }
+    ]
+}

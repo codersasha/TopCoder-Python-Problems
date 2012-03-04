@@ -1,0 +1,30 @@
+<html><head><title>10324. DigitalCounter</title></head><body><h1>10324. DigitalCounter</h1><h2>Problem</h2><p><td class="statText"><p>
+We have an N-digit digital counter that increments every second. The counter is cyclic: after it reaches 10^N - 1, it starts once again from zero.
+</p>
+<p>
+Each digit is shown using the standard seven-segment display. The exact forms of all the digits are shown in the ASCII art below.
+</p>
+<pre>
+    +   +---+   +---+   +   +   +---+
+    |       |       |   |   |   |
+    +   +---+   +---+   +---+   +---+
+    |   |           |       |       |
+    +   +---+   +---+       +   +---+
+
++---+   +---+   +---+   +---+   +---+
+|           |   |   |   |   |   |   |
++---+       +   +---+   +---+   +   +
+|   |       |   |   |       |   |   |
++---+       +   +---+       +   +---+
+</pre>
+<p>
+Each line segment that connects two adjacent '+' symbols represents a single lit segment.  For example, '1' contains two lit segments, and '9' contains five lit segments.
+</p>
+<p>
+You are given a String <b>current</b> that contains the current number shown by the counter. 
+<br />
+The number of characters in <b>current</b> is equal to the number N of displayed digits.
+</p>
+<p>
+Return the smallest positive number of seconds after which the counter will have the same total number of lit segments as it does now.
+</p></td></p><h2>Definition</h2><h3>Filename</h3><p>DigitalCounter.py</p><h3>Signature</h3><p>long nextEvent(String current)</p><h2>Constraints</h2><ul><li><td class="statText"><b>current</b> will contain between 1 and 15 characters, inclusive.</td></li><li><td class="statText">Each character in <b>current</b> will be a digit ('0'-'9').</td></li></ul><h2>Examples</h2><ul><li>nextEvent('1') = 10<td class="statText"><table><tr><td colspan="2" class="statText">No other digit has exactly two segments lit, thus the next time there will be two segments lit will be in 10 seconds.</td></tr></table></td></li><li>nextEvent('3') = 2<td class="statText"><table><tr><td colspan="2" class="statText">In 2 seconds the display will show "5", and "5" and "3" both have exactly five lit segments.</td></tr></table></td></li><li>nextEvent('9') = 3<td class="statText"><table><tr><td colspan="2" class="statText">In 3 seconds, the display will show "2".</td></tr></table></td></li><li>nextEvent('99') = 5<td class="statText"><table><tr><td colspan="2" class="statText">The number "99" is shown using 5+5=10 lit segments. In 5 seconds, the display will show "04", with 6+4=10 lit segments again. </td></tr></table></td></li><li>nextEvent('654371') = 43</li><li>nextEvent('007') = 11<td class="statText"><table><tr><td colspan="2" class="statText">Note that the input can have leading zeroes.</td></tr></table></td></li></ul>

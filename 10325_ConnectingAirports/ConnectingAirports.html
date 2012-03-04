@@ -1,0 +1,27 @@
+<html><head><title>10325. ConnectingAirports</title></head><body><h1>10325. ConnectingAirports</h1><h2>Problem</h2><p><td class="statText"><p>
+In the kingdom of Absurdistan there are N airports, and in the far away country of Utopia there are M airports.
+Currently, there is no air traffic on any of these airports. 
+Each airport has some capacity - i.e., a limit on the number of flights it can handle. Capacities may be different for different airports.
+</p>
+<p>
+The citizens of the two countries would like to connect them by new flights. The schedule must follow these rules:
+</p>
+<ul>
+<li>Each flight is a two-way service that directly connects an airport in Absurdistan and an airport in Utopia.</li>
+<li>No pair of airports can be connected by more than one flight.</li>
+<li>Together, the flights must exactly meet the capacities of all airports. That is, for each airport the number of flights scheduled from it to another airports must be exactly the same as the capacity for this airport.</li>
+<li>If there are multiple schedules that satisfy the previous rules, the lexicographically smallest one (definition follows) must be chosen.</li>
+</ul>
+<p>
+Each possible schedule can be represented as a matrix with N rows and M columns.
+The rows correspond to airports in Absurdistan (in alphabetical order), the columns to airports in Utopia (again, in alphabetical order).
+The cell at (r,c) contains the number 1 if the two airports are connected by a flight and 0 otherwise.
+</p>
+<p>
+To compare two schedules, find the first row in which they differ, and in that row find the first column in which they differ.
+The one that contains a zero in this cell is lexicographically smaller.
+</p>
+<p>
+You are given two int[]s: <b>capacityA</b> and <b>capacityU</b>. The int[] <b>capacityA</b> contains the capacities of all the airports in Absurdistan in alphabetical order. The int[] <b>capacityU</b> describes the Utopian airports in the same way.
+If there is no valid schedule, return an empty String[]. Otherwise, find the lexicographically smallest valid schedule and return it formatted as a String[].
+</p></td></p><h2>Definition</h2><h3>Filename</h3><p>ConnectingAirports.py</p><h3>Signature</h3><p>String[] getSchedule(int[] capacityA, int[] capacityU)</p><h2>Constraints</h2><ul><li><td class="statText"><b>capacityA</b> will contain between 1 and 50 elements, inclusive.</td></li><li><td class="statText"><b>capacityU</b> will contain between 1 and 50 elements, inclusive.</td></li><li><td class="statText">Each element in <b>capacityA</b> will be between 0 and 50, inclusive.</td></li><li><td class="statText">Each element in <b>capacityU</b> will be between 0 and 50, inclusive.</td></li></ul><h2>Examples</h2><ul><li>getSchedule([1, 2, 3], [3, 1, 2]) = ['100', '101', '111']<td class="statText"><table><tr><td colspan="2" class="statText">In this case there is only one way to schedule the flights.</td></tr></table></td></li><li>getSchedule([3, 2, 1, 1], [1, 3, 1, 2]) = ['0111', '0101', '0100', '1000']<td class="statText"><table><tr><td colspan="2" class="statText">In this case there are multiple valid schedules. Make sure that you output the lexicographically smallest one.</td></tr></table></td></li><li>getSchedule([1, 2, 3, 4], [5, 6, 7, 8]) = []<td class="statText"><table><tr><td colspan="2" class="statText">The capacities of airports in Absurdistan are too small.</td></tr></table></td></li><li>getSchedule([47, 47], [47, 40, 7]) = []<td class="statText"><table><tr><td colspan="2" class="statText">Each pair of airports can only be connected by a single flight.</td></tr></table></td></li><li>getSchedule([5, 5], [1, 1, 2, 1, 1, 1, 1, 1, 1]) = ['001001111', '111110000']</li><li>getSchedule([0, 0, 0, 0], [0, 0, 0, 0, 0, 0]) = ['000000', '000000', '000000', '000000']<td class="statText"><table><tr><td colspan="2" class="statText">Zeros may occur in the input.</td></tr></table></td></li></ul>

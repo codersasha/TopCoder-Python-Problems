@@ -1,0 +1,61 @@
+<html><head><title>10317. Unicorn</title></head><body><h1>10317. Unicorn</h1><h2>Problem</h2><p><td class="statText"><p>
+The unicorn is an exotic chess piece similar to the knight. The difference is that while the knight moves two cells in one direction and one in the other direction, the unicorn moves <i>more than</i> two cells in one direction and <i>more than</i> one in the other direction.
+</p>
+<p>
+More precisely, each unicorn move looks as follows:
+</p>
+<ul>
+<li>pick up the unicorn;</li>
+<li>pick one of the four basic directions, and move the unicorn more than two cells in that direction;</li>
+<li>pick one of the two basic directions that are orthogonal to the previous one, and move the unicorn more than one cell in that direction;</li>
+<li>put down the unicorn.</li>
+</ul>
+<p>
+We have a chessboard that has <b>R</b> rows times <b>C</b> columns. 
+Each cell of the chessboard contains one of the first <b>L</b> letters of the alphabet.
+To keep the input small, the content of the cells is randomly generated using the method
+described below.
+</p>
+<p>
+You are given the ints <b>R</b>, <b>C</b>, and <b>L</b> described above, an int <b>seed</b> used to generate
+the letters in the cells, and a String <b>word</b>. You want to trace the String <b>word</b> by taking a unicorn, placing it onto a cell containing the
+first letter of <b>word</b>, making a valid move that takes it onto a cell that contains the second letter, from there making another
+move to the third letter, and so on.
+Return the number of ways in which this can be done, modulo 1,000,000,007.
+</p>
+<p>
+The content of the cells is generated using the following pseudocode:
+</p>
+<pre>
+x = <b>seed</b>;
+d = (65535 div <b>L</b>)+1;
+for (int r=0; r<<b>R</b>; r++)
+  for (int c=0; c<<b>C</b>; c++) {
+    x = (x * 25173 + 13849) modulo 65536;
+    chessboard[r][c] = character with ASCII code (65+(x div d));
+  }
+</pre>
+</td></p><h2>Definition</h2><h3>Filename</h3><p>Unicorn.py</p><h3>Signature</h3><p>int countWays(int R, int C, int L, int seed, String word)</p><h2>Constraints</h2><ul><li><td class="statText"><b>R</b> will be between 1 and 300, inclusive.</td></li><li><td class="statText"><b>C</b> will be between 1 and 300, inclusive.</td></li><li><td class="statText"><b>L</b> will be between 1 and 26, inclusive.</td></li><li><td class="statText"><b>seed</b> will be between 0 and 65,535, inclusive.</td></li><li><td class="statText"><b>word</b> will contain between 1 and 50 characters, inclusive.</td></li><li><td class="statText">Each character in <b>word</b> will be an uppercase letter ('A'-'Z').</td></li></ul><h2>Examples</h2><ul><li>countWays(3, 4, 2, 47, 'AB') = 2<td class="statText"><table><tr><td colspan="2" class="statText"><p>
+When generating the input we will compute d=32768, and then generate the content of the cells. The variable <tt>x</tt> will have the following values, in order: 17332, 39133, 37242, 14235, 656, 12265, 20598, 6471, 51372, 44853, 44210, and 45363. The generated chessboard looks as follows:
+</p>
+<pre>
+ABBA
+AAAA
+BBBB
+</pre>
+<p>
+There are only two ways a unicorn can trace the word "AB" on this chessboard. It has to start in one of the two top corners, and then jump into the opposite corner.
+</p></td></tr></table></td></li><li>countWays(5, 5, 2, 47, 'CD') = 0<td class="statText"><table><tr><td colspan="2" class="statText">No letter C on this board.
+</td></tr></table></td></li><li>countWays(4, 4, 1, 42, 'AA') = 20<td class="statText"><table><tr><td colspan="2" class="statText">The unicorn can start in one of the four corner cells (and then has three possible jumps), or at one of the 8 cells that share a side with a corner cell (and then only have one possible jump). This gives us 4*3 + 8*1 = 20 ways to trace the word.
+</td></tr></table></td></li><li>countWays(4, 4, 1, 42, 'AAAAA') = 172</li><li>countWays(1, 1, 5, 54321, 'ABCDE') = 0<td class="statText"><table><tr><td colspan="2" class="statText">The board is too small. No word longer than one character can be traced as there is no way to make a valid move.</td></tr></table></td></li><li>countWays(8, 8, 26, 226, 'TOPCODER') = 1<td class="statText"><table><tr><td colspan="2" class="statText">The board looks as follows:
+<pre>
+AILFPSPF
+DZIOMYCE
+QOODZARU
+YVOTLTRX
+LSRIGANL
+LCIUUSNF
+IWVXKTDE
+OVPPNXRD
+</pre>
+If we number the rows and columns starting from 0, with (0,0) being the upper left corner cell, the only valid path of the unicorn is (6,5)-(2,1)-(7,3)-(1,6)-(7,0)-(2,3)-(6,7)-(4,2).</td></tr></table></td></li><li>countWays(20, 20, 2, 47, 'AAAAA') = 373977054<td class="statText"><table><tr><td colspan="2" class="statText">Do not forget about the modulo; the actual number of paths can be huge.</td></tr></table></td></li></ul>

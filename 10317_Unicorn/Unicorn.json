@@ -1,0 +1,1637 @@
+{
+    "definition": {
+        "method": "countWays", 
+        "names": {
+            "input": [
+                "R", 
+                "C", 
+                "L", 
+                "seed", 
+                "word"
+            ]
+        }, 
+        "types": {
+            "output": "int", 
+            "input": [
+                "int", 
+                "int", 
+                "int", 
+                "int", 
+                "String"
+            ]
+        }, 
+        "class": "Unicorn"
+    }, 
+    "tests": [
+        {
+            "input": [
+                3, 
+                4, 
+                2, 
+                47, 
+                "AB"
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                5, 
+                5, 
+                2, 
+                47, 
+                "CD"
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                4, 
+                4, 
+                1, 
+                42, 
+                "AA"
+            ], 
+            "output": 20
+        }, 
+        {
+            "input": [
+                4, 
+                4, 
+                1, 
+                42, 
+                "AAAAA"
+            ], 
+            "output": 172
+        }, 
+        {
+            "input": [
+                1, 
+                1, 
+                5, 
+                54321, 
+                "ABCDE"
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                8, 
+                8, 
+                26, 
+                226, 
+                "TOPCODER"
+            ], 
+            "output": 1
+        }, 
+        {
+            "input": [
+                300, 
+                300, 
+                26, 
+                47, 
+                "QWERTYUIOPLKJHGFDSAZXCVBNMQWERTYUIOPLKJHGFDSAZXXVB"
+            ], 
+            "output": 814990822
+        }, 
+        {
+            "input": [
+                3, 
+                3, 
+                3, 
+                214, 
+                "B"
+            ], 
+            "output": 4
+        }, 
+        {
+            "input": [
+                20, 
+                20, 
+                2, 
+                47, 
+                "AAAAA"
+            ], 
+            "output": 373977054
+        }, 
+        {
+            "input": [
+                300, 
+                300, 
+                26, 
+                4747, 
+                "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+            ], 
+            "output": 488664626
+        }, 
+        {
+            "input": [
+                300, 
+                300, 
+                1, 
+                35612, 
+                "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+            ], 
+            "output": 861343945
+        }, 
+        {
+            "input": [
+                300, 
+                1, 
+                10, 
+                2434, 
+                "ABCCBC"
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                1, 
+                300, 
+                10, 
+                21414, 
+                "BAACACDFG"
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                3, 
+                4, 
+                2, 
+                47, 
+                "ABABABABABABABABABABABABABABABABABABABABABABABABAB"
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                297, 
+                294, 
+                3, 
+                152, 
+                "AABACABACAACACABACACABACBACBACBABCABCBABAACA"
+            ], 
+            "output": 500171210
+        }, 
+        {
+            "input": [
+                125, 
+                14, 
+                23, 
+                28045, 
+                "WMLWJUKDORUVOTUFOWKUUSTT"
+            ], 
+            "output": 640540645
+        }, 
+        {
+            "input": [
+                9, 
+                84, 
+                8, 
+                38564, 
+                "AFF"
+            ], 
+            "output": 413060
+        }, 
+        {
+            "input": [
+                210, 
+                150, 
+                3, 
+                9689, 
+                "BAACCACCABAAAAAABBBACBCCBC"
+            ], 
+            "output": 680124160
+        }, 
+        {
+            "input": [
+                35, 
+                55, 
+                23, 
+                22805, 
+                "HPIHGAUSRIDKJIAGTGDIFRGRQSOVENVRAVL"
+            ], 
+            "output": 351146909
+        }, 
+        {
+            "input": [
+                69, 
+                208, 
+                15, 
+                48892, 
+                "FOKAOOGIMDCEGNDFILAIBKLKNBBFIFKOOIKBJFH"
+            ], 
+            "output": 118183924
+        }, 
+        {
+            "input": [
+                206, 
+                289, 
+                18, 
+                19554, 
+                "PCJKHDHKNHQODECKDEJADLQIPNNNLBNJLMDNQGECECEDH"
+            ], 
+            "output": 222491368
+        }, 
+        {
+            "input": [
+                224, 
+                229, 
+                18, 
+                63837, 
+                "PPMKEAGRINQLCERNFERAGBRGEMNADIFD"
+            ], 
+            "output": 332027111
+        }, 
+        {
+            "input": [
+                63, 
+                2, 
+                7, 
+                6668, 
+                "FEFEBGDBAEAGCDCBBFGGCFGEBCFFEAEG"
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                15, 
+                6, 
+                21, 
+                10236, 
+                "AKUGBFROGFGDKFALLUSEJIKASM"
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                103, 
+                199, 
+                19, 
+                8066, 
+                "DODHJGFQSQPLILGKKMOSDLLEOHLMHRJBR"
+            ], 
+            "output": 534125035
+        }, 
+        {
+            "input": [
+                23, 
+                217, 
+                26, 
+                37289, 
+                "MVJCOINKPQRTRUZZPZTUXKAPYYZGXZAJIXEUMGQTHWLIROLWQ"
+            ], 
+            "output": 301664651
+        }, 
+        {
+            "input": [
+                223, 
+                191, 
+                8, 
+                4211, 
+                "HFBFBGBDDCCADGECBEEGCBBDEDHGFBGHGCHHAHFDEDCHCHCH"
+            ], 
+            "output": 164842583
+        }, 
+        {
+            "input": [
+                268, 
+                220, 
+                21, 
+                47045, 
+                "JGFLTNGAFEBROEAKCBARFAOKLHEJLOJHHIKRMGUHA"
+            ], 
+            "output": 487076206
+        }, 
+        {
+            "input": [
+                47, 
+                73, 
+                19, 
+                17724, 
+                "NCQNGQKOMOFHFNOPLFFFFPBHQGL"
+            ], 
+            "output": 293810085
+        }, 
+        {
+            "input": [
+                114, 
+                18, 
+                19, 
+                57015, 
+                "DOSOCOQIPJAOQMIDOOELQOBANNNEDDBDEPQAPAFOAHE"
+            ], 
+            "output": 881377220
+        }, 
+        {
+            "input": [
+                53, 
+                284, 
+                25, 
+                8332, 
+                "TJQBELUDBJPTVTGIGJQPIPHNVIVWJEPKEFSCCWYBQQFBLK"
+            ], 
+            "output": 354594720
+        }, 
+        {
+            "input": [
+                224, 
+                300, 
+                14, 
+                30946, 
+                "IFINFICNCKMCEDICGLKFNDHNFEGIJFAHGKGHGBC"
+            ], 
+            "output": 251962695
+        }, 
+        {
+            "input": [
+                95, 
+                17, 
+                1, 
+                21328, 
+                "V"
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                241, 
+                242, 
+                23, 
+                8331, 
+                "AFOITCTWRKWCBVOAVFCBVFCDHVEUWCDPQI"
+            ], 
+            "output": 690558827
+        }, 
+        {
+            "input": [
+                3, 
+                176, 
+                19, 
+                4897, 
+                "KMOKGRCCMPHANINPGKHPNPARPCCPAOCFNKDFJOCNDJQSHCCFH"
+            ], 
+            "output": 861718693
+        }, 
+        {
+            "input": [
+                106, 
+                155, 
+                24, 
+                42503, 
+                "XXQFURTBDARAAKUXEIQJLDVFESAK"
+            ], 
+            "output": 178609739
+        }, 
+        {
+            "input": [
+                235, 
+                160, 
+                14, 
+                7409, 
+                "KKAIJNNGJDCCJLDJDMNEKLNILHJJ"
+            ], 
+            "output": 522110740
+        }, 
+        {
+            "input": [
+                127, 
+                134, 
+                23, 
+                25083, 
+                "EFSPJSFKEOTWDRBHSNLSBILLKEVPACDGEAFKBG"
+            ], 
+            "output": 539739581
+        }, 
+        {
+            "input": [
+                193, 
+                212, 
+                1, 
+                30848, 
+                "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+            ], 
+            "output": 958555856
+        }, 
+        {
+            "input": [
+                211, 
+                228, 
+                12, 
+                21336, 
+                "DGCHCGIDKCBJAILDKABEEIHHLCEEJLACAJDDKD"
+            ], 
+            "output": 695484280
+        }, 
+        {
+            "input": [
+                51, 
+                210, 
+                17, 
+                14192, 
+                "BOPHFLIJLAKPAFNQJBLMDCQDJHKFI"
+            ], 
+            "output": 12086742
+        }, 
+        {
+            "input": [
+                22, 
+                296, 
+                8, 
+                33030, 
+                "ABCCHCGBGACDBFHHDBBHFGBACC"
+            ], 
+            "output": 59910238
+        }, 
+        {
+            "input": [
+                87, 
+                22, 
+                10, 
+                7076, 
+                "DJDJIGHHBFFJJIFHHDIAIAHHFGEHCEDJIFCJH"
+            ], 
+            "output": 166324138
+        }, 
+        {
+            "input": [
+                111, 
+                4, 
+                15, 
+                55125, 
+                "CBMCKLHAIBJHLBBAJGOIIHLHFAMLLOAGHFHKMDOAIFFMBBD"
+            ], 
+            "output": 377276319
+        }, 
+        {
+            "input": [
+                61, 
+                29, 
+                17, 
+                24206, 
+                "IAJAHFMNIGPGLPOMCNCQMFAENIMNHCPGBEINJDLAHDDFLPHIMB"
+            ], 
+            "output": 557997309
+        }, 
+        {
+            "input": [
+                11, 
+                129, 
+                1, 
+                59954, 
+                "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+            ], 
+            "output": 150370884
+        }, 
+        {
+            "input": [
+                33, 
+                44, 
+                21, 
+                27368, 
+                "FNGCBJKPKGMHKTELHUUUMPNAUNIOUOBSQO"
+            ], 
+            "output": 214460220
+        }, 
+        {
+            "input": [
+                119, 
+                210, 
+                3, 
+                43424, 
+                "CACCBACBACBBCBACABBABABBBBCA"
+            ], 
+            "output": 366456386
+        }, 
+        {
+            "input": [
+                214, 
+                44, 
+                11, 
+                34739, 
+                "HIHBAHCFIHBAIHIGEIFHAEGKG"
+            ], 
+            "output": 969342859
+        }, 
+        {
+            "input": [
+                212, 
+                180, 
+                9, 
+                3324, 
+                "EFGBDAHGBBBIICGDBCFFICABDIGFBABFEB"
+            ], 
+            "output": 280169015
+        }, 
+        {
+            "input": [
+                188, 
+                36, 
+                23, 
+                63370, 
+                "BJEFSGBGNHPSSNHKGWKBTLORSASJWWTSINOVDHUB"
+            ], 
+            "output": 485241611
+        }, 
+        {
+            "input": [
+                152, 
+                73, 
+                20, 
+                53139, 
+                "FANAPIANFHNIFAMSFIRDALMD"
+            ], 
+            "output": 48919101
+        }, 
+        {
+            "input": [
+                178, 
+                207, 
+                14, 
+                18038, 
+                "FHGHBJDKICBBCFELFBCCCMNNNNLLLIJCDIA"
+            ], 
+            "output": 712446435
+        }, 
+        {
+            "input": [
+                157, 
+                168, 
+                16, 
+                26276, 
+                "L"
+            ], 
+            "output": 1630
+        }, 
+        {
+            "input": [
+                95, 
+                275, 
+                17, 
+                4776, 
+                "BBIALFOODIEJGAHEGCEDLGPGLDGGGBKBGOQKJM"
+            ], 
+            "output": 877946352
+        }, 
+        {
+            "input": [
+                222, 
+                35, 
+                6, 
+                21920, 
+                "CBDFEBFBDFCEAFDCEEBEFDDABCCADDDCB"
+            ], 
+            "output": 766550773
+        }, 
+        {
+            "input": [
+                275, 
+                87, 
+                2, 
+                2951, 
+                "BABAABABBABABABBABABBBBBBBA"
+            ], 
+            "output": 963575496
+        }, 
+        {
+            "input": [
+                171, 
+                231, 
+                10, 
+                5428, 
+                "XSSTPACKJKCMOIPABHYIACIAOYCJLAFOCEQUJSZGPJAZZPJ"
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                6, 
+                152, 
+                10, 
+                33218, 
+                "ACDFIGGBCGBJCJEHAADBGGBAEDABFEBAABBGHJGADJJFDJIJ"
+            ], 
+            "output": 691737914
+        }, 
+        {
+            "input": [
+                84, 
+                2, 
+                18, 
+                3516, 
+                "GPCJLJDJOJLLRPNQCINQGGLRMEAAEOMNKBRACD"
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                99, 
+                40, 
+                3, 
+                19082, 
+                "BBCACCCBBAABBCAAABCACBCCAACBCBCAA"
+            ], 
+            "output": 569637787
+        }, 
+        {
+            "input": [
+                213, 
+                151, 
+                15, 
+                48449, 
+                "IOCDIDMENNAMBHOIGODDDCIMLMCDNFJLJDEBGD"
+            ], 
+            "output": 490095859
+        }, 
+        {
+            "input": [
+                65, 
+                52, 
+                17, 
+                53871, 
+                "ABHOKDKAKIAGDCFNDDPHGLJBFCIJNOPIFEQBIBCDDLLKJE"
+            ], 
+            "output": 348468764
+        }, 
+        {
+            "input": [
+                246, 
+                4, 
+                16, 
+                43323, 
+                "WHSWYBJSWOSOYVCZGYLDGRVACCARVKOKYZCJDWUWLJVGXE"
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                219, 
+                191, 
+                2, 
+                38892, 
+                "B"
+            ], 
+            "output": 21012
+        }, 
+        {
+            "input": [
+                114, 
+                5, 
+                7, 
+                32821, 
+                "FDEADDACAGEEGFDCCDFFEFGGCACGCECFBBGGBCBGFA"
+            ], 
+            "output": 638835127
+        }, 
+        {
+            "input": [
+                2, 
+                266, 
+                1, 
+                20379, 
+                "AAA"
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                40, 
+                223, 
+                16, 
+                49282, 
+                "MFALOEPPDONEHFIGOKIKNLHNLLJ"
+            ], 
+            "output": 428058376
+        }, 
+        {
+            "input": [
+                255, 
+                234, 
+                25, 
+                31763, 
+                "SEFRBXLPLHTXFASWSHIJEVMSA"
+            ], 
+            "output": 952894581
+        }, 
+        {
+            "input": [
+                233, 
+                156, 
+                21, 
+                15939, 
+                "CCTUNNECCBRRGRCKAIPUBTTJOOIGMCQEJGGRKPEN"
+            ], 
+            "output": 215287459
+        }, 
+        {
+            "input": [
+                105, 
+                217, 
+                22, 
+                19211, 
+                "STEAATCFMJFQGGGMPNFAOGLRSUVIVNTDVEGVQJRJTMBI"
+            ], 
+            "output": 739434495
+        }, 
+        {
+            "input": [
+                144, 
+                123, 
+                6, 
+                3749, 
+                "CAECEDFBCBCCEAFEFABFBFEFABFAFCDECBDADBEFDCAEDEA"
+            ], 
+            "output": 971517439
+        }, 
+        {
+            "input": [
+                9, 
+                82, 
+                13, 
+                49525, 
+                "GFCHFHMIFLIHFGLDGKBDFGJDBLG"
+            ], 
+            "output": 401188863
+        }, 
+        {
+            "input": [
+                197, 
+                131, 
+                15, 
+                30519, 
+                "WQDOUPAIXOQRPOWSYFSJJQZESKQPPYSIKLXZ"
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                222, 
+                218, 
+                12, 
+                17076, 
+                "EIFHKDIAKDFLHELEJFAECHELDLCBKHBGFBD"
+            ], 
+            "output": 393840750
+        }, 
+        {
+            "input": [
+                172, 
+                86, 
+                15, 
+                63667, 
+                "EMBNDBLNDLNNEKAABNMENLAAAHBBCBD"
+            ], 
+            "output": 356437033
+        }, 
+        {
+            "input": [
+                148, 
+                210, 
+                1, 
+                33688, 
+                "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+            ], 
+            "output": 12274854
+        }, 
+        {
+            "input": [
+                81, 
+                130, 
+                23, 
+                25588, 
+                "SJIGLMMTJDLFOGRDVGAWMISENJCVHEGDDAFGSTM"
+            ], 
+            "output": 664386174
+        }, 
+        {
+            "input": [
+                216, 
+                156, 
+                11, 
+                26448, 
+                "JFJJFAAJFGJKCBCDFKGJBEIHKFCED"
+            ], 
+            "output": 525116527
+        }, 
+        {
+            "input": [
+                183, 
+                145, 
+                22, 
+                39905, 
+                "HGV"
+            ], 
+            "output": 537638338
+        }, 
+        {
+            "input": [
+                156, 
+                4, 
+                8, 
+                44652, 
+                "HFEFGFHHCCGBECHCBFBAEDABFGCABFHAADGGC"
+            ], 
+            "output": 649522516
+        }, 
+        {
+            "input": [
+                278, 
+                111, 
+                6, 
+                10938, 
+                "BFCFEBEBACACEECCEBFEDECCBBABDBFCCFCBEAABABACCAAEC"
+            ], 
+            "output": 50731872
+        }, 
+        {
+            "input": [
+                26, 
+                271, 
+                10, 
+                41614, 
+                "CCDAGEJIFGHECABEECJHECJGDHBBJHAAEEBDEJHJJABIF"
+            ], 
+            "output": 3864239
+        }, 
+        {
+            "input": [
+                245, 
+                167, 
+                1, 
+                50896, 
+                "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+            ], 
+            "output": 953990655
+        }, 
+        {
+            "input": [
+                144, 
+                121, 
+                3, 
+                29064, 
+                "BBCACBABCACCBAABCCACAACABCBBCBCABABBBCBBABB"
+            ], 
+            "output": 182028855
+        }, 
+        {
+            "input": [
+                300, 
+                300, 
+                3, 
+                12345, 
+                "ABABAAABABAABCABCAAABCCACABACCAABACBABACACABACAAB"
+            ], 
+            "output": 786883102
+        }, 
+        {
+            "input": [
+                20, 
+                20, 
+                2, 
+                49, 
+                "AAAAA"
+            ], 
+            "output": 837978474
+        }, 
+        {
+            "input": [
+                300, 
+                300, 
+                26, 
+                234, 
+                "ABCPDSOWEOSOCXODSOEWPSDOASDOSDOZXCOWAEOSDAODSAO"
+            ], 
+            "output": 719500530
+        }, 
+        {
+            "input": [
+                300, 
+                300, 
+                2, 
+                2342, 
+                "ABABAAABABBAABBBBABABABBABBBABBABABBABABBABABBBABA"
+            ], 
+            "output": 283522936
+        }, 
+        {
+            "input": [
+                300, 
+                300, 
+                1, 
+                47, 
+                "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+            ], 
+            "output": 861343945
+        }, 
+        {
+            "input": [
+                300, 
+                300, 
+                2, 
+                47, 
+                "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+            ], 
+            "output": 445391449
+        }, 
+        {
+            "input": [
+                300, 
+                300, 
+                3, 
+                2134, 
+                "ABCBAABBCAABCBAABBCAABCBAABBCAABCBAABBCAABCBAABBCA"
+            ], 
+            "output": 537697376
+        }, 
+        {
+            "input": [
+                300, 
+                300, 
+                1, 
+                1, 
+                "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+            ], 
+            "output": 861343945
+        }, 
+        {
+            "input": [
+                300, 
+                300, 
+                2, 
+                42, 
+                "ABABABABABAABABBABABABABABABABAABABBABABAABABBABAB"
+            ], 
+            "output": 768820158
+        }, 
+        {
+            "input": [
+                300, 
+                300, 
+                2, 
+                123, 
+                "ABABABABABABABABABABABABABABABABABABABABABABABABAB"
+            ], 
+            "output": 326008507
+        }, 
+        {
+            "input": [
+                300, 
+                300, 
+                1, 
+                0, 
+                "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+            ], 
+            "output": 861343945
+        }, 
+        {
+            "input": [
+                300, 
+                300, 
+                26, 
+                100, 
+                "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+            ], 
+            "output": 401636837
+        }, 
+        {
+            "input": [
+                232, 
+                123, 
+                26, 
+                226, 
+                "TOPCODER"
+            ], 
+            "output": 935748138
+        }, 
+        {
+            "input": [
+                299, 
+                299, 
+                26, 
+                9999, 
+                "DAREMY"
+            ], 
+            "output": 826948420
+        }, 
+        {
+            "input": [
+                300, 
+                300, 
+                2, 
+                0, 
+                "ABABABABABABABABABABABABABABABABABABABABABABABABAB"
+            ], 
+            "output": 281249122
+        }, 
+        {
+            "input": [
+                300, 
+                300, 
+                26, 
+                7, 
+                "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+            ], 
+            "output": 446215026
+        }, 
+        {
+            "input": [
+                300, 
+                300, 
+                26, 
+                65000, 
+                "AMBLGNVJSRTIJGRDGVCSHGEBKDTIDKTJFNYJFLGKKGIWU"
+            ], 
+            "output": 220623087
+        }, 
+        {
+            "input": [
+                300, 
+                300, 
+                3, 
+                1015, 
+                "ABCACBBACBCACABCBAAABCACBBACBCACABCBABBBABABBAAACC"
+            ], 
+            "output": 427757232
+        }, 
+        {
+            "input": [
+                300, 
+                300, 
+                26, 
+                523, 
+                "ABFDSFASDFADFSDFASDFASF"
+            ], 
+            "output": 559051743
+        }, 
+        {
+            "input": [
+                300, 
+                300, 
+                2, 
+                10, 
+                "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+            ], 
+            "output": 659948255
+        }, 
+        {
+            "input": [
+                300, 
+                300, 
+                1, 
+                12345, 
+                "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+            ], 
+            "output": 861343945
+        }, 
+        {
+            "input": [
+                300, 
+                300, 
+                1, 
+                34234, 
+                "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+            ], 
+            "output": 861343945
+        }, 
+        {
+            "input": [
+                300, 
+                300, 
+                1, 
+                22, 
+                "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+            ], 
+            "output": 861343945
+        }, 
+        {
+            "input": [
+                300, 
+                300, 
+                2, 
+                23, 
+                "ABAAABBABAABAAABBABAABAAABBABAABAAABBABAABAAABBABA"
+            ], 
+            "output": 578796717
+        }, 
+        {
+            "input": [
+                300, 
+                300, 
+                2, 
+                47, 
+                "AAABBBBAABBBAAAABABABABBBBAAABBBBAABBBAAAABABABABB"
+            ], 
+            "output": 185328352
+        }, 
+        {
+            "input": [
+                300, 
+                300, 
+                26, 
+                234, 
+                "FIWORIGFNGTPNOKSXNBZUFEWOGTOYITNJKVNDCQPEOJNMSAJ"
+            ], 
+            "output": 808425795
+        }, 
+        {
+            "input": [
+                300, 
+                300, 
+                26, 
+                10007, 
+                "ABCHIJKLMNOPQRSTUVWXYZOPQRSTUVDEFGHIJKLMNABCDEFGWX"
+            ], 
+            "output": 222392399
+        }, 
+        {
+            "input": [
+                300, 
+                300, 
+                26, 
+                226, 
+                "ABCDEFGHIJKLMNOPQRSTUVWXYABCDEFGHIJKLMNOPQRSTUVWXY"
+            ], 
+            "output": 721662974
+        }, 
+        {
+            "input": [
+                300, 
+                300, 
+                1, 
+                5, 
+                "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+            ], 
+            "output": 861343945
+        }, 
+        {
+            "input": [
+                300, 
+                300, 
+                2, 
+                47, 
+                "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+            ], 
+            "output": 421440691
+        }, 
+        {
+            "input": [
+                300, 
+                300, 
+                2, 
+                23, 
+                "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+            ], 
+            "output": 609554907
+        }, 
+        {
+            "input": [
+                300, 
+                300, 
+                26, 
+                65535, 
+                "AAAAABBBBBCCCCCZZZZZXXXXXCCCCCFFFFFRRRRRTTTTTGGGGG"
+            ], 
+            "output": 925047332
+        }, 
+        {
+            "input": [
+                300, 
+                300, 
+                1, 
+                300, 
+                "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+            ], 
+            "output": 797806534
+        }, 
+        {
+            "input": [
+                300, 
+                300, 
+                2, 
+                1235, 
+                "ABABABABABABABABABABABABABABABABABABABABABABABABAB"
+            ], 
+            "output": 532222533
+        }, 
+        {
+            "input": [
+                300, 
+                300, 
+                26, 
+                47, 
+                "ABCDEFGHIJKLMMMMMMMMMOUTRFDGHJIUYTREDFGHJKIOMNBVCX"
+            ], 
+            "output": 591856012
+        }, 
+        {
+            "input": [
+                300, 
+                300, 
+                2, 
+                47, 
+                "AAAAABBBBBBBBBBAAAAAAA"
+            ], 
+            "output": 320012450
+        }, 
+        {
+            "input": [
+                300, 
+                300, 
+                1, 
+                10, 
+                "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+            ], 
+            "output": 861343945
+        }, 
+        {
+            "input": [
+                300, 
+                300, 
+                1, 
+                653, 
+                "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+            ], 
+            "output": 861343945
+        }, 
+        {
+            "input": [
+                300, 
+                300, 
+                2, 
+                1, 
+                "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+            ], 
+            "output": 698080016
+        }, 
+        {
+            "input": [
+                300, 
+                300, 
+                2, 
+                47, 
+                "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB"
+            ], 
+            "output": 317211214
+        }, 
+        {
+            "input": [
+                300, 
+                300, 
+                2, 
+                222, 
+                "ABABABABABABABABABABABABABABABABABABABABABABABABAB"
+            ], 
+            "output": 16339227
+        }, 
+        {
+            "input": [
+                300, 
+                300, 
+                26, 
+                2, 
+                "FDSAAAAAKFDHSAKLDFHDSAKGNFHKLGASDGFDAGAQWFGUHAAAAA"
+            ], 
+            "output": 702126508
+        }, 
+        {
+            "input": [
+                300, 
+                300, 
+                2, 
+                27, 
+                "AAAAAAAAAAAAAAA"
+            ], 
+            "output": 567543686
+        }, 
+        {
+            "input": [
+                300, 
+                300, 
+                2, 
+                47, 
+                "AAAAABBBBB"
+            ], 
+            "output": 16682137
+        }, 
+        {
+            "input": [
+                300, 
+                300, 
+                3, 
+                7648, 
+                "AAAAAABAAAC"
+            ], 
+            "output": 302768154
+        }, 
+        {
+            "input": [
+                300, 
+                300, 
+                2, 
+                47, 
+                "AAAAA"
+            ], 
+            "output": 450003361
+        }, 
+        {
+            "input": [
+                300, 
+                300, 
+                1, 
+                1312, 
+                "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+            ], 
+            "output": 861343945
+        }, 
+        {
+            "input": [
+                300, 
+                300, 
+                26, 
+                12345, 
+                "KAKAASDFQWERZXCVPOIUAAAAKKKKYUIOTHMKQEPOIUYTREWQ"
+            ], 
+            "output": 662701903
+        }, 
+        {
+            "input": [
+                300, 
+                300, 
+                26, 
+                325, 
+                "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+            ], 
+            "output": 682929454
+        }, 
+        {
+            "input": [
+                300, 
+                300, 
+                1, 
+                26, 
+                "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+            ], 
+            "output": 861343945
+        }, 
+        {
+            "input": [
+                300, 
+                300, 
+                2, 
+                1231, 
+                "AAABBBAAABAAABBBAAABAAABBBAAABAAABBBAAABAAABBBAAAB"
+            ], 
+            "output": 523210126
+        }, 
+        {
+            "input": [
+                300, 
+                300, 
+                26, 
+                43896, 
+                "TOPCODERFOREVER"
+            ], 
+            "output": 714484037
+        }, 
+        {
+            "input": [
+                300, 
+                300, 
+                10, 
+                2, 
+                "ABCDEFGHIJABCDEFGHIJABCDEFGHIJABCDEFGHIJABCDEFGHIJ"
+            ], 
+            "output": 480525478
+        }, 
+        {
+            "input": [
+                300, 
+                300, 
+                1, 
+                438, 
+                "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+            ], 
+            "output": 861343945
+        }, 
+        {
+            "input": [
+                300, 
+                300, 
+                5, 
+                37617, 
+                "ABAADEADABCDABECCCEBABEBCABBABAECBCBCAAABBBBBBBBBB"
+            ], 
+            "output": 305920360
+        }, 
+        {
+            "input": [
+                300, 
+                300, 
+                5, 
+                47, 
+                "ABCDEABCDEABCDEABCDEABCDEABCDEABCDEABCDEABCDEABCDE"
+            ], 
+            "output": 301936484
+        }, 
+        {
+            "input": [
+                300, 
+                300, 
+                1, 
+                226, 
+                "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+            ], 
+            "output": 861343945
+        }, 
+        {
+            "input": [
+                300, 
+                300, 
+                1, 
+                43, 
+                "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+            ], 
+            "output": 861343945
+        }, 
+        {
+            "input": [
+                300, 
+                300, 
+                1, 
+                42, 
+                "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+            ], 
+            "output": 861343945
+        }, 
+        {
+            "input": [
+                300, 
+                300, 
+                4, 
+                27, 
+                "ABCD"
+            ], 
+            "output": 575191091
+        }, 
+        {
+            "input": [
+                300, 
+                299, 
+                2, 
+                47, 
+                "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+            ], 
+            "output": 393610615
+        }, 
+        {
+            "input": [
+                300, 
+                300, 
+                1, 
+                8191, 
+                "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+            ], 
+            "output": 861343945
+        }, 
+        {
+            "input": [
+                300, 
+                300, 
+                1, 
+                57, 
+                "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+            ], 
+            "output": 861343945
+        }, 
+        {
+            "input": [
+                300, 
+                300, 
+                1, 
+                7667, 
+                "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+            ], 
+            "output": 861343945
+        }, 
+        {
+            "input": [
+                300, 
+                300, 
+                26, 
+                65535, 
+                "AJSDFJAFDJASFJGJASGDJGJGDFASKDGASKGDKAJSHDKJHASDJK"
+            ], 
+            "output": 69017844
+        }, 
+        {
+            "input": [
+                300, 
+                300, 
+                1, 
+                31000, 
+                "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+            ], 
+            "output": 861343945
+        }, 
+        {
+            "input": [
+                300, 
+                300, 
+                1, 
+                32516, 
+                "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+            ], 
+            "output": 861343945
+        }
+    ], 
+    "name": "Unicorn", 
+    "statement": "<td class=\"statText\"><p>\nThe unicorn is an exotic chess piece similar to the knight. The difference is that while the knight moves two cells in one direction and one in the other direction, the unicorn moves <i>more than</i> two cells in one direction and <i>more than</i> one in the other direction.\n</p>\n<p>\nMore precisely, each unicorn move looks as follows:\n</p>\n<ul>\n<li>pick up the unicorn;</li>\n<li>pick one of the four basic directions, and move the unicorn more than two cells in that direction;</li>\n<li>pick one of the two basic directions that are orthogonal to the previous one, and move the unicorn more than one cell in that direction;</li>\n<li>put down the unicorn.</li>\n</ul>\n<p>\nWe have a chessboard that has <b>R</b> rows times <b>C</b> columns. \nEach cell of the chessboard contains one of the first <b>L</b> letters of the alphabet.\nTo keep the input small, the content of the cells is randomly generated using the method\ndescribed below.\n</p>\n<p>\nYou are given the ints <b>R</b>, <b>C</b>, and <b>L</b> described above, an int <b>seed</b> used to generate\nthe letters in the cells, and a String <b>word</b>. You want to trace the String <b>word</b> by taking a unicorn, placing it onto a cell containing the\nfirst letter of <b>word</b>, making a valid move that takes it onto a cell that contains the second letter, from there making another\nmove to the third letter, and so on.\nReturn the number of ways in which this can be done, modulo 1,000,000,007.\n</p>\n<p>\nThe content of the cells is generated using the following pseudocode:\n</p>\n<pre>\nx = <b>seed</b>;\nd = (65535 div <b>L</b>)+1;\nfor (int r=0; r<<b>R</b>; r++)\n  for (int c=0; c<<b>C</b>; c++) {\n    x = (x * 25173 + 13849) modulo 65536;\n    chessboard[r][c] = character with ASCII code (65+(x div d));\n  }\n</pre>\n</td>", 
+    "constraints": [
+        "<td class=\"statText\"><b>R</b> will be between 1 and 300, inclusive.</td>", 
+        "<td class=\"statText\"><b>C</b> will be between 1 and 300, inclusive.</td>", 
+        "<td class=\"statText\"><b>L</b> will be between 1 and 26, inclusive.</td>", 
+        "<td class=\"statText\"><b>seed</b> will be between 0 and 65,535, inclusive.</td>", 
+        "<td class=\"statText\"><b>word</b> will contain between 1 and 50 characters, inclusive.</td>", 
+        "<td class=\"statText\">Each character in <b>word</b> will be an uppercase letter ('A'-'Z').</td>"
+    ], 
+    "number": 10317, 
+    "examples": [
+        {
+            "comment": "<td class=\"statText\"><table><tr><td colspan=\"2\" class=\"statText\"><p>\nWhen generating the input we will compute d=32768, and then generate the content of the cells. The variable <tt>x</tt> will have the following values, in order: 17332, 39133, 37242, 14235, 656, 12265, 20598, 6471, 51372, 44853, 44210, and 45363. The generated chessboard looks as follows:\n</p>\n<pre>\nABBA\nAAAA\nBBBB\n</pre>\n<p>\nThere are only two ways a unicorn can trace the word \"AB\" on this chessboard. It has to start in one of the two top corners, and then jump into the opposite corner.\n</p></td></tr></table></td>", 
+            "input": [
+                3, 
+                4, 
+                2, 
+                47, 
+                "AB"
+            ], 
+            "output": 2
+        }, 
+        {
+            "comment": "<td class=\"statText\"><table><tr><td colspan=\"2\" class=\"statText\">No letter C on this board.\n</td></tr></table></td>", 
+            "input": [
+                5, 
+                5, 
+                2, 
+                47, 
+                "CD"
+            ], 
+            "output": 0
+        }, 
+        {
+            "comment": "<td class=\"statText\"><table><tr><td colspan=\"2\" class=\"statText\">The unicorn can start in one of the four corner cells (and then has three possible jumps), or at one of the 8 cells that share a side with a corner cell (and then only have one possible jump). This gives us 4*3 + 8*1 = 20 ways to trace the word.\n</td></tr></table></td>", 
+            "input": [
+                4, 
+                4, 
+                1, 
+                42, 
+                "AA"
+            ], 
+            "output": 20
+        }, 
+        {
+            "comment": "", 
+            "input": [
+                4, 
+                4, 
+                1, 
+                42, 
+                "AAAAA"
+            ], 
+            "output": 172
+        }, 
+        {
+            "comment": "<td class=\"statText\"><table><tr><td colspan=\"2\" class=\"statText\">The board is too small. No word longer than one character can be traced as there is no way to make a valid move.</td></tr></table></td>", 
+            "input": [
+                1, 
+                1, 
+                5, 
+                54321, 
+                "ABCDE"
+            ], 
+            "output": 0
+        }, 
+        {
+            "comment": "<td class=\"statText\"><table><tr><td colspan=\"2\" class=\"statText\">The board looks as follows:\n<pre>\nAILFPSPF\nDZIOMYCE\nQOODZARU\nYVOTLTRX\nLSRIGANL\nLCIUUSNF\nIWVXKTDE\nOVPPNXRD\n</pre>\nIf we number the rows and columns starting from 0, with (0,0) being the upper left corner cell, the only valid path of the unicorn is (6,5)-(2,1)-(7,3)-(1,6)-(7,0)-(2,3)-(6,7)-(4,2).</td></tr></table></td>", 
+            "input": [
+                8, 
+                8, 
+                26, 
+                226, 
+                "TOPCODER"
+            ], 
+            "output": 1
+        }, 
+        {
+            "comment": "<td class=\"statText\"><table><tr><td colspan=\"2\" class=\"statText\">Do not forget about the modulo; the actual number of paths can be huge.</td></tr></table></td>", 
+            "input": [
+                20, 
+                20, 
+                2, 
+                47, 
+                "AAAAA"
+            ], 
+            "output": 373977054
+        }
+    ]
+}

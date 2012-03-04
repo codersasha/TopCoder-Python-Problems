@@ -1,0 +1,17 @@
+<html><head><title>10282. TheGarland</title></head><body><h1>10282. TheGarland</h1><h2>Problem</h2><p><td class="statText"><p>
+When all the presents are delivered to the children, Santa Claus goes home to take some rest.  Then, the most exciting part of the day begins - Santa starts making garlands.  A garland is a sequence of lamps connected with a wire.  You are given a String[] <b>lamps</b> containing the available lamps.  Each element is formatted "color size" (quotes for clarity), where color is a string representing the lamp's color, and size is an integer representing the lamp's size.  A garland must contain every available lamp, and every pair of consecutive lamps in a garland must have different sizes.
+</p>
+<p>
+Santa will make every possible garland using these lamps.  Each time he makes a garland, he will turn it on for a while and then disassemble it to make another one.  Every garland he makes will be different.  Two garlands are different if they have different lamps in at least one position.  Santa will make one garland before another if it has a bigger first lamp.  In case of a tie, he will choose the garland whose first lamp's color comes earlier alphabetically.  If both garlands have the same first lamp, he will make his choice according to the second lamp, and so on.  He will go to sleep after making all possible garlands.
+</p>
+<p>
+Return a String[] containing the <b>n</b>-th garland Santa will make, where <b>n</b> is a 1-based index.  The return String[] should be a permutation of the String[] <b>lamps</b>.  If Santa will make less than <b>n</b> garlands, return an empty String[] instead.
+</p>
+</td></p><h2>Definition</h2><h3>Filename</h3><p>TheGarland.py</p><h3>Signature</h3><p>String[] find(String[] lamps, int n)</p><h2>Constraints</h2><ul><li><td class="statText"><b>lamps</b> will contain between 1 and 50 elements, inclusive.</td></li><li><td class="statText">All elements of <b>lamps</b> will be distinct.</td></li><li><td class="statText">Each element of <b>lamps</b> will be formatted "color size", where color is "Red", "Green", "Blue" or "Yellow", and size is an integer between 1 and 1,000,000,000, inclusive, with no leading zeroes (all quotes for clarity).</td></li><li><td class="statText"><b>n</b> will be between 1 and 1,000,000,000, inclusive.</td></li></ul><h2>Examples</h2><ul><li>find(['Red 5', 'Yellow 9', 'Red 9', 'Green 1'], 4) = ['Red 9', 'Green 1', 'Red 5', 'Yellow 9']<td class="statText"><table><tr><td colspan="2" class="statText">Here are the first four garlands made by Santa:
+<ul>
+<li>{"Red 9", "Red 5", "Yellow 9", "Green 1"}</li>
+<li>{"Red 9", "Red 5", "Green 1", "Yellow 9"}</li>
+<li>{"Red 9", "Green 1", "Yellow 9", "Red 5"}</li>
+<li>{"Red 9", "Green 1", "Red 5", "Yellow 9"}</li>
+</ul>
+</td></tr></table></td></li><li>find(['Yellow 47', 'Blue 47'], 1) = []<td class="statText"><table><tr><td colspan="2" class="statText">It is impossible to make any garlands since the two lamps are of equal size and therefore cannot be next to each other.</td></tr></table></td></li><li>find(['Green 4', 'Blue 4', 'Yellow 100'], 2) = ['Green 4', 'Yellow 100', 'Blue 4']<td class="statText"><table><tr><td colspan="2" class="statText">Only two possible garlands.</td></tr></table></td></li><li>find(['Yellow 21', 'Blue 24', 'Red 29', 'Blue 27', 'Green 21', 'Green 27', 'Yellow 24', 'Yellow 28'], 19) = ['Red 29', 'Yellow 28', 'Blue 27', 'Yellow 24', 'Yellow 21', 'Blue 24', 'Green 27', 'Green 21']</li></ul>

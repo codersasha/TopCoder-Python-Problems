@@ -1,0 +1,991 @@
+{
+    "definition": {
+        "method": "getAmount", 
+        "names": {
+            "input": [
+                "words"
+            ]
+        }, 
+        "types": {
+            "output": "long", 
+            "input": [
+                "String[]"
+            ]
+        }, 
+        "class": "PalindromePhrases"
+    }, 
+    "tests": [
+        {
+            "input": [
+                [
+                    "a", 
+                    "ba"
+                ]
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                [
+                    "ab", 
+                    "bcd", 
+                    "efg"
+                ]
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                [
+                    "a", 
+                    "bba", 
+                    "abb"
+                ]
+            ], 
+            "output": 7
+        }, 
+        {
+            "input": [
+                [
+                    "aabccc", 
+                    "ccbbca", 
+                    "a", 
+                    "acaabb", 
+                    "aaa", 
+                    "aab", 
+                    "c", 
+                    "babb", 
+                    "aacaa", 
+                    "b"
+                ]
+            ], 
+            "output": 47
+        }, 
+        {
+            "input": [
+                [
+                    "a", 
+                    "aa", 
+                    "aaa", 
+                    "aaaa", 
+                    "aaaaa", 
+                    "aaaaaa", 
+                    "aaaaaaa", 
+                    "aaaaaaaa", 
+                    "aaaaaaaaa", 
+                    "aaaaaaaaaa", 
+                    "aaaaaaaaaaa", 
+                    "aaaaaaaaaaaa", 
+                    "aaaaaaaaaaaaa"
+                ]
+            ], 
+            "output": 16926797485
+        }, 
+        {
+            "input": [
+                [
+                    "a", 
+                    "b", 
+                    "aa", 
+                    "ab", 
+                    "ba", 
+                    "bb", 
+                    "aaa", 
+                    "aab", 
+                    "aba", 
+                    "abb", 
+                    "baa", 
+                    "bab", 
+                    "bba"
+                ]
+            ], 
+            "output": 1081925
+        }, 
+        {
+            "input": [
+                [
+                    "baabaabbaba", 
+                    "aaabaa", 
+                    "b", 
+                    "ab", 
+                    "bbbbabbaa", 
+                    "aabbbab", 
+                    "bbbbaaa", 
+                    "aaabaaaa", 
+                    "bb", 
+                    "bbba", 
+                    "aaaaaaab", 
+                    "bbbb", 
+                    "abbbbaabaaaaa"
+                ]
+            ], 
+            "output": 166
+        }, 
+        {
+            "input": [
+                [
+                    "bbbb", 
+                    "bbaaaaaaa", 
+                    "aabbbababb", 
+                    "b", 
+                    "aba", 
+                    "aaaaba", 
+                    "babab", 
+                    "aaabaaaaaaabb", 
+                    "aabbb", 
+                    "bbbbbbaa", 
+                    "aaabaaa", 
+                    "bb", 
+                    "abb"
+                ]
+            ], 
+            "output": 371
+        }, 
+        {
+            "input": [
+                [
+                    "aa", 
+                    "a", 
+                    "b", 
+                    "aaabaaaabaab", 
+                    "bbaababbbbbbb", 
+                    "bb", 
+                    "ababaaaaaaa", 
+                    "ba", 
+                    "bbb", 
+                    "bbbbbbbb", 
+                    "abba", 
+                    "aaabba", 
+                    "aaaaaaaababb"
+                ]
+            ], 
+            "output": 1353
+        }, 
+        {
+            "input": [
+                [
+                    "abbbaaa", 
+                    "bbbbbbbbbb", 
+                    "ba", 
+                    "bbb", 
+                    "bbbb", 
+                    "aaaaaabbb", 
+                    "baabbbaaaaa", 
+                    "aa", 
+                    "aaaaabaa", 
+                    "aaa", 
+                    "bbbbba", 
+                    "aaabbbbabbb", 
+                    "bbbbbbbbbbbb"
+                ]
+            ], 
+            "output": 1527
+        }, 
+        {
+            "input": [
+                [
+                    "bbbaaa", 
+                    "bbb", 
+                    "abbbbbb", 
+                    "b", 
+                    "bbbbbb", 
+                    "bbbbbbb", 
+                    "baaaaabbbbb", 
+                    "aaabbaaaaaaa", 
+                    "aabbbbbbaaaab", 
+                    "aaaaaaaaaaa", 
+                    "aaaaa", 
+                    "aabbaaabbbbbb", 
+                    "a"
+                ]
+            ], 
+            "output": 2743
+        }, 
+        {
+            "input": [
+                [
+                    "bbbba", 
+                    "bbbaaa", 
+                    "abbb", 
+                    "baa", 
+                    "abaaa", 
+                    "aaaaaaaaa", 
+                    "aaa", 
+                    "a", 
+                    "abbbb", 
+                    "aaaaabbbbbbb", 
+                    "bb", 
+                    "abbbbbbbbbbb", 
+                    "bbaa"
+                ]
+            ], 
+            "output": 3449
+        }, 
+        {
+            "input": [
+                [
+                    "b", 
+                    "bbbb", 
+                    "aaaaaaaaa", 
+                    "bba", 
+                    "aa", 
+                    "aaaaa", 
+                    "bbbaaa", 
+                    "aaabaaaab", 
+                    "bbbbbbbb", 
+                    "babbbbbbbbbbb", 
+                    "aaabbbbbb", 
+                    "a", 
+                    "bbaaaaaaaaaa"
+                ]
+            ], 
+            "output": 6265
+        }, 
+        {
+            "input": [
+                [
+                    "bbbbb", 
+                    "bbbba", 
+                    "abbbbbbbbbb", 
+                    "aaaab", 
+                    "bbbbabbbbb", 
+                    "aaa", 
+                    "aaaaab", 
+                    "bbb", 
+                    "bb", 
+                    "aaaaa", 
+                    "aaaaaaaaa", 
+                    "aaaaaaaaaa", 
+                    "bbbbbaaa"
+                ]
+            ], 
+            "output": 22318
+        }, 
+        {
+            "input": [
+                [
+                    "aaaab", 
+                    "bbbbbbbb", 
+                    "bbbb", 
+                    "b", 
+                    "bbbbb", 
+                    "aaaabb", 
+                    "aaa", 
+                    "a", 
+                    "bbaaaa", 
+                    "aaabbbaaaaaa", 
+                    "aa", 
+                    "aabb", 
+                    "bbbbbbbbb"
+                ]
+            ], 
+            "output": 137781
+        }, 
+        {
+            "input": [
+                [
+                    "aaaaaaaaa", 
+                    "aaaa", 
+                    "b", 
+                    "aaaaaaaaaaa", 
+                    "bbb", 
+                    "aaaaa", 
+                    "bbaaa", 
+                    "bbbb", 
+                    "bb", 
+                    "bbbbbb", 
+                    "bbbbbabbbbba", 
+                    "aa", 
+                    "bbbbbaaa"
+                ]
+            ], 
+            "output": 161460
+        }, 
+        {
+            "input": [
+                [
+                    "aaaa", 
+                    "ba", 
+                    "aaaaaaa", 
+                    "a", 
+                    "ab", 
+                    "bbb", 
+                    "bbbbbbb", 
+                    "aabbbbbb", 
+                    "bbbbaaaabbb", 
+                    "bbbbb", 
+                    "b", 
+                    "aa", 
+                    "aaa"
+                ]
+            ], 
+            "output": 178351
+        }, 
+        {
+            "input": [
+                [
+                    "bb", 
+                    "bbbbbbbbbbbb", 
+                    "a", 
+                    "bbb", 
+                    "aaaa", 
+                    "b", 
+                    "bbbbbbbb", 
+                    "bbbbbaaaaa", 
+                    "bbbbb", 
+                    "aa", 
+                    "ba", 
+                    "aaa", 
+                    "aaaaaaaaaaaaa"
+                ]
+            ], 
+            "output": 568258
+        }, 
+        {
+            "input": [
+                [
+                    "z", 
+                    "aa", 
+                    "aaa", 
+                    "aaaa", 
+                    "aaaaa", 
+                    "aaaaaa", 
+                    "aaaaaaa", 
+                    "aaaaaaaa", 
+                    "aaaaaaaaa", 
+                    "aaaaaaaaaa", 
+                    "aaaaaaaaaaa", 
+                    "aaaaaaaaaaaa", 
+                    "aaaaaaaaaaaaa"
+                ]
+            ], 
+            "output": 1417768545
+        }, 
+        {
+            "input": [
+                [
+                    "z", 
+                    "az", 
+                    "aaa", 
+                    "aaaa", 
+                    "aaaaa", 
+                    "aaaaaa", 
+                    "aaaaaaa", 
+                    "aaaaaaaa", 
+                    "aaaaaaaaa", 
+                    "aaaaaaaaaa", 
+                    "aaaaaaaaaaa", 
+                    "aaaaaaaaaaaa", 
+                    "aaaaaaaaaaaaa"
+                ]
+            ], 
+            "output": 348050484
+        }, 
+        {
+            "input": [
+                [
+                    "z", 
+                    "aa", 
+                    "aza", 
+                    "aaaa", 
+                    "aazaa", 
+                    "aaaaaa", 
+                    "aaazaaa", 
+                    "aaaaaaaa", 
+                    "aazaaaaaa", 
+                    "aaaaaaaaaa", 
+                    "aaaaaaaaaaa", 
+                    "aaaaaaaaaaaa", 
+                    "aaaaaaaaaaaaa"
+                ]
+            ], 
+            "output": 3391484
+        }, 
+        {
+            "input": [
+                [
+                    "ddaad", 
+                    "ca", 
+                    "daa", 
+                    "abbbaa", 
+                    "dd", 
+                    "aa", 
+                    "bbb", 
+                    "ccbbbba", 
+                    "bbdcccdd", 
+                    "bbbbccbb", 
+                    "cccdd", 
+                    "dccc", 
+                    "d"
+                ]
+            ], 
+            "output": 187
+        }, 
+        {
+            "input": [
+                [
+                    "abb", 
+                    "acccb", 
+                    "dc", 
+                    "c", 
+                    "bbbbb", 
+                    "ccc", 
+                    "ddc", 
+                    "a", 
+                    "d", 
+                    "cdccc", 
+                    "dd", 
+                    "da", 
+                    "addbabaadaddd"
+                ]
+            ], 
+            "output": 660
+        }, 
+        {
+            "input": [
+                [
+                    "d", 
+                    "a", 
+                    "b", 
+                    "bb", 
+                    "c", 
+                    "cb", 
+                    "ab", 
+                    "bc", 
+                    "cbb", 
+                    "ddcc", 
+                    "cc", 
+                    "ccd", 
+                    "dddc"
+                ]
+            ], 
+            "output": 19506
+        }, 
+        {
+            "input": [
+                [
+                    "abbb", 
+                    "bb", 
+                    "a", 
+                    "b", 
+                    "ab", 
+                    "c", 
+                    "cc", 
+                    "cca", 
+                    "ba", 
+                    "bbb", 
+                    "ccc", 
+                    "cbb", 
+                    "cbc"
+                ]
+            ], 
+            "output": 30651
+        }, 
+        {
+            "input": [
+                [
+                    "bbb", 
+                    "aaa", 
+                    "a", 
+                    "aa", 
+                    "b", 
+                    "baa", 
+                    "bb", 
+                    "bbbb", 
+                    "baaa", 
+                    "aaaa", 
+                    "ab", 
+                    "bbaa", 
+                    "aab"
+                ]
+            ], 
+            "output": 1247825
+        }, 
+        {
+            "input": [
+                [
+                    "aaaaaaaaaaaaa", 
+                    "vvvvvvvvvvvvv", 
+                    "vvvvvvvvvvvv", 
+                    "vv", 
+                    "vvv", 
+                    "vvvv", 
+                    "vvvvv", 
+                    "vvvvvv", 
+                    "vvvvvvv", 
+                    "vvvvvvvv", 
+                    "vvvvvvvvv", 
+                    "vvvvvvvvvv", 
+                    "vvvvvvvvvvv"
+                ]
+            ], 
+            "output": 1417768545
+        }, 
+        {
+            "input": [
+                [
+                    "abcdefghijklm", 
+                    "vvvvvvvvvvvvv", 
+                    "vvvvvvvvvvvv", 
+                    "nopqrstuvwxyz", 
+                    "vvv", 
+                    "vvvv", 
+                    "vvvvv", 
+                    "vvvvvv", 
+                    "vvvvvvv", 
+                    "vvvvvvvv", 
+                    "vvvvvvvvv", 
+                    "vvvvvvvvvv", 
+                    "vvvvvvvvvvv"
+                ]
+            ], 
+            "output": 108505111
+        }, 
+        {
+            "input": [
+                [
+                    "zbmadgjlqetu", 
+                    "b", 
+                    "z", 
+                    "m", 
+                    "g", 
+                    "a", 
+                    "l", 
+                    "j", 
+                    "d", 
+                    "u", 
+                    "q", 
+                    "e", 
+                    "t"
+                ]
+            ], 
+            "output": 16
+        }, 
+        {
+            "input": [
+                [
+                    "g"
+                ]
+            ], 
+            "output": 1
+        }, 
+        {
+            "input": [
+                [
+                    "aaaaaaaaaaaaa", 
+                    "bbbbbbbbbbbbb", 
+                    "ccccccccccccc", 
+                    "ddddddddddddd", 
+                    "eeeeeeeeeeeee", 
+                    "fffffffffffff", 
+                    "ggggggggggggg", 
+                    "hhhhhhhhhhhhh", 
+                    "iiiiiiiiiiiii", 
+                    "jjjjjjjjjjjjj", 
+                    "kkkkkkkkkkkkk", 
+                    "lllllllllllll", 
+                    "mmmmmmmmmmmmm"
+                ]
+            ], 
+            "output": 13
+        }, 
+        {
+            "input": [
+                [
+                    "ofujhrpdlitty", 
+                    "jabdrwtizxfmy", 
+                    "shblupvdfpbay", 
+                    "nuvrylrxphhhd", 
+                    "yttildprhjufo", 
+                    "guljxqbitnlbf", 
+                    "sshyjuazudhta", 
+                    "athduzaujyhss", 
+                    "fblntibqxjlug", 
+                    "yabpfdvpulbhs", 
+                    "ybbfqyfyqfbby", 
+                    "ymfxzitwrdbaj", 
+                    "dhhhpxrlyrvun"
+                ]
+            ], 
+            "output": 151945
+        }, 
+        {
+            "input": [
+                [
+                    "xsomedozrof", 
+                    "fo", 
+                    "vdkvmgcrvky", 
+                    "haiforzodemos", 
+                    "dvofkgjzudhrq", 
+                    "wykvrcgmvk", 
+                    "wdfiqvfzgwaw", 
+                    "xqrhduzjgk", 
+                    "pueaqold", 
+                    "iahaxdloqae", 
+                    "gzfvqifd", 
+                    "xa", 
+                    "up"
+                ]
+            ], 
+            "output": 3
+        }, 
+        {
+            "input": [
+                [
+                    "sqqqp", 
+                    "lgnrof", 
+                    "icjplywdjc", 
+                    "nnztdi", 
+                    "yyvd", 
+                    "dvyy", 
+                    "forngljpqqqs", 
+                    "dwylpjci", 
+                    "zqjewjwejqz", 
+                    "idtznnny", 
+                    "yn", 
+                    "cj", 
+                    "j"
+                ]
+            ], 
+            "output": 1370
+        }, 
+        {
+            "input": [
+                [
+                    "tloluntkgfwo", 
+                    "lpvitywywy", 
+                    "owfgktnulolt", 
+                    "tivplzezgtmiq", 
+                    "nxqtriomo", 
+                    "zjxmvuomnyi", 
+                    "qqpvsvmqdtjw", 
+                    "qduawfbrxpyc", 
+                    "wjtdqmvsvpqq", 
+                    "ylyomoirtqxn", 
+                    "cypxrbfwaudq", 
+                    "iynmouvmxjz", 
+                    "ylyqimtgzez"
+                ]
+            ], 
+            "output": 1898
+        }, 
+        {
+            "input": [
+                [
+                    "lkgiglfjft", 
+                    "llmqrzsetqgf", 
+                    "eihlhwhlcsr", 
+                    "llsjtmgai", 
+                    "iecpzofybo", 
+                    "ismiylvqr", 
+                    "fgqteszrqmll", 
+                    "yhfykkyfhy", 
+                    "rsclhwhlh", 
+                    "ietfjflgigkl", 
+                    "obyfozpcei", 
+                    "rqvlyimsi", 
+                    "iagmtjsll"
+                ]
+            ], 
+            "output": 12661
+        }, 
+        {
+            "input": [
+                [
+                    "aba", 
+                    "ababa", 
+                    "abababa", 
+                    "ababababa", 
+                    "abababababa", 
+                    "ababababababa", 
+                    "b", 
+                    "bab", 
+                    "babab", 
+                    "bababab", 
+                    "babababab", 
+                    "bababababab", 
+                    "babababababab"
+                ]
+            ], 
+            "output": 16893295
+        }, 
+        {
+            "input": [
+                [
+                    "a", 
+                    "aa", 
+                    "aaa", 
+                    "aaaa", 
+                    "aaaaa", 
+                    "aaaaaa", 
+                    "aaaaaaa", 
+                    "aaaaaaaa", 
+                    "aaaaaaaaa", 
+                    "aaaaaaaaaa", 
+                    "aaaaaaaaaaa", 
+                    "aaaaaaaaaaaa", 
+                    "aaaaaaaaaaaaa"
+                ]
+            ], 
+            "output": 16926797485
+        }, 
+        {
+            "input": [
+                [
+                    "a", 
+                    "aa", 
+                    "aaa", 
+                    "aaba", 
+                    "aaaaa", 
+                    "aaaaaa", 
+                    "aaaaaaa", 
+                    "aaaaaaaa", 
+                    "aaaaaaaaa", 
+                    "aaaaaaaaaa", 
+                    "aaaaaaaaaaa", 
+                    "aaaaaaaaaaaa", 
+                    "aaaaaaaaaaaaa"
+                ]
+            ], 
+            "output": 1416025405
+        }, 
+        {
+            "input": [
+                [
+                    "a", 
+                    "ab", 
+                    "ba", 
+                    "aaaa", 
+                    "aaaaa", 
+                    "aaaaaa", 
+                    "aaaaaaa", 
+                    "aaaaaaaa", 
+                    "aaaaaaaaa", 
+                    "aaaaaaaaaa", 
+                    "aaaaaaaaaaa", 
+                    "aaaaaaaaaaaa", 
+                    "aaaaaaaaaaaaa"
+                ]
+            ], 
+            "output": 450689647
+        }, 
+        {
+            "input": [
+                [
+                    "a", 
+                    "aa", 
+                    "aba", 
+                    "aaaa", 
+                    "aabaa", 
+                    "aaaaaa", 
+                    "aaabaaa", 
+                    "aaaaaaaa", 
+                    "aaaabaaaa", 
+                    "aaaaaaaaaa", 
+                    "aaaaabaaaaa", 
+                    "aaaaaaaaaaaa", 
+                    "aaaaaabaaaaaa"
+                ]
+            ], 
+            "output": 1803349
+        }, 
+        {
+            "input": [
+                [
+                    "a", 
+                    "aa", 
+                    "aaa", 
+                    "aaaa", 
+                    "aaaaa", 
+                    "aaaaaa", 
+                    "aaaaaaa", 
+                    "aaaaaaaa", 
+                    "aaaaaaaaa", 
+                    "aaaaaaaaaa", 
+                    "aaaaaaaaaaa", 
+                    "aaaaaaaaaaaa", 
+                    "aaaaaaaazaaaa"
+                ]
+            ], 
+            "output": 1434328329
+        }, 
+        {
+            "input": [
+                [
+                    "a", 
+                    "aa", 
+                    "aaa", 
+                    "aaaa", 
+                    "aaaaa", 
+                    "aaaaaa", 
+                    "aaaaaaa", 
+                    "aaaaaaaa", 
+                    "aaaaaaaaa", 
+                    "aaaaaaaaaa", 
+                    "aaaaaaaaaaa", 
+                    "aaaaaaaaaaaa"
+                ]
+            ], 
+            "output": 1302061344
+        }, 
+        {
+            "input": [
+                [
+                    "aaaaaaaaaaa", 
+                    "aaa", 
+                    "aaaaaaaaaa", 
+                    "aaaaaaaaa", 
+                    "a", 
+                    "aaaaaaa", 
+                    "aaaaaaaa", 
+                    "aaaaaa", 
+                    "aaaaa", 
+                    "aaaaaaaaaaaa", 
+                    "aaaa", 
+                    "aa", 
+                    "aaaaaaaaaaaaa"
+                ]
+            ], 
+            "output": 16926797485
+        }, 
+        {
+            "input": [
+                [
+                    "a", 
+                    "aa", 
+                    "aaa", 
+                    "aaaa", 
+                    "aaaaa", 
+                    "aaaaaa", 
+                    "aaaaaaa", 
+                    "aaaaaaaaa", 
+                    "aaaaaaaaaa", 
+                    "aaaaaaaaaaa", 
+                    "aaaaaaaaaaaa", 
+                    "bbbbbbbbbbbbb", 
+                    "aaaaaaaa"
+                ]
+            ], 
+            "output": 1434337685
+        }, 
+        {
+            "input": [
+                [
+                    "b", 
+                    "aa", 
+                    "aaa", 
+                    "aaaa", 
+                    "aaaaa", 
+                    "aaaaaa", 
+                    "aaaaaaa", 
+                    "aaaaaaaa", 
+                    "aaaaaaaaa", 
+                    "aaaaaaaaaa", 
+                    "aaaaaaaaaaa", 
+                    "aaaaaaaaaaaa", 
+                    "aaaaaaaaaaaaa"
+                ]
+            ], 
+            "output": 1417768545
+        }, 
+        {
+            "input": [
+                [
+                    "a", 
+                    "aa", 
+                    "aaa", 
+                    "aaaa", 
+                    "aaaaa", 
+                    "aaaaaaa", 
+                    "aaaaaaaa", 
+                    "aaaaaaaaa", 
+                    "aaaaaaaaaa", 
+                    "aaaaaaaaaaa", 
+                    "aaaaaaaaaaaa", 
+                    "aaaaaaaaaaaaa", 
+                    "aaaaaa"
+                ]
+            ], 
+            "output": 16926797485
+        }, 
+        {
+            "input": [
+                [
+                    "aaaaaa", 
+                    "bbbbbb", 
+                    "cccccc", 
+                    "dddddd", 
+                    "eeeeee", 
+                    "ffffff", 
+                    "gggggg", 
+                    "hhhhhh", 
+                    "bbbbbbaaaaaa", 
+                    "ddddddcccccc", 
+                    "ffffffeeeeee", 
+                    "hhhhhhgggggg"
+                ]
+            ], 
+            "output": 1896
+        }
+    ], 
+    "name": "PalindromePhrases", 
+    "statement": "<td class=\"statText\">One of your friends has given you several words and asked you how many palindromic phrases you can compose with those words.  \nTo save yourself some time, you've decided to write a program to answer this question.  In this problem, a <i>word</i> is defined as a non-empty sequence\nof lowercase letters ('a'-'z').  A <i>phrase</i> is a non-empty sequence of words, where each pair of consecutive words is separated with exactly one space character.  A phrase is <i>palindromic</i> if it reads the same forward and backward, ignoring space characters.\n<br /><br />\nYou are given a String[] <b>words</b>.  Return the number of different palindromic phrases that can be composed with the given words.  Each word in <b>words</b> can be used at most once within each phrase.  Two phrases are considered different if they are different strings, even if they read the same when ignoring spaces (for example, \"a ba\" and \"ab a\" are different phrases).</td>", 
+    "constraints": [
+        "<td class=\"statText\"><b>words</b> will contain between 1 and 13 elements, inclusive.</td>", 
+        "<td class=\"statText\">Each element of <b>words</b> will contain between 1 and 13 lowercase letters ('a'-'z'), inclusive.</td>", 
+        "<td class=\"statText\">All elements of <b>words</b> will be distinct.</td>"
+    ], 
+    "number": 10382, 
+    "examples": [
+        {
+            "comment": "<td class=\"statText\"><table><tr><td colspan=\"2\" class=\"statText\">You\u00a0can\u00a0construct\u00a0two\u00a0palindromic\u00a0phrases\u00a0\"a\"\u00a0and\u00a0\"a\u00a0ba\".</td></tr></table></td>", 
+            "input": [
+                [
+                    "a", 
+                    "ba"
+                ]
+            ], 
+            "output": 2
+        }, 
+        {
+            "comment": "<td class=\"statText\"><table><tr><td colspan=\"2\" class=\"statText\">No\u00a0palindromic\u00a0phrases\u00a0can\u00a0be\u00a0built.</td></tr></table></td>", 
+            "input": [
+                [
+                    "ab", 
+                    "bcd", 
+                    "efg"
+                ]
+            ], 
+            "output": 0
+        }, 
+        {
+            "comment": "<td class=\"statText\"><table><tr><td colspan=\"2\" class=\"statText\">Here we have 7 palindromic phrases: \"a\", \"a bba\", \"abb a\", \"abb bba\", \"bba abb\", \"abb a bba\", \"bba a abb\".\nNote that even though \"a bba\" and \"abb a\" represent the same palindrome, they differ as strings, so we count both of them.</td></tr></table></td>", 
+            "input": [
+                [
+                    "a", 
+                    "bba", 
+                    "abb"
+                ]
+            ], 
+            "output": 7
+        }, 
+        {
+            "comment": "", 
+            "input": [
+                [
+                    "aabccc", 
+                    "ccbbca", 
+                    "a", 
+                    "acaabb", 
+                    "aaa", 
+                    "aab", 
+                    "c", 
+                    "babb", 
+                    "aacaa", 
+                    "b"
+                ]
+            ], 
+            "output": 47
+        }
+    ]
+}

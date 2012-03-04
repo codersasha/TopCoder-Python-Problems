@@ -1,0 +1,43 @@
+<html><head><title>8215. RevealTriangle</title></head><body><h1>8215. RevealTriangle</h1><h2>Problem</h2><p><td class="statText"><p>
+	Suppose there is a triangle of digits like the following:
+</p>
+<pre>74932
+1325
+457
+92
+1</pre>
+<p>
+	Each digit, with the exception of those in the top row, is equal to the last digit of the sum of 
+	its upper and upper-right neighboring digits.
+</p>
+<p>
+	You will be given a String[] <b>questionMarkTriangle</b> containing a triangle where 
+	only one digit in each row is known and all others are represented by '?'s 
+	(see example 0 for clarification).
+	Each element of <b>questionMarkTriangle</b> represents a row of the triangle, and the rows are given 
+	from top to bottom. Each element contains exactly one digit ('0'-'9') and 
+	the remaining characters are all '?'s. Restore the triangle and return it as a 
+	String[] without '?'s.
+</p>
+</td></p><h2>Definition</h2><h3>Filename</h3><p>RevealTriangle.py</p><h3>Signature</h3><p>String[] calcTriangle(String[] questionMarkTriangle)</p><h2>Constraints</h2><ul><li><td class="statText"><b>questionMarkTriangle</b> will contain between 1 and 50 elements, inclusive.</td></li><li><td class="statText">Element i (0 indexed) of <b>questionMarkTriangle</b> will contain exactly n-i characters, where n is the number of elements in <b>questionMarkTriangle</b>.</td></li><li><td class="statText">Each element of <b>questionMarkTriangle</b> will contain exactly one digit ('0'-'9') and all others characters will be '?'s.</td></li></ul><h2>Examples</h2><ul><li>calcTriangle(['4??', '?2', '1']) = ['457', '92', '1']<td class="statText"><table><tr><td colspan="2" class="statText">Let's substitute '?'s with unknown variables:
+<pre>
+4ab 
+c2 
+1
+</pre>
+
+Having done that, we start solving for the variables from the bottom to the top. First, we know that the last digit of (c + 2) is 1. Therefore, c must be 9:
+
+<pre>
+4ab 
+92 
+1
+</pre>
+Now we know that the last digit of (4 + a) is 9, which means a is 5:
+<pre>
+45b 
+92 
+1
+</pre>
+
+And, finally, the last digit of (5 + b) is 2, so b is 7.</td></tr></table></td></li><li>calcTriangle(['1']) = ['1']</li><li>calcTriangle(['???2', '??2', '?2', '2']) = ['0002', '002', '02', '2']</li><li>calcTriangle(['??5?', '??9', '?4', '6']) = ['7054', '759', '24', '6']</li></ul>

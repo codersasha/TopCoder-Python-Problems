@@ -1,0 +1,15 @@
+<html><head><title>8216. ReadingBooks</title></head><body><h1>8216. ReadingBooks</h1><h2>Problem</h2><p><td class="statText"><p>
+	There are some books, each consisting of exactly three parts: introduction, story and edification. 
+	There is a reader who goes through the books and reads various parts. 
+	Each time he finishes reading a part, he adds the name of the part to the end of a list. 
+	He may read zero or more parts from each book, and he can read them in any order, but he cannot 
+	read each part more than once. 
+	Whenever he starts reading a new book, he can no longer go back and read any parts of books he has 
+	looked at previously.
+</p>
+<p>
+	You are given a String[] <b>readParts</b> containing the list created by the reader. 
+	Each element of <b>readParts</b> is "introduction", "story" or "edification" (quotes for clarity). 
+	Return the maximum possible number of books for which the reader has read all three parts.
+</p>
+</td></p><h2>Definition</h2><h3>Filename</h3><p>ReadingBooks.py</p><h3>Signature</h3><p>int countBooks(String[] readParts)</p><h2>Constraints</h2><ul><li><td class="statText"><b>readParts</b> will contain between 1 and 50 elements, inclusive.</td></li><li><td class="statText">Each element of <b>readParts</b> will be "introduction", "story" or "edification" (quotes for clarity).</td></li></ul><h2>Examples</h2><ul><li>countBooks(['introduction', 'story', 'introduction', 'edification']) = 1<td class="statText"><table><tr><td colspan="2" class="statText">It is possible that the reader has read the introduction from the first book and all 3 parts from the second one. Of course, it is also possible that he has read one part from four different books, but we are interested in the maximal number of books for which all 3 parts have been read.</td></tr></table></td></li><li>countBooks(['introduction', 'story', 'edification', 'introduction', 'story', 'edification']) = 2<td class="statText"><table><tr><td colspan="2" class="statText">Two books have been read in their entirety.</td></tr></table></td></li><li>countBooks(['introduction', 'story', 'introduction', 'edification', 'story', 'introduction']) = 1</li><li>countBooks(['introduction', 'story', 'introduction', 'edification', 'story', 'story', 'edification', 'edification', 'edification', 'introduction', 'introduction', 'edification', 'story', 'introduction', 'story', 'edification', 'edification', 'story', 'introduction', 'edification', 'story', 'story', 'edification', 'introduction', 'story']) = 5</li></ul>

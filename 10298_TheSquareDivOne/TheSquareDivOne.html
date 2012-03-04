@@ -1,0 +1,17 @@
+<html><head><title>10298. TheSquareDivOne</title></head><body><h1>10298. TheSquareDivOne</h1><h2>Problem</h2><p><td class="statText">John and Brus like puzzles. They have been playing a new game which involves placing checkers on a square board. The board is a grid containing the same number of columns and rows.<br />
+<br />
+The game begins with John placing checkers on specific cells of the board.  Then, R[i] is calculated for each row i, where R[i] is the number of checkers in the i-th row.  Brus must then move the checkers in such a way that for each column i in the final board, the number of checkers in that column is equal to R[i].  Note that R[i] is calculated for the initial placement of checkers and is not modified afterwards.  In a single turn, Brus can move a checker up, down, left or right into an adjacent empty cell.  He must use as few turns as possible to reach the goal.<br />
+<br />
+You are give a String[] <b>board</b>, where the j-th character of the i-th element is uppercase 'C' if the cell at row i, column j contains a checker and '.' otherwise.  Return the final placement of checkers using the same format as the input.  Since there may be many possible final placements, return the one that comes first lexicographically.</td></p><h2>Definition</h2><h3>Filename</h3><p>TheSquareDivOne.py</p><h3>Signature</h3><p>String[] solve(String[] board)</p><h2>Constraints</h2><ul><li><td class="statText"><b>board</b> will contain exactly n elements, where n is between 1 and 18, inclusive.</td></li><li><td class="statText">Each element of <b>board</b> will contain exactly n characters.</td></li><li><td class="statText">Each element of <b>board</b> will contain only uppercase 'C' or '.'.</td></li></ul><h2>Examples</h2><ul><li>solve(['...', '...', 'C..']) = ['...', '...', '..C']<td class="statText"><table><tr><td colspan="2" class="statText">Initially, R[0] = 0, R[1] = 0, R[2] = 1.<br />
+There is currently a checker in column 0 which must be moved to column 2. It can be done in two turns.</td></tr></table></td></li><li>solve(['CCC', '.C.', 'CCC']) = ['C.C', 'C.C', 'CCC']<td class="statText"><table><tr><td colspan="2" class="statText"><pre>
+CCC    CCC    C.C    C.C
+.C. -> ..C -> .CC -> C.C
+CCC    CCC    CCC    CCC
+</pre>
+<br />
+The following sequence also takes three turns, but its final placement does not come earlier lexicographically:<br /><br />
+<pre>
+CCC    CCC    CCC    CCC
+.C. -> C.. -> CC. -> C.C
+CCC    CCC    C.C    C.C
+</pre><br /></td></tr></table></td></li><li>solve(['C..', '.C.', '..C']) = ['C..', '.C.', '..C']<td class="statText"><table><tr><td colspan="2" class="statText">No move is necessary.</td></tr></table></td></li><li>solve(['C....', 'CCCCC', '...CC', '.CC..', '.C.C.']) = ['.C...', 'CCCCC', '.C..C', '.CC..', '.C.C.']</li></ul>

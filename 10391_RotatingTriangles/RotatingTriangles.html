@@ -1,0 +1,18 @@
+<html><head><title>10391. RotatingTriangles</title></head><body><h1>10391. RotatingTriangles</h1><h2>Problem</h2><p><td class="statText"><i>NOTE: This problem statement contains images that may not display properly if viewed outside of the applet.</i>
+<br />
+<br />
+You are given a white rectangular <b>grid</b> made up of square cells.  Some cells contain black squares, and some contain black squares that have been folded in half to form right triangles.  Each of these triangles can be rotated left or right by any multiple of 90 degrees.  They can also be unfolded to become squares.  However, black squares cannot be folded to become triangles.<br />
+<br />
+Your task is to generate proper black triangles in the grid using the aforementioned operations.  A black triangle is considered proper within a grid configuration if no other black shape shares a line segment with it.  However, black shapes may still share one or more points with the triangle.<br />
+<br />
+The <b>grid</b> will be given as a String[], where the j-th character of the i-th element represents the cell at row i, column j.  '.' represents an empty cell, '#' represents a cell containing a black square, and '/' represents a cell containing a black triangle.  Return the total number of distinct proper black triangles that can be formed in this grid.  Two triangles are considered distinct if they differ in at least one vertex.<br />
+<br />
+For example, consider the following input grid:<br />
+<br />
+<img src="http://www.topcoder.com/contest/problem/RotatingTriangles/input.png" /><br />
+<br />
+It is possible to generate 5 distinct proper black triangles:<br />
+<br />
+<pre><img src="http://www.topcoder.com/contest/problem/RotatingTriangles/t1.png" /> <img src="http://www.topcoder.com/contest/problem/RotatingTriangles/t2.png" /></pre>
+<pre><img src="http://www.topcoder.com/contest/problem/RotatingTriangles/t3.png" /> <img src="http://www.topcoder.com/contest/problem/RotatingTriangles/t4.png" /></pre>
+<img src="http://www.topcoder.com/contest/problem/RotatingTriangles/t5.png" /></td></p><h2>Definition</h2><h3>Filename</h3><p>RotatingTriangles.py</p><h3>Signature</h3><p>int count(String[] grid)</p><h2>Constraints</h2><ul><li><td class="statText"><b>grid</b> will contain between 1 and 50 elements, inclusive.</td></li><li><td class="statText">Each element of <b>grid</b> will contain between 1 and 50 characters, inclusive.</td></li><li><td class="statText">Each element of <b>grid</b> will contain the same number of characters.</td></li><li><td class="statText">Each character in <b>grid</b> will be '.', '#' or '/'.</td></li></ul><h2>Examples</h2><ul><li>count(['//']) = 10</li><li>count(['#//#./#/#', '####.#/##', '...../#.#', '.....####']) = 5<td class="statText"><table><tr><td colspan="2" class="statText">This is the example from the statement.</td></tr></table></td></li><li>count(['.#.', '#/#', '.#.']) = 0</li><li>count(['.../...', '..///./', './/#/./']) = 46</li></ul>

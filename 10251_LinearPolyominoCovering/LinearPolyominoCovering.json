@@ -1,0 +1,363 @@
+{
+    "definition": {
+        "method": "findCovering", 
+        "names": {
+            "input": [
+                "region"
+            ]
+        }, 
+        "types": {
+            "output": "String", 
+            "input": [
+                "String"
+            ]
+        }, 
+        "class": "LinearPolyominoCovering"
+    }, 
+    "tests": [
+        {
+            "input": [
+                "XXXXXX"
+            ], 
+            "output": "AAAABB"
+        }, 
+        {
+            "input": [
+                "XX.XX"
+            ], 
+            "output": "BB.BB"
+        }, 
+        {
+            "input": [
+                "XXXX....XXX.....XX"
+            ], 
+            "output": "impossible"
+        }, 
+        {
+            "input": [
+                "."
+            ], 
+            "output": "."
+        }, 
+        {
+            "input": [
+                "X"
+            ], 
+            "output": "impossible"
+        }, 
+        {
+            "input": [
+                "XX"
+            ], 
+            "output": "BB"
+        }, 
+        {
+            "input": [
+                "XXXX"
+            ], 
+            "output": "AAAA"
+        }, 
+        {
+            "input": [
+                "XXXXXXXX"
+            ], 
+            "output": "AAAAAAAA"
+        }, 
+        {
+            "input": [
+                "X.XXXX"
+            ], 
+            "output": "impossible"
+        }, 
+        {
+            "input": [
+                "XXXX.X"
+            ], 
+            "output": "impossible"
+        }, 
+        {
+            "input": [
+                "XX.XXXX.XXXXXX.XXXXXXXX.XXXXXXXXXX"
+            ], 
+            "output": "BB.AAAA.AAAABB.AAAAAAAA.AAAAAAAABB"
+        }, 
+        {
+            "input": [
+                "XX.XXXXXXXXXX..XXXXXXXX...XXXXXX"
+            ], 
+            "output": "BB.AAAAAAAABB..AAAAAAAA...AAAABB"
+        }, 
+        {
+            "input": [
+                "..........XXXXXX........XXXX........XX.........."
+            ], 
+            "output": "..........AAAABB........AAAA........BB.........."
+        }, 
+        {
+            "input": [
+                "...XXXXXXXXXXXX.....XXXXXXXXXXXXXX......."
+            ], 
+            "output": "...AAAAAAAAAAAA.....AAAAAAAAAAAABB......."
+        }, 
+        {
+            "input": [
+                "XX.XX.XX.XX.XX.XX.XX.XX.XX.XX.XX.XX.XX.XX.XX.XX.XX"
+            ], 
+            "output": "BB.BB.BB.BB.BB.BB.BB.BB.BB.BB.BB.BB.BB.BB.BB.BB.BB"
+        }, 
+        {
+            "input": [
+                ".XX.XXXX.XX.XX.XXXX.XX.XX.XXXX.XX.XX.XXXX.XX.XX.XX"
+            ], 
+            "output": ".BB.AAAA.BB.BB.AAAA.BB.BB.AAAA.BB.BB.AAAA.BB.BB.BB"
+        }, 
+        {
+            "input": [
+                "....XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX...."
+            ], 
+            "output": "....AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABB...."
+        }, 
+        {
+            "input": [
+                "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+            ], 
+            "output": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABB"
+        }, 
+        {
+            "input": [
+                ".XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+            ], 
+            "output": "impossible"
+        }, 
+        {
+            "input": [
+                "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX."
+            ], 
+            "output": "impossible"
+        }, 
+        {
+            "input": [
+                ".XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX."
+            ], 
+            "output": ".AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA."
+        }, 
+        {
+            "input": [
+                "...XXXXXXXXXXXXXXXXXXXXXX.....XXXXXXXXXXXXXXXXXX.."
+            ], 
+            "output": "...AAAAAAAAAAAAAAAAAAAABB.....AAAAAAAAAAAAAAAABB.."
+        }, 
+        {
+            "input": [
+                "...XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+            ], 
+            "output": "impossible"
+        }, 
+        {
+            "input": [
+                ".........................................XXXX"
+            ], 
+            "output": ".........................................AAAA"
+        }, 
+        {
+            "input": [
+                "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+            ], 
+            "output": "impossible"
+        }, 
+        {
+            "input": [
+                ".XX...XXXX.....XXXXXX.......XXXXXXXX........."
+            ], 
+            "output": ".BB...AAAA.....AAAABB.......AAAAAAAA........."
+        }, 
+        {
+            "input": [
+                "..XXX....XXXXX......XXXXXXX........XXXXXXXXX"
+            ], 
+            "output": "impossible"
+        }, 
+        {
+            "input": [
+                ".........XXXXXXXX.......XXXXXX.....XXXX...XX."
+            ], 
+            "output": ".........AAAAAAAA.......AAAABB.....AAAA...BB."
+        }, 
+        {
+            "input": [
+                "XXXXXXXXXXXXXXXXXXXXXX......XXXXXXXXXXX..XXXX"
+            ], 
+            "output": "impossible"
+        }, 
+        {
+            "input": [
+                "XXXXXX........XXXX..XXXXXX....XXXXXX..XXXXXXX."
+            ], 
+            "output": "impossible"
+        }, 
+        {
+            "input": [
+                "........XXXX..XXXXXX....XXXXXX..X...."
+            ], 
+            "output": "impossible"
+        }, 
+        {
+            "input": [
+                "..X..XXXXXX....XXXXXX..XXXXXX...."
+            ], 
+            "output": "impossible"
+        }, 
+        {
+            "input": [
+                "........XXXXXXXX..XXXXXX....X..XXXXXX...."
+            ], 
+            "output": "impossible"
+        }, 
+        {
+            "input": [
+                "XX.XXXXXXXXXX..XXXXXXXX.XX.XXX.XXXXXX"
+            ], 
+            "output": "impossible"
+        }, 
+        {
+            "input": [
+                "XXXXX"
+            ], 
+            "output": "impossible"
+        }, 
+        {
+            "input": [
+                "XXX"
+            ], 
+            "output": "impossible"
+        }, 
+        {
+            "input": [
+                "X.X."
+            ], 
+            "output": "impossible"
+        }, 
+        {
+            "input": [
+                "....."
+            ], 
+            "output": "....."
+        }, 
+        {
+            "input": [
+                "..."
+            ], 
+            "output": "..."
+        }, 
+        {
+            "input": [
+                ".."
+            ], 
+            "output": ".."
+        }, 
+        {
+            "input": [
+                "XXXX....XX..XXXX"
+            ], 
+            "output": "AAAA....BB..AAAA"
+        }, 
+        {
+            "input": [
+                "...."
+            ], 
+            "output": "...."
+        }, 
+        {
+            "input": [
+                "........"
+            ], 
+            "output": "........"
+        }, 
+        {
+            "input": [
+                "XX.XXXXXXXXXX..XXXXXXXX...XXX"
+            ], 
+            "output": "impossible"
+        }, 
+        {
+            "input": [
+                ".XXX.XXX.XX.XXX.XXX.XX"
+            ], 
+            "output": "impossible"
+        }, 
+        {
+            "input": [
+                "X.X"
+            ], 
+            "output": "impossible"
+        }, 
+        {
+            "input": [
+                "...XX..."
+            ], 
+            "output": "...BB..."
+        }, 
+        {
+            "input": [
+                ".........."
+            ], 
+            "output": ".........."
+        }, 
+        {
+            "input": [
+                "......"
+            ], 
+            "output": "......"
+        }, 
+        {
+            "input": [
+                ".XXXX.XXXX.XX.XXXX."
+            ], 
+            "output": ".AAAA.AAAA.BB.AAAA."
+        }
+    ], 
+    "name": "LinearPolyominoCovering", 
+    "statement": "<td class=\"statText\"><p>You have an infinite number of the following two polyominoes: AAAA and BB.</p>\n<p>You are given a String <b>region</b>, filled with characters '.' and 'X'. You need to cover (without overlapping) all the 'X' characters with the given polyominoes.</p>\n<p>Return a String that contains the same region with cells marked '.' left untouched, and cells marked 'X' changed to 'A' or 'B', according to the polyomino that covers the cell.</p>\n<p>If there is no solution, return the String \"impossible\" (quotes for clarity only).</p>\n<p>If there are multiple solutions, return the lexicographically smallest one.</p>\n</td>", 
+    "constraints": [
+        "<td class=\"statText\"><b>region</b> will contain between 1 and 50 characters, inclusive.</td>", 
+        "<td class=\"statText\">Each character of <b>region</b> will be either '.' or uppercase 'X'.</td>"
+    ], 
+    "number": 10251, 
+    "examples": [
+        {
+            "comment": "<td class=\"statText\"><table><tr><td colspan=\"2\" class=\"statText\">There is only room for one AAAA polyomino, so there are three possible coverings: \"AAAABB\", \"BBAAAA\", and \"BBBBBB\". The first one is the lexicographically smallest.</td></tr></table></td>", 
+            "input": [
+                "XXXXXX"
+            ], 
+            "output": "AAAABB"
+        }, 
+        {
+            "comment": "<td class=\"statText\"><table><tr><td colspan=\"2\" class=\"statText\">The empty cell in the middle should be left uncovered, so we can't use the AAAA polyomino here.</td></tr></table></td>", 
+            "input": [
+                "XX.XX"
+            ], 
+            "output": "BB.BB"
+        }, 
+        {
+            "comment": "<td class=\"statText\"><table><tr><td colspan=\"2\" class=\"statText\">The middle segment of Xs is too narrow for an AAAA polyomino, but is too wide for a BB polyomino.</td></tr></table></td>", 
+            "input": [
+                "XXXX....XXX.....XX"
+            ], 
+            "output": "impossible"
+        }, 
+        {
+            "comment": "", 
+            "input": [
+                "X"
+            ], 
+            "output": "impossible"
+        }, 
+        {
+            "comment": "", 
+            "input": [
+                "XX.XXXXXXXXXX..XXXXXXXX...XXXXXX"
+            ], 
+            "output": "BB.AAAAAAAABB..AAAAAAAA...AAAABB"
+        }
+    ]
+}

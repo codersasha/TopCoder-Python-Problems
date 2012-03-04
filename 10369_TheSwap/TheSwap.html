@@ -1,0 +1,13 @@
+<html><head><title>10369. TheSwap</title></head><body><h1>10369. TheSwap</h1><h2>Problem</h2><p><td class="statText"><p>
+There is nothing more beautiful than just an integer number.
+</p>
+<p>
+You are given an integer <b>n</b>.  Write down <b>n</b> in decimal notation with no leading zeroes, and let M be the number of written digits.  Perform the following operation exactly <b>k</b> times:
+<ul>
+<li>Choose two different 1-based positions, i and j, such that 1 <= i < j <= M. Swap the digits at positions i and j.  This swap must not cause the resulting number to have a leading zero, i.e., if the digit at position j is zero, then i must be strictly greater than 1.</li>
+</ul>
+</p>
+<p>
+Return the maximal possible number you can get at the end of this procedure.  If it's not possible to perform <b>k</b> operations, return -1 instead.
+</p>
+</td></p><h2>Definition</h2><h3>Filename</h3><p>TheSwap.py</p><h3>Signature</h3><p>int findMax(int n, int k)</p><h2>Constraints</h2><ul><li><td class="statText"><b>n</b> will be between 1 and 1,000,000, inclusive.</td></li><li><td class="statText"><b>k</b> will be between 1 and 10, inclusive.</td></li></ul><h2>Examples</h2><ul><li>findMax(16375, 1) = 76315<td class="statText"><table><tr><td colspan="2" class="statText">The optimal way is to swap 1 and 7.</td></tr></table></td></li><li>findMax(432, 1) = 423<td class="statText"><table><tr><td colspan="2" class="statText">In this case the result is less than the given number.</td></tr></table></td></li><li>findMax(90, 4) = -1<td class="statText"><table><tr><td colspan="2" class="statText">We can't make even a single operation because it would cause the resulting number to have a leading zero.</td></tr></table></td></li><li>findMax(5, 2) = -1<td class="statText"><table><tr><td colspan="2" class="statText">Here we can't choose two different positions for an operation.</td></tr></table></td></li><li>findMax(436659, 2) = 966354</li></ul>

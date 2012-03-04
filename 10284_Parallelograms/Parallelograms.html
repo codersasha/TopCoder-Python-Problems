@@ -1,0 +1,12 @@
+<html><head><title>10284. Parallelograms</title></head><body><h1>10284. Parallelograms</h1><h2>Problem</h2><p><td class="statText"><p>
+A parallelogram is a quadrilateral with two sets of parallel sides.
+</p>
+<p>
+You are given three distinct points A(<b>xA</b>,<b>yA</b>), B(<b>xB</b>,<b>yB</b>) and C(<b>xC</b>,<b>yC</b>) in the plane.
+</p>
+<p>
+Consider all non-degenerate parallelograms such that A, B, and C are three of its vertices.
+Your method should return the difference between the largest and the smallest possible perimeter of such a parallelogram.
+If there is no such parallelogram, return -1 instead.
+</p></td></p><h2>Definition</h2><h3>Filename</h3><p>Parallelograms.py</p><h3>Signature</h3><p>double getDifference(int xA, int yA, int xB, int yB, int xC, int yC)</p><h2>Constraints</h2><ul><li><td class="statText"><b>xA</b>, <b>yA</b>, <b>xB</b>, <b>yB</b>, <b>xC</b> and <b>yC</b> will be between -5,000 and 5,000, inclusive.</td></li><li><td class="statText">A, B, and C will be three different points.</td></li></ul><h2>Examples</h2><ul><li>getDifference(0, 0, 0, 1, 1, 0) = 0<td class="statText"><table><tr><td colspan="2" class="statText">For this input there are three possible parallelograms, with the fourth vertex at (1,1), (1,-1), or (-1,1). In the first case, we get a 1 by 1 square with a perimeter of 4.  In both the second and third cases, we get a parallelogram with side lengths 1 and sqrt(2), with a perimeter of approximately 4.828427.
+</td></tr></table></td></li><li>getDifference(0, 0, 4, 0, 0, 3) = 4<td class="statText"><table><tr><td colspan="2" class="statText">In this case the largest possible perimeter is 18 and the smallest possible perimeter is 14.</td></tr></table></td></li><li>getDifference(0, 0, 1, 0, 47, 0) = -1.0<td class="statText"><table><tr><td colspan="2" class="statText">No parallelogram can have three vertices on the same line.  Therefore, the answer for this test case is -1.</td></tr></table></td></li><li>getDifference(1, 2, 3, 4, 8, 7) = 11</li><li>getDifference(2, -1, -7, 2, -1, 0) = -1.0<td class="statText"><table><tr><td colspan="2" class="statText">One more example of three points on the same line.</td></tr></table></td></li></ul>

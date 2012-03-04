@@ -1,0 +1,23 @@
+<html><head><title>10326. MismatchedStrings</title></head><body><h1>10326. MismatchedStrings</h1><h2>Problem</h2><p><td class="statText"><p>
+Well-parenthesized strings are defined using the following rules:
+</p>
+<ul>
+<li>The empty string is well-parenthesized.</li>
+<li>If <tt>S</tt> is a well-parenthesized string, then <tt>(S)</tt> is a well-parenthesized string.</li>
+<li>If <tt>S</tt> and <tt>T</tt> are well-parenthesized strings, then <tt>ST</tt> is a well-parenthesized string.</li>
+<li>Every well-parenthesized string can be created using the previous rules only.</li>
+</ul>
+<p>
+In this problem we will deal with the complement of this set of strings: The strings that consist only of the characters '<tt>(</tt>' and '<tt>)</tt>', but are not well-parenthesized. We will call these strings <i>mismatched</i>.
+</p>
+<p>
+You are given an int <b>N</b> and a long <b>K</b>. All mismatched strings of length <b>N</b> can be ordered lexicographically, and numbered sequentially, starting with zero. Return the string that will get the number <b>K</b> in this order. If there is no such string, return the empty string instead.
+</p>
+</td></p><h2>Definition</h2><h3>Filename</h3><p>MismatchedStrings.py</p><h3>Signature</h3><p>String getString(int N, long K)</p><h2>Constraints</h2><ul><li><td class="statText"><b>N</b> will be between 1 and 50, inclusive.</td></li><li><td class="statText"><b>K</b> will be between 0 and 2^<b>N</b> - 1, inclusive.</td></li></ul><h2>Examples</h2><ul><li>getString(4, 0) = '(((('<td class="statText"><table><tr><td colspan="2" class="statText">For any length, the lexicographically smallest mismatched string consists of '(' characters only.</td></tr></table></td></li><li>getString(4, 4) = '())('<td class="statText"><table><tr><td colspan="2" class="statText">There are 14 mismatched strings of length 4. The first five are 
+"<tt>((((</tt>",
+"<tt>((()</tt>",
+"<tt>(()(</tt>",
+"<tt>()((</tt>",
+and
+"<tt>())(</tt>".
+Note that we use a 0-based index, hence <b>K</b>=4 corresponds to the fifth mismatched string.</td></tr></table></td></li><li>getString(6, 63) = ''<td class="statText"><table><tr><td colspan="2" class="statText">There are less than 64 mismatched strings of length 6.</td></tr></table></td></li><li>getString(7, 13) = '((())()'</li></ul>

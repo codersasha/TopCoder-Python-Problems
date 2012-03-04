@@ -1,0 +1,16 @@
+<html><head><title>10285. AnotherCoinProblem</title></head><body><h1>10285. AnotherCoinProblem</h1><h2>Problem</h2><p><td class="statText"><p>
+The monetary system in Absurdistan is really simple and systematic. The locals only use coins. The coins come in different values.
+The values used are:
+</p>
+<p>
+1, 10, 25, 100, 1000, 2500, 10000, 100000, 250000, 1000000, ...
+</p>
+<p>
+Formally, for each K>=0 there are coins worth 10<sup>K</sup>, and coins worth 25*100<sup>K</sup>.
+</p>
+<p>
+You want to buy a new car. Its price is <b>cost</b>. Write a method that will return the smallest number of coins necessary to pay exactly the cost of the car (assuming 
+you have a sufficient supply of coins of each of the types you will need).
+</p></td></p><h2>Definition</h2><h3>Filename</h3><p>AnotherCoinProblem.py</p><h3>Signature</h3><p>int minimumCoins(long cost)</p><h2>Constraints</h2><ul><li><td class="statText"><b>cost</b> will be between 1 and 10^15, inclusive.</td></li></ul><h2>Examples</h2><ul><li>minimumCoins(47) = 5<td class="statText"><table><tr><td colspan="2" class="statText">The best way to pay 47 is 25+10+10+1+1.</td></tr></table></td></li><li>minimumCoins(9) = 9<td class="statText"><table><tr><td colspan="2" class="statText">To pay 9, we can only use nine coins worth 1 each.</td></tr></table></td></li><li>minimumCoins(250111) = 4</li><li>minimumCoins(76540123) = 16<td class="statText"><table><tr><td colspan="2" class="statText">3*25,000,000 + 1*1,000,000 + 2*250,000 + 4*10,000 + 1*100 + 2*10 + 3*1 = 76,540,123
+<br />
+3 + 1 + 2 + 4 + 1 + 2 + 3 = 16</td></tr></table></td></li></ul>

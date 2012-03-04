@@ -1,0 +1,8 @@
+<html><head><title>10279. ThePresents</title></head><body><h1>10279. ThePresents</h1><h2>Problem</h2><p><td class="statText"><p>
+Santa Claus has <b>n</b> small boxes, all of equal size, containing presents for the children.  Each box is a A x A x A cube.  Santa wants to pack all of the small boxes into a large rectangular box with dimensions <b>length</b> x <b>width</b> x <b>height</b>.  Each small box must be placed inside the big box with its sides parallel to the sides of the big box.
+</p>
+<p>
+Return the maximal possible value of A that will allow Santa Claus to fit all of the small boxes into the big one.  Note that A is not necessarily an integer.
+</p>
+</td></p><h2>Definition</h2><h3>Filename</h3><p>ThePresents.py</p><h3>Signature</h3><p>double find(int n, int length, int width, int height)</p><h2>Constraints</h2><ul><li><td class="statText"><b>n</b> will be between 1 and 1,000,000,000, inclusive.</td></li><li><td class="statText"><b>length</b>, <b>width</b> and <b>height</b> will be between 1 and 1,000,000,000, inclusive.</td></li></ul><h2>Examples</h2><ul><li>find(2, 2, 2, 2) = 1<td class="statText"><table><tr><td colspan="2" class="statText">There's room for eight 1x1x1 presents in the big box.  However, if the presents are larger than 1x1x1, there is only room for one at most.
+</td></tr></table></td></li><li>find(1, 12, 47, 5) = 5<td class="statText"><table><tr><td colspan="2" class="statText">Just one present.</td></tr></table></td></li><li>find(10, 4, 2, 10) = 2<td class="statText"><table><tr><td colspan="2" class="statText">There will be no free space left in the big box.</td></tr></table></td></li><li>find(77, 146, 523, 229) = 52</li></ul>

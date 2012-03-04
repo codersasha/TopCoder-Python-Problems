@@ -1,0 +1,954 @@
+{
+    "definition": {
+        "method": "probability", 
+        "names": {
+            "input": [
+                "M", 
+                "lowerBound", 
+                "upperBound", 
+                "N", 
+                "K"
+            ]
+        }, 
+        "types": {
+            "output": "double", 
+            "input": [
+                "int", 
+                "int", 
+                "int", 
+                "int", 
+                "int"
+            ]
+        }, 
+        "class": "KthProbableElement"
+    }, 
+    "tests": [
+        {
+            "input": [
+                1, 
+                1, 
+                10, 
+                3, 
+                1
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                3, 
+                1, 
+                2, 
+                2, 
+                2
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                3, 
+                1, 
+                3, 
+                2, 
+                2
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                10, 
+                1, 
+                10, 
+                1, 
+                10
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                4, 
+                61, 
+                65, 
+                62, 
+                3
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                100, 
+                1, 
+                1000, 
+                500, 
+                50
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                100, 
+                1, 
+                1000, 
+                1, 
+                1
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                100, 
+                1, 
+                1000, 
+                1, 
+                100
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                100, 
+                1, 
+                1000, 
+                1, 
+                50
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                4, 
+                632, 
+                636, 
+                634, 
+                2
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                4, 
+                917, 
+                921, 
+                921, 
+                4
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                5, 
+                2, 
+                6, 
+                5, 
+                2
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                5, 
+                11, 
+                15, 
+                11, 
+                5
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                5, 
+                101, 
+                105, 
+                105, 
+                3
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                6, 
+                201, 
+                206, 
+                201, 
+                1
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                6, 
+                311, 
+                316, 
+                316, 
+                2
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                6, 
+                421, 
+                426, 
+                423, 
+                3
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                6, 
+                565, 
+                570, 
+                565, 
+                6
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                100, 
+                1000, 
+                1000, 
+                1000, 
+                33
+            ], 
+            "output": 1
+        }, 
+        {
+            "input": [
+                31, 
+                844, 
+                993, 
+                976, 
+                21
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                81, 
+                909, 
+                991, 
+                927, 
+                20
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                72, 
+                531, 
+                676, 
+                531, 
+                25
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                54, 
+                266, 
+                488, 
+                271, 
+                24
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                36, 
+                366, 
+                770, 
+                493, 
+                33
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                59, 
+                75, 
+                357, 
+                317, 
+                24
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                37, 
+                193, 
+                943, 
+                581, 
+                4
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                86, 
+                959, 
+                990, 
+                977, 
+                35
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                78, 
+                283, 
+                744, 
+                451, 
+                17
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                99, 
+                741, 
+                919, 
+                791, 
+                74
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                88, 
+                584, 
+                813, 
+                617, 
+                43
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                87, 
+                551, 
+                786, 
+                567, 
+                20
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                4, 
+                349, 
+                453, 
+                378, 
+                4
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                75, 
+                887, 
+                908, 
+                902, 
+                32
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                41, 
+                693, 
+                962, 
+                921, 
+                41
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                6, 
+                228, 
+                394, 
+                370, 
+                2
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                62, 
+                986, 
+                996, 
+                988, 
+                12
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                62, 
+                104, 
+                263, 
+                149, 
+                25
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                41, 
+                657, 
+                750, 
+                709, 
+                15
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                70, 
+                366, 
+                672, 
+                493, 
+                49
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                30, 
+                792, 
+                832, 
+                815, 
+                22
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                73, 
+                526, 
+                735, 
+                607, 
+                49
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                37, 
+                955, 
+                960, 
+                960, 
+                34
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                31, 
+                67, 
+                698, 
+                211, 
+                7
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                52, 
+                646, 
+                877, 
+                697, 
+                18
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                67, 
+                122, 
+                921, 
+                315, 
+                17
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                76, 
+                847, 
+                933, 
+                909, 
+                44
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                100, 
+                982, 
+                989, 
+                987, 
+                34
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                72, 
+                567, 
+                940, 
+                823, 
+                50
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                46, 
+                688, 
+                775, 
+                707, 
+                23
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                90, 
+                299, 
+                824, 
+                514, 
+                48
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                25, 
+                544, 
+                550, 
+                549, 
+                14
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                65, 
+                343, 
+                794, 
+                423, 
+                17
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                51, 
+                838, 
+                856, 
+                843, 
+                21
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                33, 
+                997, 
+                1000, 
+                997, 
+                29
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                7, 
+                35, 
+                378, 
+                257, 
+                1
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                30, 
+                697, 
+                996, 
+                960, 
+                15
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                28, 
+                595, 
+                755, 
+                652, 
+                5
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                47, 
+                705, 
+                850, 
+                794, 
+                31
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                68, 
+                1, 
+                330, 
+                270, 
+                58
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                88, 
+                437, 
+                940, 
+                442, 
+                12
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                51, 
+                135, 
+                870, 
+                746, 
+                37
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                35, 
+                651, 
+                798, 
+                737, 
+                5
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                6, 
+                128, 
+                489, 
+                251, 
+                1
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                45, 
+                190, 
+                729, 
+                249, 
+                17
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                5, 
+                193, 
+                970, 
+                957, 
+                1
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                93, 
+                187, 
+                913, 
+                852, 
+                80
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                39, 
+                358, 
+                549, 
+                367, 
+                18
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                9, 
+                225, 
+                255, 
+                255, 
+                6
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                52, 
+                784, 
+                812, 
+                787, 
+                24
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                79, 
+                474, 
+                964, 
+                782, 
+                71
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                2, 
+                410, 
+                663, 
+                638, 
+                1
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                90, 
+                799, 
+                995, 
+                935, 
+                35
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                67, 
+                505, 
+                783, 
+                768, 
+                9
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                72, 
+                883, 
+                947, 
+                904, 
+                48
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                45, 
+                956, 
+                960, 
+                959, 
+                26
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                95, 
+                143, 
+                928, 
+                484, 
+                36
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                100, 
+                1, 
+                1000, 
+                55, 
+                55
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                100, 
+                1, 
+                1000, 
+                501, 
+                49
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                100, 
+                1, 
+                1000, 
+                239, 
+                50
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                100, 
+                5, 
+                900, 
+                400, 
+                50
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                100, 
+                500, 
+                1000, 
+                750, 
+                50
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                100, 
+                2, 
+                1000, 
+                499, 
+                55
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                97, 
+                1, 
+                998, 
+                497, 
+                47
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                100, 
+                1, 
+                1, 
+                1, 
+                50
+            ], 
+            "output": 1
+        }, 
+        {
+            "input": [
+                100, 
+                1, 
+                1000, 
+                400, 
+                50
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                100, 
+                1, 
+                1000, 
+                553, 
+                47
+            ], 
+            "output": 0
+        }
+    ], 
+    "name": "KthProbableElement", 
+    "statement": "<td class=\"statText\"><b>M</b> integers are randomly independently chosen from the interval <b>lowerBound</b>...<b>upperBound</b>, inclusive.  Return the probability that the <b>K</b>-th smallest element of the generated set is equal to <b>N</b>.  <b>K</b>=1 refers to the smallest element, <b>K</b>=2 refers to the second smallest element, and so on.\n</td>", 
+    "constraints": [
+        "<td class=\"statText\"><b>M</b> will be between 1 and 100, inclusive.</td>", 
+        "<td class=\"statText\"><b>lowerBound</b> will be between 1 and 1000, inclusive.</td>", 
+        "<td class=\"statText\"><b>upperBound</b> will be between <b>lowerBound</b> and 1000, inclusive.</td>", 
+        "<td class=\"statText\"><b>N</b> will be between <b>lowerBound</b> and <b>upperBound</b>, inclusive.</td>", 
+        "<td class=\"statText\"><b>K</b> will be between 1 and <b>M</b>, inclusive.</td>"
+    ], 
+    "number": 10335, 
+    "examples": [
+        {
+            "comment": "<td class=\"statText\"><table><tr><td colspan=\"2\" class=\"statText\">The probability that the only chosen number will be equal to 3 is 0.1.</td></tr></table></td>", 
+            "input": [
+                1, 
+                1, 
+                10, 
+                3, 
+                1
+            ], 
+            "output": 0
+        }, 
+        {
+            "comment": "<td class=\"statText\"><table><tr><td colspan=\"2\" class=\"statText\">There are 8 ways to choose 3 numbers from the interval 1..2:\n<pre>Numbers | 2nd smallest element\n 1 1 1  |  1\n 1 1 2  |  1\n 1 2 1  |  1\n 1 2 2  |  2\n 2 1 1  |  1\n 2 1 2  |  2\n 2 2 1  |  2\n 2 2 2  |  2</pre>\nExactly 4 of the ways have the 2nd smallest element equal to 2.</td></tr></table></td>", 
+            "input": [
+                3, 
+                1, 
+                2, 
+                2, 
+                2
+            ], 
+            "output": 0
+        }, 
+        {
+            "comment": "<td class=\"statText\"><table><tr><td colspan=\"2\" class=\"statText\">There are 27 ways to choose 3 numbers from the interval 1..3, 13 of them have the 2nd smallest element equal to 2.</td></tr></table></td>", 
+            "input": [
+                3, 
+                1, 
+                3, 
+                2, 
+                2
+            ], 
+            "output": 0
+        }, 
+        {
+            "comment": "<td class=\"statText\"><table><tr><td colspan=\"2\" class=\"statText\">Only one of 10<sup>10</sup> ways to choose 10 numbers from the interval 1..10 has 1 as the 10th smallest element.</td></tr></table></td>", 
+            "input": [
+                10, 
+                1, 
+                10, 
+                1, 
+                10
+            ], 
+            "output": 0
+        }, 
+        {
+            "comment": "", 
+            "input": [
+                4, 
+                61, 
+                65, 
+                62, 
+                3
+            ], 
+            "output": 0
+        }
+    ]
+}

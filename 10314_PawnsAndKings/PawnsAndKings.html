@@ -1,0 +1,23 @@
+<html><head><title>10314. PawnsAndKings</title></head><body><h1>10314. PawnsAndKings</h1><h2>Problem</h2><p><td class="statText"><p>
+	You are given a String[] <b>board</b> representing a standard 8x8 chess board.
+	The '.' character represents an empty cell, 'P' represents a cell occupied by a pawn, and 'K' 
+	represents a cell occupied by a king.
+</p>
+<p>
+	In a single move, a king can move to any of its 8 neighboring cells. If you move a king 
+	into a cell occupied by a pawn, the king will capture that pawn. You can never move a 
+	king outside the board or into a cell already occupied by another king.
+</p>
+<p>
+	Return the minimal number of moves required for the kings to capture all the pawns.
+</p>
+</td></p><h2>Definition</h2><h3>Filename</h3><p>PawnsAndKings.py</p><h3>Signature</h3><p>int minNumberOfMoves(String[] board)</p><h2>Constraints</h2><ul><li><td class="statText"><b>board</b> will contain exactly 8 elements.</td></li><li><td class="statText">Each element of <b>board</b> will contain exactly 8 characters.</td></li><li><td class="statText">Each character of each element of <b>board</b> will be '.', or an uppercase 'P', or an uppercase 'K'.</td></li><li><td class="statText">The number of 'P' characters will be between 1 and 10, inclusive.</td></li><li><td class="statText">The number of 'K' characters will be between 1 and 10, inclusive.</td></li></ul><h2>Examples</h2><ul><li>minNumberOfMoves(['.PPPPKP.', '........', '........', '........', '........', '........', '........', '........']) = 6<td class="statText"><table><tr><td colspan="2" class="statText">The only king will make the minimal number of moves by first capturing the only pawn at its right side and then capturing the other pawns.</td></tr></table></td></li><li>minNumberOfMoves(['P......P', '........', '........', '........', '...KK...', '........', '........', 'P......P']) = 20<td class="statText"><table><tr><td colspan="2" class="statText">If we mark the kings with A and B and the pawns with 1, 2, 3 and 4, then one possible solution is that A captures the pawns 1 and 2, and B captures the pawns 3 and 4.
+<pre>
+1......4
+........
+........
+........
+...AB...
+........
+........
+2......3</pre></td></tr></table></td></li><li>minNumberOfMoves(['.....P.P', '..K....P', '....K...', '..PP...P', '...K..KK', '........', 'K.......', 'KP.K....']) = 9</li><li>minNumberOfMoves(['PK...KPK', '......K.', '...K....', '..KPK...', '...K....', '........', '........', 'K..P.K.P']) = 8</li></ul>

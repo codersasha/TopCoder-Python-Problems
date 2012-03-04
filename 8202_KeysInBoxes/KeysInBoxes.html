@@ -1,0 +1,15 @@
+<html><head><title>8202. KeysInBoxes</title></head><body><h1>8202. KeysInBoxes</h1><h2>Problem</h2><p><td class="statText"><p>There are <b>N</b> boxes numbered from 1 to <b>N</b> and <b>N</b> keys numbered from 1 to <b>N</b>. 
+The i-th key can only be used to open the i-th box.
+Now, we randomly put exactly one key into each of the boxes.
+We assume that all configurations of keys in boxes occur with the same probability. Then we lock all the boxes.
+You have <b>M</b> bombs, each of which can be used to open one locked box.
+Once you open a locked box, you can get the key in it and perhaps open another locked box with that key.
+Your strategy is to select a box, open it with a bomb, take the key and open all the boxes you can and then repeat with another bomb.</p>
+<p>
+Return the probability that you can get all the keys.
+The return value must be a string formatted as "A/B" (quotes for clarity), representing the probability as a fraction.  A and B must both be positive integers with no leading zeroes, and the greatest common divisor of A and B must be 1.</p>
+</td></p><h2>Definition</h2><h3>Filename</h3><p>KeysInBoxes.py</p><h3>Signature</h3><p>String getAllKeys(int N, int M)</p><h2>Constraints</h2><ul><li><td class="statText"><b>N</b> will be between 1 and 20, inclusive.</td></li><li><td class="statText"><b>M</b> will be between 1 and <b>N</b>, inclusive.</td></li></ul><h2>Examples</h2><ul><li>getAllKeys(2, 1) = '1/2'<td class="statText"><table><tr><td colspan="2" class="statText">When box 1 contains key 2, you can get all the keys.</td></tr></table></td></li><li>getAllKeys(2, 2) = '1/1'<td class="statText"><table><tr><td colspan="2" class="statText">When <b>N</b>=<b>M</b>, you can always get all the keys.</td></tr></table></td></li><li>getAllKeys(3, 1) = '1/3'<td class="statText"><table><tr><td colspan="2" class="statText">There are 6 possible configurations of keys in boxes. Using 1 bomb, you can open all the boxes in 2 of them:
+<ul>
+<li>box 1 - key 2, box 2 - key 3, box 3 - key 1;</li>
+<li>box 1 - key 3, box 2 - key 1, box 3 - key 2.</li>
+</ul></td></tr></table></td></li><li>getAllKeys(3, 2) = '5/6'<td class="statText"><table><tr><td colspan="2" class="statText">Now, when you have 2 bombs, you are only unable to get all the keys in the following configuration: box 1 - key 1, box 2 - key 2, box 3 - key 3.</td></tr></table></td></li><li>getAllKeys(4, 2) = '17/24'</li></ul>

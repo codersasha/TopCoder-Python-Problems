@@ -1,0 +1,817 @@
+{
+    "definition": {
+        "method": "count", 
+        "names": {
+            "input": [
+                "N", 
+                "A"
+            ]
+        }, 
+        "types": {
+            "output": "int", 
+            "input": [
+                "int", 
+                "int"
+            ]
+        }, 
+        "class": "MegaCoolNumbers"
+    }, 
+    "tests": [
+        {
+            "input": [
+                3, 
+                1
+            ], 
+            "output": 25
+        }, 
+        {
+            "input": [
+                3, 
+                5
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                10, 
+                6
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                10, 
+                2
+            ], 
+            "output": 643
+        }, 
+        {
+            "input": [
+                6, 
+                10
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                9, 
+                4
+            ], 
+            "output": 13946
+        }, 
+        {
+            "input": [
+                8, 
+                10
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                8, 
+                5
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                8, 
+                6
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                6, 
+                10
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                7, 
+                8
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                29, 
+                9
+            ], 
+            "output": 1550927
+        }, 
+        {
+            "input": [
+                17, 
+                7
+            ], 
+            "output": 154272
+        }, 
+        {
+            "input": [
+                29, 
+                7
+            ], 
+            "output": 13904532
+        }, 
+        {
+            "input": [
+                13, 
+                2
+            ], 
+            "output": 744
+        }, 
+        {
+            "input": [
+                4, 
+                10
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                33, 
+                10
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                10, 
+                3
+            ], 
+            "output": 7502
+        }, 
+        {
+            "input": [
+                8, 
+                9
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                27, 
+                9
+            ], 
+            "output": 679757
+        }, 
+        {
+            "input": [
+                56, 
+                4
+            ], 
+            "output": 4328198
+        }, 
+        {
+            "input": [
+                28, 
+                1
+            ], 
+            "output": 9
+        }, 
+        {
+            "input": [
+                64, 
+                2
+            ], 
+            "output": 2580
+        }, 
+        {
+            "input": [
+                28, 
+                6
+            ], 
+            "output": 8752247
+        }, 
+        {
+            "input": [
+                51, 
+                5
+            ], 
+            "output": 38201689
+        }, 
+        {
+            "input": [
+                65, 
+                10
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                8, 
+                1
+            ], 
+            "output": 11
+        }, 
+        {
+            "input": [
+                52, 
+                10
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                22, 
+                6
+            ], 
+            "output": 2125867
+        }, 
+        {
+            "input": [
+                80, 
+                1
+            ], 
+            "output": 9
+        }, 
+        {
+            "input": [
+                302, 
+                2
+            ], 
+            "output": 11148
+        }, 
+        {
+            "input": [
+                282, 
+                9
+            ], 
+            "output": 678308819
+        }, 
+        {
+            "input": [
+                28, 
+                10
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                35, 
+                2
+            ], 
+            "output": 1536
+        }, 
+        {
+            "input": [
+                369, 
+                6
+            ], 
+            "output": 528884859
+        }, 
+        {
+            "input": [
+                194, 
+                7
+            ], 
+            "output": 927974911
+        }, 
+        {
+            "input": [
+                140, 
+                4
+            ], 
+            "output": 62139602
+        }, 
+        {
+            "input": [
+                231, 
+                7
+            ], 
+            "output": 603901423
+        }, 
+        {
+            "input": [
+                258, 
+                5
+            ], 
+            "output": 901374186
+        }, 
+        {
+            "input": [
+                142, 
+                7
+            ], 
+            "output": 24704033
+        }, 
+        {
+            "input": [
+                197, 
+                3
+            ], 
+            "output": 1726380
+        }, 
+        {
+            "input": [
+                23, 
+                7
+            ], 
+            "output": 2386305
+        }, 
+        {
+            "input": [
+                238, 
+                1
+            ], 
+            "output": 9
+        }, 
+        {
+            "input": [
+                192, 
+                5
+            ], 
+            "output": 387626608
+        }, 
+        {
+            "input": [
+                53, 
+                2
+            ], 
+            "output": 2184
+        }, 
+        {
+            "input": [
+                505, 
+                4
+            ], 
+            "output": 766538468
+        }, 
+        {
+            "input": [
+                7, 
+                7
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                443, 
+                4
+            ], 
+            "output": 873279675
+        }, 
+        {
+            "input": [
+                548, 
+                8
+            ], 
+            "output": 484028533
+        }, 
+        {
+            "input": [
+                65, 
+                2
+            ], 
+            "output": 2616
+        }, 
+        {
+            "input": [
+                649, 
+                8
+            ], 
+            "output": 330601169
+        }, 
+        {
+            "input": [
+                138, 
+                4
+            ], 
+            "output": 59572172
+        }, 
+        {
+            "input": [
+                832, 
+                3
+            ], 
+            "output": 29486040
+        }, 
+        {
+            "input": [
+                455, 
+                6
+            ], 
+            "output": 239344926
+        }, 
+        {
+            "input": [
+                495, 
+                7
+            ], 
+            "output": 70673564
+        }, 
+        {
+            "input": [
+                139, 
+                9
+            ], 
+            "output": 589827333
+        }, 
+        {
+            "input": [
+                350, 
+                5
+            ], 
+            "output": 429601569
+        }, 
+        {
+            "input": [
+                270, 
+                10
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                452, 
+                10
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                988, 
+                1
+            ], 
+            "output": 9
+        }, 
+        {
+            "input": [
+                836, 
+                3
+            ], 
+            "output": 29768256
+        }, 
+        {
+            "input": [
+                63, 
+                9
+            ], 
+            "output": 992381041
+        }, 
+        {
+            "input": [
+                308, 
+                8
+            ], 
+            "output": 267850613
+        }, 
+        {
+            "input": [
+                400, 
+                7
+            ], 
+            "output": 53957028
+        }, 
+        {
+            "input": [
+                43, 
+                1
+            ], 
+            "output": 9
+        }, 
+        {
+            "input": [
+                844, 
+                1
+            ], 
+            "output": 9
+        }, 
+        {
+            "input": [
+                977, 
+                6
+            ], 
+            "output": 928100631
+        }, 
+        {
+            "input": [
+                149, 
+                10
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                252, 
+                4
+            ], 
+            "output": 351189986
+        }, 
+        {
+            "input": [
+                574, 
+                2
+            ], 
+            "output": 20940
+        }, 
+        {
+            "input": [
+                216, 
+                9
+            ], 
+            "output": 190312172
+        }, 
+        {
+            "input": [
+                723, 
+                7
+            ], 
+            "output": 873242124
+        }, 
+        {
+            "input": [
+                582, 
+                1
+            ], 
+            "output": 9
+        }, 
+        {
+            "input": [
+                176, 
+                8
+            ], 
+            "output": 230110582
+        }, 
+        {
+            "input": [
+                904, 
+                4
+            ], 
+            "output": 714463437
+        }, 
+        {
+            "input": [
+                993, 
+                4
+            ], 
+            "output": 804165142
+        }, 
+        {
+            "input": [
+                315, 
+                10
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                706, 
+                4
+            ], 
+            "output": 511679299
+        }, 
+        {
+            "input": [
+                190, 
+                1
+            ], 
+            "output": 9
+        }, 
+        {
+            "input": [
+                664, 
+                10
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                554, 
+                4
+            ], 
+            "output": 645406871
+        }, 
+        {
+            "input": [
+                96, 
+                1
+            ], 
+            "output": 9
+        }, 
+        {
+            "input": [
+                963, 
+                7
+            ], 
+            "output": 350994727
+        }, 
+        {
+            "input": [
+                918, 
+                3
+            ], 
+            "output": 35849868
+        }, 
+        {
+            "input": [
+                743, 
+                7
+            ], 
+            "output": 512504519
+        }, 
+        {
+            "input": [
+                440, 
+                10
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                420, 
+                2
+            ], 
+            "output": 15396
+        }, 
+        {
+            "input": [
+                740, 
+                5
+            ], 
+            "output": 553012949
+        }, 
+        {
+            "input": [
+                46, 
+                7
+            ], 
+            "output": 326423760
+        }, 
+        {
+            "input": [
+                471, 
+                9
+            ], 
+            "output": 844419866
+        }, 
+        {
+            "input": [
+                729, 
+                6
+            ], 
+            "output": 752357982
+        }, 
+        {
+            "input": [
+                216, 
+                1
+            ], 
+            "output": 9
+        }, 
+        {
+            "input": [
+                604, 
+                2
+            ], 
+            "output": 22020
+        }, 
+        {
+            "input": [
+                733, 
+                9
+            ], 
+            "output": 153995176
+        }, 
+        {
+            "input": [
+                23, 
+                2
+            ], 
+            "output": 1104
+        }, 
+        {
+            "input": [
+                908, 
+                1
+            ], 
+            "output": 9
+        }, 
+        {
+            "input": [
+                726, 
+                4
+            ], 
+            "output": 164721112
+        }, 
+        {
+            "input": [
+                852, 
+                9
+            ], 
+            "output": 400626524
+        }, 
+        {
+            "input": [
+                22, 
+                3
+            ], 
+            "output": 29580
+        }, 
+        {
+            "input": [
+                1000, 
+                9
+            ], 
+            "output": 528971249
+        }, 
+        {
+            "input": [
+                1, 
+                1
+            ], 
+            "output": 9
+        }, 
+        {
+            "input": [
+                2, 
+                1
+            ], 
+            "output": 45
+        }, 
+        {
+            "input": [
+                2, 
+                2
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                10, 
+                3
+            ], 
+            "output": 7502
+        }, 
+        {
+            "input": [
+                1000, 
+                1000
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                1000, 
+                980
+            ], 
+            "output": 0
+        }, 
+        {
+            "input": [
+                999, 
+                9
+            ], 
+            "output": 604032056
+        }, 
+        {
+            "input": [
+                1000, 
+                999
+            ], 
+            "output": 0
+        }
+    ], 
+    "name": "MegaCoolNumbers", 
+    "statement": "<td class=\"statText\">A positive integer is called a cool number of power A if it can be separated into exactly A groups of consecutive digits, where the digits in each group form an arithmetic progression.  An arithmetic progression is a sequence of numbers in which the difference between any two consecutive numbers is the same.  A positive integer is called a mega cool number of power A if it is a cool number of power A, not a cool number of power A-1, and all its digits are in non-decreasing order.<br />\n\nDetermine the number of mega cool numbers of power <b>A</b> that contain exactly <b>N</b> digits (with no leading zeroes).  Return this number modulo 1,000,000,007.</td>", 
+    "constraints": [
+        "<td class=\"statText\"><b>A</b> and <b>N</b> will be between 1 and 1,000, inclusive. <br /></td>"
+    ], 
+    "number": 10259, 
+    "examples": [
+        {
+            "comment": "<td class=\"statText\"><table><tr><td colspan=\"2\" class=\"statText\">There 9 such numbers: 1, 2, 3, 4, 5, 6, 7, 8, 9.</td></tr></table></td>", 
+            "input": [
+                1, 
+                1
+            ], 
+            "output": 9
+        }, 
+        {
+            "comment": "<td class=\"statText\"><table><tr><td colspan=\"2\" class=\"statText\">Any two-digit number with non-decreasing digits will be a mega cool number of power 1.</td></tr></table></td>", 
+            "input": [
+                2, 
+                1
+            ], 
+            "output": 45
+        }, 
+        {
+            "comment": "<td class=\"statText\"><table><tr><td colspan=\"2\" class=\"statText\">There are no such numbers.</td></tr></table></td>", 
+            "input": [
+                2, 
+                2
+            ], 
+            "output": 0
+        }, 
+        {
+            "comment": "", 
+            "input": [
+                10, 
+                3
+            ], 
+            "output": 7502
+        }
+    ]
+}

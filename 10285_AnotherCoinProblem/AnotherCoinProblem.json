@@ -1,0 +1,54 @@
+{
+    "definition": {
+        "method": "minimumCoins", 
+        "names": {
+            "input": [
+                "cost"
+            ]
+        }, 
+        "types": {
+            "output": "int", 
+            "input": [
+                "long"
+            ]
+        }, 
+        "class": "AnotherCoinProblem"
+    }, 
+    "tests": [], 
+    "name": "AnotherCoinProblem", 
+    "statement": "<td class=\"statText\"><p>\nThe monetary system in Absurdistan is really simple and systematic. The locals only use coins. The coins come in different values.\nThe values used are:\n</p>\n<p>\n1, 10, 25, 100, 1000, 2500, 10000, 100000, 250000, 1000000, ...\n</p>\n<p>\nFormally, for each K>=0 there are coins worth 10<sup>K</sup>, and coins worth 25*100<sup>K</sup>.\n</p>\n<p>\nYou want to buy a new car. Its price is <b>cost</b>. Write a method that will return the smallest number of coins necessary to pay exactly the cost of the car (assuming \nyou have a sufficient supply of coins of each of the types you will need).\n</p></td>", 
+    "constraints": [
+        "<td class=\"statText\"><b>cost</b> will be between 1 and 10^15, inclusive.</td>"
+    ], 
+    "number": 10285, 
+    "examples": [
+        {
+            "comment": "<td class=\"statText\"><table><tr><td colspan=\"2\" class=\"statText\">The best way to pay 47 is 25+10+10+1+1.</td></tr></table></td>", 
+            "input": [
+                47
+            ], 
+            "output": 5
+        }, 
+        {
+            "comment": "<td class=\"statText\"><table><tr><td colspan=\"2\" class=\"statText\">To pay 9, we can only use nine coins worth 1 each.</td></tr></table></td>", 
+            "input": [
+                9
+            ], 
+            "output": 9
+        }, 
+        {
+            "comment": "", 
+            "input": [
+                250111
+            ], 
+            "output": 4
+        }, 
+        {
+            "comment": "<td class=\"statText\"><table><tr><td colspan=\"2\" class=\"statText\">3*25,000,000 + 1*1,000,000 + 2*250,000 + 4*10,000 + 1*100 + 2*10 + 3*1 = 76,540,123\n<br />\n3 + 1 + 2 + 4 + 1 + 2 + 3 = 16</td></tr></table></td>", 
+            "input": [
+                76540123
+            ], 
+            "output": 16
+        }
+    ]
+}

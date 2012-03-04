@@ -1,0 +1,73 @@
+{
+    "definition": {
+        "method": "find", 
+        "names": {
+            "input": [
+                "n", 
+                "length", 
+                "width", 
+                "height"
+            ]
+        }, 
+        "types": {
+            "output": "double", 
+            "input": [
+                "int", 
+                "int", 
+                "int", 
+                "int"
+            ]
+        }, 
+        "class": "ThePresents"
+    }, 
+    "tests": [], 
+    "name": "ThePresents", 
+    "statement": "<td class=\"statText\"><p>\nSanta Claus has <b>n</b> small boxes, all of equal size, containing presents for the children.  Each box is a A x A x A cube.  Santa wants to pack all of the small boxes into a large rectangular box with dimensions <b>length</b> x <b>width</b> x <b>height</b>.  Each small box must be placed inside the big box with its sides parallel to the sides of the big box.\n</p>\n<p>\nReturn the maximal possible value of A that will allow Santa Claus to fit all of the small boxes into the big one.  Note that A is not necessarily an integer.\n</p>\n</td>", 
+    "constraints": [
+        "<td class=\"statText\"><b>n</b> will be between 1 and 1,000,000,000, inclusive.</td>", 
+        "<td class=\"statText\"><b>length</b>, <b>width</b> and <b>height</b> will be between 1 and 1,000,000,000, inclusive.</td>"
+    ], 
+    "number": 10279, 
+    "examples": [
+        {
+            "comment": "<td class=\"statText\"><table><tr><td colspan=\"2\" class=\"statText\">There's room for eight 1x1x1 presents in the big box.  However, if the presents are larger than 1x1x1, there is only room for one at most.\n</td></tr></table></td>", 
+            "input": [
+                2, 
+                2, 
+                2, 
+                2
+            ], 
+            "output": 1
+        }, 
+        {
+            "comment": "<td class=\"statText\"><table><tr><td colspan=\"2\" class=\"statText\">Just one present.</td></tr></table></td>", 
+            "input": [
+                1, 
+                12, 
+                47, 
+                5
+            ], 
+            "output": 5
+        }, 
+        {
+            "comment": "<td class=\"statText\"><table><tr><td colspan=\"2\" class=\"statText\">There will be no free space left in the big box.</td></tr></table></td>", 
+            "input": [
+                10, 
+                4, 
+                2, 
+                10
+            ], 
+            "output": 2
+        }, 
+        {
+            "comment": "", 
+            "input": [
+                77, 
+                146, 
+                523, 
+                229
+            ], 
+            "output": 52
+        }
+    ]
+}

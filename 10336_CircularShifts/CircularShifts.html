@@ -1,0 +1,18 @@
+<html><head><title>10336. CircularShifts</title></head><body><h1>10336. CircularShifts</h1><h2>Problem</h2><p><td class="statText">You have two lists of numbers, X and Y, each containing exactly <b>N</b> elements.  You can optionally apply any number of circular shifts to each list.  A circular shift means removing the last element from a list and re-inserting it before the first element.  For example, {1, 2, 3} would become {3, 1, 2}, and {3, 1, 2} would become {2, 3, 1}.  After you apply any circular shifts, the final score is calculated as:<br />
+
+X[0]*Y[0] + X[1]*Y[1] + ... + X[<b>N</b>-1]*Y[<b>N</b>-1]<br />
+
+You are given ints <b>Z0</b>, <b>A</b>, <b>B</b> and <b>M</b>. Generate a list Z of length 2*<b>N</b>, using the following recursive definition:<br />
+
+Z[0] = <b>Z0</b> MOD <b>M</b> <br />
+Z[i] = (Z[i-1]*<b>A</b>+<b>B</b>) MOD <b>M</b> (note that Z[i-1]*<b>A</b>+<b>B</b> may overflow a 32-bit integer) <br />
+
+Then, generate lists X and Y, each of length <b>N</b>, using the following definitions:<br />
+
+X[i] = Z[i] MOD 100 <br />
+Y[i] = Z[i+<b>N</b>] MOD 100 <br />
+
+Return the maximal final score you can achieve.
+
+
+</td></p><h2>Definition</h2><h3>Filename</h3><p>CircularShifts.py</p><h3>Signature</h3><p>int maxScore(int N, int Z0, int A, int B, int M)</p><h2>Constraints</h2><ul><li><td class="statText"><b>N</b> will be between 1 and 60,000, inclusive. <br /></td></li><li><td class="statText"><b>Z0</b>, <b>A</b> and <b>B</b> will each be between 0 and 1,000,000,000, inclusive. <br /></td></li><li><td class="statText"><b>M</b> will be between 1 and 1,000,000,000, inclusive. <br /></td></li></ul><h2>Examples</h2><ul><li>maxScore(5, 1, 1, 0, 13) = 5<td class="statText"><table><tr><td colspan="2" class="statText">Both lists contain only ones, so no matter how many shifts you perform, the score will always be 5.</td></tr></table></td></li><li>maxScore(4, 1, 1, 1, 20) = 70<td class="statText"><table><tr><td colspan="2" class="statText">The lists are {1, 2, 3, 4} and {5, 6, 7, 8}.  The maximal score is achieved by not making any shifts.</td></tr></table></td></li><li>maxScore(10, 23, 11, 51, 4322) = 28886<td class="statText"><table><tr><td colspan="2" class="statText">The lists are (23, 4, 95, 20, 17, 94, 63, 44, 13, 96) and (87, 54, 13, 18, 61, 24, 17, 94, 53, 2).</td></tr></table></td></li><li>maxScore(1000, 3252, 3458736, 233421, 111111111) = 2585408</li><li>maxScore(141, 96478, 24834, 74860, 92112) = 419992</li></ul>

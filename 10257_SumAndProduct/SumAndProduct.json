@@ -1,0 +1,1020 @@
+{
+    "definition": {
+        "method": "smallestSet", 
+        "names": {
+            "input": [
+                "S", 
+                "P"
+            ]
+        }, 
+        "types": {
+            "output": "int", 
+            "input": [
+                "int", 
+                "int"
+            ]
+        }, 
+        "class": "SumAndProduct"
+    }, 
+    "tests": [
+        {
+            "input": [
+                10, 
+                10
+            ], 
+            "output": 1
+        }, 
+        {
+            "input": [
+                10, 
+                20
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                10, 
+                30
+            ], 
+            "output": 3
+        }, 
+        {
+            "input": [
+                10, 
+                34
+            ], 
+            "output": 3
+        }, 
+        {
+            "input": [
+                10, 
+                40
+            ], 
+            "output": -1
+        }, 
+        {
+            "input": [
+                2, 
+                3
+            ], 
+            "output": -1
+        }, 
+        {
+            "input": [
+                5, 
+                15
+            ], 
+            "output": -1
+        }, 
+        {
+            "input": [
+                5, 
+                7
+            ], 
+            "output": -1
+        }, 
+        {
+            "input": [
+                33, 
+                3333333
+            ], 
+            "output": -1
+        }, 
+        {
+            "input": [
+                8, 
+                256
+            ], 
+            "output": -1
+        }, 
+        {
+            "input": [
+                90, 
+                1000000000
+            ], 
+            "output": 9
+        }, 
+        {
+            "input": [
+                13, 
+                1333
+            ], 
+            "output": -1
+        }, 
+        {
+            "input": [
+                76, 
+                48828124
+            ], 
+            "output": 8
+        }, 
+        {
+            "input": [
+                60, 
+                60466175
+            ], 
+            "output": 10
+        }, 
+        {
+            "input": [
+                60, 
+                60476254
+            ], 
+            "output": 11
+        }, 
+        {
+            "input": [
+                50, 
+                69691719
+            ], 
+            "output": 15
+        }, 
+        {
+            "input": [
+                30, 
+                50805
+            ], 
+            "output": 9
+        }, 
+        {
+            "input": [
+                10, 
+                37
+            ], 
+            "output": 3
+        }, 
+        {
+            "input": [
+                54, 
+                387420489
+            ], 
+            "output": 18
+        }, 
+        {
+            "input": [
+                2, 
+                10
+            ], 
+            "output": -1
+        }, 
+        {
+            "input": [
+                68, 
+                552968336
+            ], 
+            "output": 12
+        }, 
+        {
+            "input": [
+                501574537, 
+                168
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                260733505, 
+                123
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                176, 
+                731260351
+            ], 
+            "output": 7
+        }, 
+        {
+            "input": [
+                159, 
+                349038653
+            ], 
+            "output": 7
+        }, 
+        {
+            "input": [
+                178, 
+                545
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                22101078, 
+                56
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                85, 
+                813890305
+            ], 
+            "output": 10
+        }, 
+        {
+            "input": [
+                142, 
+                753661427
+            ], 
+            "output": 7
+        }, 
+        {
+            "input": [
+                104, 
+                36813313
+            ], 
+            "output": 7
+        }, 
+        {
+            "input": [
+                108, 
+                935052470
+            ], 
+            "output": 8
+        }, 
+        {
+            "input": [
+                216358530, 
+                59
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                44, 
+                987027754
+            ], 
+            "output": -1
+        }, 
+        {
+            "input": [
+                63, 
+                111127993
+            ], 
+            "output": 11
+        }, 
+        {
+            "input": [
+                294366393, 
+                73
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                161, 
+                190595378
+            ], 
+            "output": 6
+        }, 
+        {
+            "input": [
+                53, 
+                92297437
+            ], 
+            "output": 14
+        }, 
+        {
+            "input": [
+                74, 
+                1925
+            ], 
+            "output": 3
+        }, 
+        {
+            "input": [
+                4, 
+                1727
+            ], 
+            "output": -1
+        }, 
+        {
+            "input": [
+                437028657, 
+                85
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                94, 
+                632627638
+            ], 
+            "output": 9
+        }, 
+        {
+            "input": [
+                73, 
+                267515019
+            ], 
+            "output": 10
+        }, 
+        {
+            "input": [
+                46, 
+                742167708
+            ], 
+            "output": -1
+        }, 
+        {
+            "input": [
+                18, 
+                352700208
+            ], 
+            "output": -1
+        }, 
+        {
+            "input": [
+                62, 
+                11348479
+            ], 
+            "output": 8
+        }, 
+        {
+            "input": [
+                893, 
+                128
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                15, 
+                754084469
+            ], 
+            "output": -1
+        }, 
+        {
+            "input": [
+                559055798, 
+                47
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                179, 
+                125352733
+            ], 
+            "output": 6
+        }, 
+        {
+            "input": [
+                178, 
+                702476855
+            ], 
+            "output": 7
+        }, 
+        {
+            "input": [
+                827156827, 
+                247465052
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                197, 
+                1033
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                256947828, 
+                770
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                32304905, 
+                757677834
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                765, 
+                340992350
+            ], 
+            "output": 4
+        }, 
+        {
+            "input": [
+                425850548, 
+                785
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                1443, 
+                93102370
+            ], 
+            "output": 3
+        }, 
+        {
+            "input": [
+                203110238, 
+                994773300
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                1635, 
+                376530665
+            ], 
+            "output": 4
+        }, 
+        {
+            "input": [
+                561, 
+                772126853
+            ], 
+            "output": 5
+        }, 
+        {
+            "input": [
+                873727942, 
+                180782666
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                831965745, 
+                947161312
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                1468658, 
+                744
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                1309, 
+                78610884
+            ], 
+            "output": 3
+        }, 
+        {
+            "input": [
+                1575, 
+                386164359
+            ], 
+            "output": 4
+        }, 
+        {
+            "input": [
+                503672315, 
+                345
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                300, 
+                188016688
+            ], 
+            "output": 5
+        }, 
+        {
+            "input": [
+                325020298, 
+                851048036
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                495913889, 
+                706869234
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                273253323, 
+                312669917
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                40053118, 
+                404
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                918461504, 
+                908103053
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                398368799, 
+                442
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                29150901, 
+                819731125
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                943, 
+                96751180
+            ], 
+            "output": 4
+        }, 
+        {
+            "input": [
+                93011343, 
+                990783761
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                376, 
+                470347088
+            ], 
+            "output": 5
+        }, 
+        {
+            "input": [
+                286, 
+                85084726
+            ], 
+            "output": 5
+        }, 
+        {
+            "input": [
+                904815917, 
+                302202836
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                459334573, 
+                642487918
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                718088328, 
+                495208119
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                981574249, 
+                626713388
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                239752737, 
+                654835951
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                420317754, 
+                771995929
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                116512458, 
+                673157331
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                253191786, 
+                301076386
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                698092704, 
+                755690907
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                657995489, 
+                676009395
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                581705076, 
+                811828279
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                288025440, 
+                459213433
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                442665519, 
+                895037622
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                160467794, 
+                716496406
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                27242347, 
+                123054132
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                928077250, 
+                247198559
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                687733114, 
+                958261438
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                900182235, 
+                140501888
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                15844541, 
+                915940835
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                975, 
+                953987377
+            ], 
+            "output": 4
+        }, 
+        {
+            "input": [
+                52906374, 
+                118081944
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                520448041, 
+                669667622
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                290, 
+                725648598
+            ], 
+            "output": 6
+        }, 
+        {
+            "input": [
+                57, 
+                1000000000
+            ], 
+            "output": 18
+        }, 
+        {
+            "input": [
+                56, 
+                1000000000
+            ], 
+            "output": -1
+        }, 
+        {
+            "input": [
+                5, 
+                6
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                5, 
+                100
+            ], 
+            "output": -1
+        }, 
+        {
+            "input": [
+                100, 
+                1000000000
+            ], 
+            "output": 9
+        }, 
+        {
+            "input": [
+                90, 
+                58077950
+            ], 
+            "output": 7
+        }, 
+        {
+            "input": [
+                90, 
+                58077951
+            ], 
+            "output": 8
+        }, 
+        {
+            "input": [
+                82, 
+                3
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                1000000000, 
+                1
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                5, 
+                1
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                11, 
+                10
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                28, 
+                1
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                12345678, 
+                133
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                100, 
+                10
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                567, 
+                23472547
+            ], 
+            "output": 4
+        }, 
+        {
+            "input": [
+                1000000000, 
+                999999999
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                2, 
+                1
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                25, 
+                9
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                597125597, 
+                868112354
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                1000000000, 
+                999999937
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                20, 
+                10
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                1000000000, 
+                1000
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                1000000000, 
+                2
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                900000000, 
+                1000000000
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                6, 
+                5
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                10, 
+                1
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                999999999, 
+                1000000000
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                39, 
+                9621
+            ], 
+            "output": 5
+        }, 
+        {
+            "input": [
+                999999991, 
+                111123141
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                1000000000, 
+                100
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                999999999, 
+                1
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                4, 
+                1
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                103, 
+                216
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                62, 
+                1000000000
+            ], 
+            "output": 14
+        }, 
+        {
+            "input": [
+                8, 
+                16
+            ], 
+            "output": 2
+        }, 
+        {
+            "input": [
+                100, 
+                1
+            ], 
+            "output": 2
+        }
+    ], 
+    "name": "SumAndProduct", 
+    "statement": "<td class=\"statText\">A list of non-negative numbers is called satisfactory if the sum of the numbers in the list is equal to <b>S</b> and the product of the numbers is equal to <b>P</b>.  Find a satisfactory list with the least possible number of elements, and return its size.  If no such list exists, return -1 instead. Please note that the list may contain non-integer numbers.</td>", 
+    "constraints": [
+        "<td class=\"statText\"><b>S</b> and <b>P</b> will be between 1 and 1,000,000,000, inclusive. </td>"
+    ], 
+    "number": 10257, 
+    "examples": [
+        {
+            "comment": "<td class=\"statText\"><table><tr><td colspan=\"2\" class=\"statText\">The list contains only one element: 10.</td></tr></table></td>", 
+            "input": [
+                10, 
+                10
+            ], 
+            "output": 1
+        }, 
+        {
+            "comment": "<td class=\"statText\"><table><tr><td colspan=\"2\" class=\"statText\">The list contains two elements: 2 and 3.</td></tr></table></td>", 
+            "input": [
+                5, 
+                6
+            ], 
+            "output": 2
+        }, 
+        {
+            "comment": "<td class=\"statText\"><table><tr><td colspan=\"2\" class=\"statText\">No such list exists.</td></tr></table></td>", 
+            "input": [
+                5, 
+                100
+            ], 
+            "output": -1
+        }, 
+        {
+            "comment": "", 
+            "input": [
+                100, 
+                1000000000
+            ], 
+            "output": 9
+        }
+    ]
+}
